@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+#'package	do	boost                     tar.xz'
+#'package	do	valgrind-3.11.0           tar.xz'
+
+#'package	do	gdb-7.10.1                tar.xz'
+
+# System C compiler cache'
+'package	do	ccache-3.2.7             tar.xz'
+)
+

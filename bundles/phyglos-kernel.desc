@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	linux-4.4.2			tar.xz'
+)

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=(
+# Firefox
+'package	do_as	firefox-45.0           tar.xz   firefox-45.0.source.tar.xz   desktop'
+)

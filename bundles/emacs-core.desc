@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	emacs-24.5		tar.xz'
+)

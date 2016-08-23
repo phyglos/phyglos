@@ -1,0 +1,4 @@
+URL=("http://ftp.gnu.org/gnu/bash/bash-4.3.30.tar.gz" 
+     "http://www.linuxfromscratch.org/patches/lfs/7.9/bash-4.3.30-upstream_fixes-3.patch")
+MD5=("a27b3ee9be83bd3ba448c0ff52b28447" 
+     "e183ab08f0a51a7c5a2e974eb1ecbc46")

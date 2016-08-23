@@ -1,0 +1,96 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	porg-0.8                 tar.gz'
+
+# Start LFS build
+'package	do	man-pages-4.04           tar.xz'
+'package	do	linux-4.4.2              tar.xz   headers'
+'package	do	glibc-2.23               tar.xz'
+'script		run	phyglos-core-1.8.0-setup-locales'
+'package	do_in	tzdata2016a              tzdata2016a.tar.gz'
+'script		run	phyglos-core-1.8.0-adjust-builder'
+
+'package	do	zlib-1.2.8               tar.xz'  
+'package	do	file-5.25                tar.gz'
+'package	do	binutils-2.26            tar.bz2'
+
+'package	do	gmp-6.1.0                tar.xz'
+'package	do	mpfr-3.1.3               tar.xz'
+'package	do	mpc-1.0.3                tar.gz'
+'package	do	gcc-5.3.0                tar.bz2'
+
+'package	do	bzip2-1.0.6              tar.gz'
+'package	do	pkg-config-0.29          tar.gz'
+'package	do	ncurses-6.0              tar.gz'
+'package	do_as	attr-2.4.47              tar.gz    attr-2.4.47.src.tar.gz'
+'package	do_as	acl-2.2.52               tar.gz    acl-2.2.52.src.tar.gz'
+'package	do	libcap-2.25              tar.xz'
+'package	do	sed-4.2.2                tar.bz2'
+'package	do	shadow-4.2.1             tar.xz'
+'package	do	psmisc-22.21             tar.gz'
+'package	do	procps-ng-3.3.11         tar.xz'
+'package	do	e2fsprogs-1.42.13        tar.gz'
+'package	do	iana-etc-2.30            tar.bz2'
+'package	do	m4-1.4.17                tar.xz'
+'package	do	bison-3.0.4              tar.xz'
+'package	do	flex-2.6.0               tar.xz'
+'package	do	grep-2.23                tar.xz'
+'package	do	readline-6.3             tar.gz'
+'package	do	bash-4.3.30              tar.gz'
+'package	do	bc-1.06.95               tar.bz2'
+'package	do	libtool-2.4.6            tar.xz'
+'package	do	gdbm-1.11                tar.gz'
+'package	do	expat-2.1.0              tar.gz'
+'package	do	inetutils-1.9.4          tar.xz'
+'package	do	perl-5.22.1              tar.bz2'
+'package	do	XML-Parser-2.44          tar.gz'
+'package	do	autoconf-2.69            tar.xz'
+'package	do	automake-1.15            tar.xz'
+'package	do	coreutils-8.25           tar.xz'
+'package	do	diffutils-3.3            tar.xz'
+'package	do	gawk-4.1.3               tar.xz'
+'package	do	findutils-4.6.0          tar.gz'
+'package	do	gettext-0.19.7           tar.xz'
+'package	do	intltool-0.51.0          tar.gz'
+'package	do	gperf-3.0.4              tar.gz'
+'package	do	groff-1.22.3             tar.gz'
+'package	do	xz-5.2.2                 tar.xz'
+'package	do	less-481                 tar.gz'
+'package	do	gzip-1.6                 tar.xz'
+'package	do	iproute2-4.4.0           tar.xz'
+'package	do	kbd-2.0.3                tar.xz'
+'package	do	kmod-22                  tar.xz'
+'package	do	libpipeline-1.4.1        tar.gz'
+'package	do	make-4.1                 tar.bz2'
+'package	do	patch-2.7.5              tar.xz'
+'package	do	sysklogd-1.5.1           tar.gz'
+'package	do	sysvinit-2.88dsf         tar.bz2'
+'package	do	lfs-bootscripts-20150222 tar.bz2'
+'package	do	tar-1.28                 tar.xz'
+'package	do	texinfo-6.1              tar.xz'
+'package	do	eudev-3.1.5              tar.gz'
+'package	do	man-db-2.7.5             tar.xz'
+'package	do_as	vim74                    tar.bz2    vim-7.4.tar.bz2'
+
+'script		run	phyglos-core-1.8.0-setup-etc'
+'script		run	phyglos-core-1.8.0-setup-site'
+'package	do	lsb-release-1.4          tar.gz'
+
+'script		run	phyglos-core-1.8.0-setup-profiles'
+# util-linux requires tty group; after setup-profiles 
+'package	do	util-linux-2.27.1        tar.xz'      
+
+'script		run	phyglos-core-1.8.0-setup-network'
+# End LFS build
+
+# Add some core libraries 
+'package	do	libffi-3.2.1             tar.gz'
+'package	do	libidn-1.32              tar.gz'
+'package	do	libsigc++-2.6.2          tar.xz'
+'package	do	libtasn1-4.7             tar.gz'
+'package	do	libtirpc-1.0.1           tar.bz2'
+
+'script		run	phyglos-core-1.8.0-end'
+)
+

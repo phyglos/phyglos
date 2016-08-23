@@ -1,0 +1,4 @@
+URL=(http://downloads.sourceforge.net/libpng/libpng-1.6.21.tar.xz
+     http://downloads.sourceforge.net/project/apng/libpng/libpng16/libpng-1.6.21-apng.patch.gz)
+MD5=(3bacb4728f6694a64ad9052769d6a4ce
+     7c44c3950c1886115c33ee2ab4d8417d)

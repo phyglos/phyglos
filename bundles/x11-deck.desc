@@ -1,0 +1,51 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+
+# phyglos-deck ?
+#'package	do	gobject-introspection-1.46.0    tar.xz'
+
+# Perl libraries
+'script         run     HTML::Parser'
+'script         run     XML::Simple'
+
+# Accessibility libraries
+'package	do	atk-2.18.0 			tar.xz'
+'package	do	at-spi2-core-2.18.3		tar.xz'
+'package	do	at-spi2-atk-2.18.1		tar.xz'
+
+# Keyboard libraries
+'package	do	libxklavier-5.4                 tar.bz2'
+
+# Graphics libraries
+'package	do	gdk-pixbuf-2.32.3       	tar.xz'
+'package	do	libcroco-0.6.11                 tar.xz'
+'package	do	cairo-1.14.6       		tar.xz'
+'package	do	pango-1.38.1       		tar.xz'
+'package	do	librsvg-2.40.13                 tar.xz'
+
+# Icons libraries
+'package	do	startup-notification-0.12	tar.gz'
+'package	do	icon-naming-utils-0.8.90        tar.bz2'
+'package	do	hicolor-icon-theme-0.15		tar.xz'
+'package	do	adwaita-icon-theme-3.18.0	tar.xz'
+
+# GTK+
+'package	do	gtk+-2.24.29 			tar.xz'
+'package	do	gtk+-3.18.7 			tar.xz'
+
+# More icon libraries
+'package	do	gnome-icon-theme-3.12.0 	tar.xz'
+'package	do	lxde-icon-theme-0.5.1   	tar.xz'
+
+# Fonts 
+'package	do	dejavu-fonts-ttf-2.37	        tar.bz2'
+
+# Desktop libraries
+'package	do	libnotify-0.7.6                 tar.xz'
+#'package	do	libwnck-3.20.1                  tar.xz' 
+
+# Desktop utilities
+'package	do	desktop-file-utils-0.22         tar.xz'
+'package	do	shared-mime-info-1.5            tar.xz'
+)

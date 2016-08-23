@@ -1,0 +1,34 @@
+#!/bin/bash
+
+BUILD_CMD=(
+# GNOME libraries for XFCE
+'package	do	libwnck-2.30.7                  tar.xz'
+'package	do	vte-0.28.2                      tar.xz'
+
+# XFCE XS
+'package	do	gtk-xfce-engine-3.2.0           tar.bz2'
+
+'package	do	libxfce4util-4.12.1             tar.bz2'
+'package	do	xfconf-4.12.0                   tar.bz2'
+'package	do	libxfce4ui-4.12.1               tar.bz2'
+
+'package	do	exo-0.10.7                      tar.bz2'
+'package	do	garcon-0.5.0                    tar.bz2'
+
+'package	do	xfce4-appfinder-4.12.0          tar.bz2'
+'package	do	xfce4-notifyd-0.2.4             tar.bz2'
+'package	do	xfce4-panel-4.12.0              tar.bz2'
+'package	do	xfce4-xkb-plugin-0.7.1          tar.bz2'
+'package	do	xfce4-settings-4.12.0           tar.bz2'
+'package	do	xfce4-session-4.12.1            tar.bz2'
+'package	do	xfce4-terminal-0.6.3            tar.bz2'
+
+'package	do	xfwm4-4.12.3                    tar.bz2'
+'package	do	xfdesktop-4.12.3                tar.bz2'
+
+'script         run     xfce4-setup'
+
+# LXDE utilities
+'package	do	lxrandr-0.3.1                   tar.xz'
+
+)

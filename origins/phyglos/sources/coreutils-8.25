@@ -1,0 +1,4 @@
+URL=(http://ftp.gnu.org/gnu/coreutils/coreutils-8.25.tar.xz
+     http://www.linuxfromscratch.org/patches/lfs/7.9/coreutils-8.25-i18n-2.patch)
+MD5=(070e43ba7f618d747414ef56ab248a48
+     c6334ed5b03062ef7e9649e8ceb2cfc1)
