@@ -24,6 +24,9 @@ BUILD_CMD=(
 'package	do	pango-1.38.1       		tar.xz'
 'package	do	librsvg-2.40.13                 tar.xz'
 
+# Tk
+'package	do_as	tk8.6.4                         tar.gz      tk8.6.4-src.tar.gz'
+
 # Icons libraries
 'package	do	startup-notification-0.12	tar.gz'
 'package	do	icon-naming-utils-0.8.90        tar.bz2'
