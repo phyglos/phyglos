@@ -1,5 +1,5 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-'package	do	git-2.7.1		tar.xz'
+'package	do	git-2.7.1		tar.xz       desktop'
 )
