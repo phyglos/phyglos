@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	strace-4.5.19              tar.bz2'
+)
+
