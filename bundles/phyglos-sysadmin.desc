@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'# System utilities'
+'package           do       pciutils-3.4.1            tar.xz'
+)
+
