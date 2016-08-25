@@ -3,5 +3,8 @@
 BUILD_CMD=( 
 '# System utilities'
 'package           do       pciutils-3.4.1            tar.xz'
+
+'# Network utilities'
+'package	   do	    traceroute-2.1.0          tar.gz'
 )
 
