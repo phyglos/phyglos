@@ -58,14 +58,20 @@ install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
 install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
 EOF
 
-    # Save a copy of the kernel sources for building external modules
-    rm -f $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
-    bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
-    cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
-    ln -sf /lib/modules/$PHY_KERNEL_VER/build $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
-
     # Pack documentation
-    bandit_mkdir $BUILD_PACK/usr/share/doc/linux-4.4.2
-    cp -r Documentation/* $BUILD_PACK/usr/share/doc/linux-4.4.2
+    bandit_mkdir $BUILD_PACK/usr/share/doc/$PHY_KERNEL_SRC
+    cp -r Documentation/* $BUILD_PACK/usr/share/doc/$PHY_KERNEL_SRC
+
+    # Pack a copy of the kernel build directory 
+    if [ $PHY_KERNEL_KEEP_BUILD = "yes" ]; then
+	rm -f $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
+	rm -f $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
+	rm -rf Documentation
+
+	bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
+	cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
+	
+	ln -vs /lib/modules/$PHY_KERNEL_VER/build $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
+    fi
 }
 
