@@ -133,7 +133,7 @@ EOF
 	sed -i "s/chage/$PROGRAM/" /etc/pam.d/${PROGRAM}
     done
     
-    # Disable login.access and limits, uneeded after Linux-PAM
+    # Disable login.access and limits, unneeded after Linux-PAM
     [ -f /etc/login.access ] && mv -v /etc/login.access{,.orig}
     [ -f /etc/limits ]       && mv -v /etc/limits{,.orig}
 

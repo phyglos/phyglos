@@ -1,9 +1,6 @@
 #!/bin/bash
 
 BUILD_CMD=(
-# BLFS bootscritps
-'package	do	blfs-bootscripts-20150924  tar.bz2'
-
 # Common Development tools
 'package	do	elfutils-0.165             tar.bz2'
 'package	do_as	tcl8.6.4                   tar.gz     tcl8.6.4-src.tar.gz'
