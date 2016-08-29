@@ -2,6 +2,9 @@
 
 script_run()
 {
+    #---
+    # Create CAcerts scripts   
+    #---
     cat > /usr/bin/CAcerts-make-SSLpem.pl << "EOF"
 #!/usr/bin/perl -w
 
@@ -52,6 +55,7 @@ while ( <IN> )
 EOF
     chmod +x /usr/bin/CAcerts-make-SSLpem.pl
 
+
     cat > /usr/bin/CAcerts-make-SSLcerts.sh << "EOF"
 #!/bin/sh
 # Begin make-ca.sh
@@ -64,6 +68,9 @@ EOF
 #          Bruce Dubbs
 #
 # Version 20120211
+
+# Some data in the certs have UTF-8 characters
+#export LANG=en_US.utf8
 
 certdata="certdata.txt"
 
@@ -91,10 +98,10 @@ TRUSTATTRIBUTES="CKA_TRUST_SERVER_AUTH"
 mkdir "${TEMPDIR}/certs"
 
 # Get a list of staring lines for each cert
-CERTBEGINLIST=$(grep -n "^# Certificate" "${certdata}" | cut -d ":" -f1)
+CERTBEGINLIST=$(grep -an "^# Certificate" "${certdata}" | cut -d ":" -f1)
 
 # Get a list of ending lines for each cert
-CERTENDLIST=`grep -n "^CKA_TRUST_STEP_UP_APPROVED" "${certdata}" | cut -d ":" -f 1`
+CERTENDLIST=`grep -an "^CKA_TRUST_STEP_UP_APPROVED" "${certdata}" | cut -d ":" -f 1`
 
 # Start a loop
 for certbegin in ${CERTBEGINLIST}; do
@@ -152,6 +159,7 @@ rm -r "${TEMPDIR}"
 EOF
     chmod +x /usr/bin/CAcerts-make-SSLcerts.sh
 
+    
     cat > /usr/bin/CAcerts-remove-expired-SSLcerts.sh << "EOF"
 #!/bin/sh
 # Begin /usr/bin/remove-expired-certs.sh
@@ -209,6 +217,10 @@ done
 EOF
     chmod +x /usr/bin/CAcerts-remove-expired-SSLcerts.sh
 
+    #---
+    # Run CAcerts scripts   
+    #---
+
     bandit_msg "Downloading CA certdata..."
     rm -f certdata.txt
     wget http://anduin.linuxfromscratch.org/sources/other/certdata.txt
@@ -216,10 +228,10 @@ EOF
     bandit_msg "Making new SSL certs..."
     CAcerts-make-SSLcerts.sh    
 
-    local SSLDIR=/etc/ssl                                              
-
     bandit_msg "Removing expired SSL certs..."
     CAcerts-remove-expired-SSLcerts.sh certs
+
+    local SSLDIR=/etc/ssl                                              
 
     bandit_msg "Installing SSL certs..."
     install -d                  ${SSLDIR}/certs          
