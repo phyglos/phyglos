@@ -15,26 +15,23 @@ script_run()
     # Create /etc/fstab
     #---
 
-    cat > /etc/fstab << "EOF"
-# file system  mount-point  type     options             dump  fsck
+    cat > /etc/fstab << EOF
+# file system  mount-point  type      options             dump  fsck
 #                                                              order
-PHY_PART       /            PHY_TYPE defaults            1     1
-PHY_SWAP       swap         swap     pri=1               0     0
-proc           /proc        proc     nosuid,noexec,nodev 0     0
-sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0
-devpts         /dev/pts     devpts   gid=5,mode=620      0     0
-tmpfs          /run         tmpfs    defaults            0     0
-devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
+$PHY_PART      /            $PHY_TYPE defaults            1     1
+$PHY_SWAP      swap         swap      pri=1               0     0
+proc           /proc        proc      nosuid,noexec,nodev 0     0
+sysfs          /sys         sysfs     nosuid,noexec,nodev 0     0
+devpts         /dev/pts     devpts    gid=5,mode=620      0     0
+tmpfs          /run         tmpfs     defaults            0     0
+devtmpfs       /dev         devtmpfs  mode=0755,nosuid    0     0
 EOF
-    sed -i "s|PHY_PART|$BANDIT_TARGET_PART|" /etc/fstab
-    sed -i "s|PHY_TYPE|$BANDIT_TARGET_PART_TYPE|" /etc/fstab
-    sed -i "s|PHY_SWAP|$BANDIT_TARGET_SWAP|" /etc/fstab
 
     #---
     # Configure SystemV /etc/inittab
     #---
 
-    cat > /etc/inittab << "EOF"
+    cat > /etc/inittab << EOF
 id:3:initdefault:
 
 si::sysinit:/etc/rc.d/init.d/rc S
@@ -63,7 +60,7 @@ EOF
     # Create /etc/inputrc
     #---
 
-    cat > /etc/inputrc << "EOF"
+    cat > /etc/inputrc << EOF
 # Modified by Chris Lynn <roryo@roryo.dynup.net>
 
 # Allow the command prompt to wrap to the next line
@@ -108,7 +105,7 @@ EOF
     # Create /etc/shells
     #---
 
-    cat > /etc/shells << "EOF"
+    cat > /etc/shells << EOF
 /bin/sh
 /bin/bash
 EOF

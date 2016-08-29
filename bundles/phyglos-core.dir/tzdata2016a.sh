@@ -15,6 +15,6 @@ build_pack()
     zic -d $BUILD_PACK/usr/share/zoneinfo -p America/New_York
     
     bandit_mkdir $BUILD_PACK/etc
-    cp -v $BUILD_PACK/usr/share/zoneinfo/Etc/UTC $BUILD_PACK/etc/localtime
+    cp -v $BUILD_PACK/usr/share/zoneinfo/${PHY_TIMEZONE} $BUILD_PACK/etc/localtime
 }
 

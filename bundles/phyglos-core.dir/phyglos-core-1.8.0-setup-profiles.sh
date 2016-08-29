@@ -5,7 +5,7 @@ script_run()
 
     bandit_log "Creating /etc/passwd and /etc/group files..."
 
-cat > /etc/passwd <<EOF
+cat > /etc/passwd << EOF
 root:x:0:0:root:/root:/bin/bash
 bin:x:1:1:bin:/dev/null:/bin/false
 daemon:x:6:6:Daemon user:/dev/null:/bin/false
@@ -14,7 +14,7 @@ games:x:60:60:Games user:/dev/null:/bin/false
 nobody:x:99:99:Unprivileged user:/dev/null:/bin/false
 EOF
 
-cat > /etc/group <<EOF
+cat > /etc/group << EOF
 root:x:0:
 bin:x:1:daemon
 sys:x:2:
@@ -176,13 +176,12 @@ pathappend /usr/share/info INFOPATH
 EOF
 
      cat > /etc/profile.d/i18n.sh << EOF
-export LANG=$PHY_LANG
+export LANG=${PHY_LOCALES[0]}
 EOF
 
     cat > /etc/profile.d/phyglos.sh << EOF
 alias grep='grep --color=auto'
 alias ls='ls -h --color=auto'
-alias x='startx'
 EOF
 
      cat > /etc/profile.d/readline.sh << "EOF"
@@ -292,7 +291,7 @@ EOF
 
     bandit_mkdir /etc/skel
     cp -v /root/.bash_profile /etc/skel
-    cp -v /root/.bashrc /etc/skel
-    cp -v /root/.bash_logout /etc/skel
+    cp -v /root/.bashrc       /etc/skel
+    cp -v /root/.bash_logout  /etc/skel
 
 }
