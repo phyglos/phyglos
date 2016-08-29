@@ -14,6 +14,7 @@ build_compile()
     make html
 }
 
+build_test_level=1
 build_test()
 {
     make check 

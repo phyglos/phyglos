@@ -13,6 +13,7 @@ build_compile()
     make
 }
 
+build_test_level=4
 build_test()
 {
     sed -i -r 's|(pmap_initname)\\\$|\1|' testsuite/pmap.test/pmap.exp
