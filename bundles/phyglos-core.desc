@@ -88,7 +88,7 @@ BUILD_CMD=(
 'package	do	blfs-bootscripts-20150924  tar.bz2'
 
 # Add some core libraries 
-'package	do	havedeg-1.9.1            tar.gz'
+'package	do	haveged-1.9.1            tar.gz'
 'package	do	libffi-3.2.1             tar.gz'
 'package	do	libidn-1.32              tar.gz'
 'package	do	libsigc++-2.6.2          tar.xz'
