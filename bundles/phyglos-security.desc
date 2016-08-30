@@ -19,8 +19,8 @@ BUILD_CMD=(
 'package	do	gnutls-3.4.9             tar.xz'
 
 # Network security 
-#'package	do	iptables-1.4.21          tar.bz2'
-#'script	run	phyglos-security-1.8.0-setup-firewall'
+'package	do	iptables-1.6.0           tar.bz2'
+#'script		run	phyglos-security-1.8.0-setup-firewall'
 
 # Prepare PKI 
 'package	do	wget-1.17.1              tar.xz'
