@@ -26,10 +26,3 @@ build_pack()
     done   
 }
 
-install_setup()
-{
-    pushd /opt/blfs-bootscripts
-      make install-iptables
-      /etc/init.d/iptables start
-    popd
-}
