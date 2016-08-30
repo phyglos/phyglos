@@ -15,6 +15,10 @@ script_run()
     # Create /etc/fstab
     #---
 
+    local PHY_PART=$BANDIT_TARGET_PART
+    local PHY_TYPE=$BANDIT_TARGET_PART_TYPE
+    local PHY_SWAP=$BANDIT_TARGET_SWAP
+    
     cat > /etc/fstab << EOF
 # file system  mount-point  type      options             dump  fsck
 #                                                              order
