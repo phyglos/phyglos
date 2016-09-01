@@ -5,9 +5,9 @@ build_compile()
     mkdir -v build
     cd build
 
-    CC=$BANDIT_BUILDER_ARCH-gcc                  \
-    AR=$BANDIT_BUILDER_ARCH-ar                   \
-    RANLIB=$BANDIT_BUILDER_ARCH-ranlib           \
+    CC=$BANDIT_BUILDER_TRIPLET-gcc                  \
+    AR=$BANDIT_BUILDER_TRIPLET-ar                   \
+    RANLIB=$BANDIT_BUILDER_TRIPLET-ranlib           \
     ../configure                              \
         --prefix=$BANDIT_BUILDER_DIR             \
         --disable-nls                         \

@@ -26,7 +26,7 @@ build_compile()
     cd gcc-build
 
     ../configure                                                    \
-        --target=$BANDIT_BUILDER_ARCH                               \
+        --target=$BANDIT_BUILDER_TRIPLET                               \
         --prefix=$BANDIT_BUILDER_DIR                                \
         --with-glibc-version=2.11                                   \
         --with-sysroot=$BANDIT_HOST_TGT_MNT                         \

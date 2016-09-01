@@ -3,7 +3,7 @@
 build_compile()
 {
     cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
-	`dirname $($BANDIT_BUILDER_ARCH-gcc -print-libgcc-file-name)`/include-fixed/limits.h
+	`dirname $($BANDIT_BUILDER_TRIPLET-gcc -print-libgcc-file-name)`/include-fixed/limits.h
 
     for file in $(find gcc/config -name linux64.h -o -name linux.h -o -name sysv4.h)
     do
@@ -28,10 +28,10 @@ build_compile()
     mkdir -v build
     cd build
 
-    CC=$BANDIT_BUILDER_ARCH-gcc                                        \
-    CXX=$BANDIT_BUILDER_ARCH-g++                                       \
-    AR=$BANDIT_BUILDER_ARCH-ar                                         \
-    RANLIB=$BANDIT_BUILDER_ARCH-ranlib                                 \
+    CC=$BANDIT_BUILDER_TRIPLET-gcc                                        \
+    CXX=$BANDIT_BUILDER_TRIPLET-g++                                       \
+    AR=$BANDIT_BUILDER_TRIPLET-ar                                         \
+    RANLIB=$BANDIT_BUILDER_TRIPLET-ranlib                                 \
     ../configure                                                    \
         --prefix=$BANDIT_BUILDER_DIR                                   \
         --with-local-prefix=$BANDIT_BUILDER_DIR                        \

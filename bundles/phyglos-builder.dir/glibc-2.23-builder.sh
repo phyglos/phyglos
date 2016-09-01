@@ -6,7 +6,7 @@ build_compile()
     cd build
 
     ../configure                                      \
-	--host=$BANDIT_BUILDER_ARCH                      \
+	--host=$BANDIT_BUILDER_TRIPLET                      \
 	--build=$(../scripts/config.guess)            \
 	--prefix=$BANDIT_BUILDER_DIR                     \
 	--disable-profile                             \
@@ -30,7 +30,7 @@ install_verify()
     bandit_log "Checking for a working compiler..."
 
     echo 'int main(){}' > dummy.c
-    $BANDIT_BUILDER_ARCH-gcc dummy.c
+    $BANDIT_BUILDER_TRIPLET-gcc dummy.c
 
     echo
     readelf -l a.out | grep ": $BANDIT_BUILDER_DIR"

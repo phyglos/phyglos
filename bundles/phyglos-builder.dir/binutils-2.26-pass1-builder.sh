@@ -6,7 +6,7 @@ build_compile()
     cd build
 
     ../configure                             \
-        --target=$BANDIT_BUILDER_ARCH           \
+        --target=$BANDIT_BUILDER_TRIPLET           \
         --prefix=$BANDIT_BUILDER_DIR            \
         --with-sysroot=$BANDIT_HOST_TGT_MNT     \
         --with-lib-path=$BANDIT_BUILDER_DIR/lib \
