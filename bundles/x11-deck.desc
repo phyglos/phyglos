@@ -6,8 +6,8 @@ BUILD_CMD=(
 #'package	do	gobject-introspection-1.46.0    tar.xz'
 
 # Perl libraries
-'script         run     HTML::Parser'
-'script         run     XML::Simple'
+'module         perl5   HTML::Parser'
+'module         perl5   XML::Simple'
 
 # Accessibility libraries
 'package	do	atk-2.18.0 			tar.xz'

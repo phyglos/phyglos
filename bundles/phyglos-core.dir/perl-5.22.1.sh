@@ -30,3 +30,11 @@ build_pack()
 {
     make DESTDIR=$BUILD_PACK install
 }
+
+install_setup()
+{
+    # Prepare modules environemnt
+    echo "Setting up CPAN..."
+    yes | cpan -i CPAN
+}
+
