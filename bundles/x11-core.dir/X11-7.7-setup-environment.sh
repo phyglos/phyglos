@@ -9,7 +9,7 @@ script_run()
 XORG_PREFIX="$PHY_XORG_PREFIX"
 export XORG_PREFIX
 
-alias x="startx &> ./x11-session.log"
+alias x="startx &> ~/.x11-session.log"
 EOF
     chmod 644 /etc/profile.d/X11.sh
 
@@ -26,7 +26,7 @@ pathappend $PHY_XORG_PREFIX/lib             LIBRARY_PATH
 pathappend $PHY_XORG_PREFIX/include         C_INCLUDE_PATH
 pathappend $PHY_XORG_PREFIX/include         CPLUS_INCLUDE_PATH
 
-ACLOCAL='aclocal -I "$PHY_XORG_PREFIX"/share/aclocal'
+ACLOCAL='aclocal -I $PHY_XORG_PREFIX/share/aclocal'
 
 export PATH PKG_CONFIG_PATH ACLOCAL LIBRARY_PATH C_INCLUDE_PATH CPLUS_INCLUDE_PATH
 EOF
