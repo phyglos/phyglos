@@ -4,14 +4,15 @@ build_compile()
 {
     patch -Np1 -i $BUILD_SOURCES/nss-3.23-standalone-1.patch
 
-    cd nss 
+    cd nss
+    
     make -j1                                \
 	BUILD_OPT=1                         \
 	NSPR_INCLUDE_DIR=/usr/include/nspr  \
 	USE_SYSTEM_ZLIB=1                   \
 	ZLIB_LIBS=-lz                       \
-	$([ $(uname -m) = x86_64 ] && echo USE_64=1) \
-	$([ -f /usr/include/sqlite3.h ] && echo NSS_USE_SYSTEM_SQLITE=1)
+	$([ $(BANDIT_TARGET_ARCH) = x86_64 ] && echo USE_64=1) \
+	$([ -f /usr/include/sqlite3.h ]      && echo NSS_USE_SYSTEM_SQLITE=1)
 }
 
 build_pack()

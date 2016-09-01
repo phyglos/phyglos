@@ -5,11 +5,12 @@ build_compile()
     tar -xf $BUILD_SOURCES/tcl8.6.4-html.tar.gz --strip-components=1
 
     export SRCDIR=`pwd`
+
     cd unix
     ./configure                 \
 	--prefix=/usr           \
         --mandir=/usr/share/man \
-        $([ $(uname -m) = x86_64 ] && echo --enable-64bit)
+        $([ $BANDIT_TARGET_ARCH = x86_64 ] && echo --enable-64bit)
 
     make
 

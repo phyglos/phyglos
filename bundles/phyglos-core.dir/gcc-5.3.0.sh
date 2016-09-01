@@ -52,7 +52,7 @@ install_verify()
 
     readelf -l a.out | grep ': /lib'
     echo "Compare line above with:"
-    case $(uname -m) in
+    case $BANDIT_TARGET_ARCH in
 	x86)
 	    echo "      [Requesting program interpreter: /lib/ld-linux-x86.so.2]"
 	    ;;
@@ -64,7 +64,7 @@ install_verify()
 
     grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log
     echo "Compare lines above with:"
-    case $(uname -m) in
+    case $BANDIT_TARGET_ARCH in
 	x86)
 	    echo "/usr/lib/gcc/x86-unknown-linux-gnu/5.3.0/../../../../lib/crt1.o succeeded"
 	    echo "/usr/lib/gcc/x86-unknown-linux-gnu/5.3.0/../../../../lib/crti.o succeeded"
@@ -80,7 +80,7 @@ install_verify()
 
     grep -B4 '^ /usr/include' dummy.log
     echo "Compare lines above with:"
-    case $(uname -m) in
+    case $BANDIT_TARGET_ARCH in
 	x86)
 	    echo "#include <...> search starts here:"
 	    echo " /usr/lib/gcc/x86-unknown-linux-gnu/5.3.0/include"
@@ -101,7 +101,7 @@ install_verify()
     echo "Compare:"
     grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
     echo "Compare lines above with:"
-    case $(uname -m) in
+    case $BANDIT_TARGET_ARCH in
 	x86)
 	    echo "SEARCH_DIR(\"/usr/i686-unknown-linux-gnu/lib32\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib32\")"
@@ -127,7 +127,7 @@ install_verify()
     
     grep "/lib.*/libc.so.6 " dummy.log
     echo "Compare line above with:"
-    case $(uname -m) in
+    case $BANDIT_TARGET_ARCH in
 	x86)
 	    echo "attempt to open /lib/libc.so.6 succeeded"
 	    ;;
@@ -139,7 +139,7 @@ install_verify()
 
     grep found dummy.log
     echo "Compare line above with:"
-    case $(uname -m) in
+    case $BANDIT_TARGET_ARCH in
 	x86)
 	    echo "found ld-linux.so.2 at /lib/ld-linux.so.2"
 	    ;;

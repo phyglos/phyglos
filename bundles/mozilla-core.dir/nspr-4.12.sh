@@ -10,7 +10,7 @@ build_compile()
 	--prefix=/usr   \
         --with-mozilla  \
         --with-pthreads \
-        $([ $(uname -m) = x86_64 ] && echo --enable-64bit) 
+        $([ $BANDIT_TARGET_ARCH = x86_64 ] && echo --enable-64bit) 
 
     make
 }
