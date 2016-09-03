@@ -101,15 +101,12 @@ exit 0
 EOF
     chmod 754 /etc/init.d/firewall
 
-    ln -svf ../init.d/firewall /etc/rc.d/rc2.d/S10firewall
-    ln -svf ../init.d/firewall /etc/rc.d/rc3.d/S10firewall
-    ln -svf ../init.d/firewall /etc/rc.d/rc4.d/S10firewall
-    ln -svf ../init.d/firewall /etc/rc.d/rc5.d/S10firewall
-
-    ln -svf ../init.d/firewall /etc/rc.d/rc0.d/K06firewall
-    ln -svf ../init.d/firewall /etc/rc.d/rc1.d/K06firewall
-    ln -svf ../init.d/firewall /etc/rc.d/rc6.d/K06firewall
-    # ln -svf ../init.d/firewall /etc/rc.d/rcS.d/S10firewall
+    for i in (0 1 2 6); do
+	ln -svf ../init.d/firewall /etc/rc.d/rc$i.d/K60firewall
+    done
+    for i in (3 4 5); do
+	ln -svf ../init.d/firewall /etc/rc.d/rc$i.d/S10firewall
+    done
 }
 
 
