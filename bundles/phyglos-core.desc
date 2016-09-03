@@ -44,8 +44,7 @@ BUILD_CMD=(
 'package	do	expat-2.1.0              tar.gz'
 'package	do	inetutils-1.9.4          tar.xz'
 'package	do	perl-5.22.1              tar.bz2'
-'module	        perl5	Log::Log4perl'
-'module	        perl5	XML::Parser'
+#'package	do	XML-Parser-2.44          tar.gz' `# Moved to phyglos-deck as perl5 module`
 'package	do	autoconf-2.69            tar.xz'
 'package	do	automake-1.15            tar.xz'
 'package	do	coreutils-8.25           tar.xz'
@@ -53,13 +52,13 @@ BUILD_CMD=(
 'package	do	gawk-4.1.3               tar.xz'
 'package	do	findutils-4.6.0          tar.gz'
 'package	do	gettext-0.19.7           tar.xz'
-'package	do	intltool-0.51.0          tar.gz'
+#'package	do	intltool-0.51.0          tar.gz' `# Moved to phyglos-deck after XML::Parser`
 'package	do	gperf-3.0.4              tar.gz'
 'package	do	groff-1.22.3             tar.gz'
 'package	do	xz-5.2.2                 tar.xz'
 'package	do	less-481                 tar.gz'
 'package	do	gzip-1.6                 tar.xz'
-#'package	do	iproute2-4.4.0           tar.xz'   `# Moved to phyglos-security`
+#'package	do	iproute2-4.4.0           tar.xz' `# Moved to phyglos-security`
 'package	do	kbd-2.0.3                tar.xz'
 'package	do	kmod-22                  tar.xz'
 'package	do	libpipeline-1.4.1        tar.gz'
