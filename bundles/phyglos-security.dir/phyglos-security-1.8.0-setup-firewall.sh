@@ -11,8 +11,8 @@ script_run()
 # Provides:          firewall
 # Required-Start:    mountkernfs $local_fs
 # Required-Stop:     $local_fs
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
+# Default-Start:     3 4 5
+# Default-Stop:      0 1 2 6
 # Short-Description: Set up simple firewall with iptables rules
 ### END INIT INFO
 
@@ -101,11 +101,11 @@ exit 0
 EOF
     chmod 754 /etc/init.d/firewall
 
-    for i in (0 1 2 6); do
+    for i in 0 1 2 6; do
 	ln -svf ../init.d/firewall /etc/rc.d/rc$i.d/K60firewall
     done
-    for i in (3 4 5); do
-	ln -svf ../init.d/firewall /etc/rc.d/rc$i.d/S10firewall
+    for i in 3 4 5; do
+	ln -svf ../init.d/firewall /etc/rc.d/rc$i.d/S15firewall
     done
 }
 
