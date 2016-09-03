@@ -5,6 +5,9 @@ BUILD_CMD=(
 'package	do	sudo-1.8.15              tar.gz'
 'script		run	phyglos-security-1.8.0-setup-users'
 
+# Enforce strong passwords use
+'package	do	cracklib-2.9.6           tar.gz'
+
 # Do Linux-PAM and rebuild other packages with PAM support
 'package	do	Linux-PAM-1.2.1          tar.bz2'
 'package	do	libcap-2.25              tar.xz       with-pam'
@@ -20,9 +23,9 @@ BUILD_CMD=(
 
 # Network security 
 'package	do	iptables-1.6.0           tar.bz2'
-#'script		run	phyglos-security-1.8.0-setup-firewall'
+'script		run	phyglos-security-1.8.0-setup-firewall'
 
-# Prepare PKI 
+# Setup PKI 
 'package	do	wget-1.17.1              tar.xz'
 'script		run	phyglos-security-1.8.0-setup-certs'
 

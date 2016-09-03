@@ -58,13 +58,19 @@ EOF
 session   required    pam_unix.so
 EOF
 
-    # No Cracklib installed
+    # Password with Cracklib installed.
     cat > $BUILD_PACK/etc/pam.d/system-password << "EOF"
-# use sha512 hash for encryption, use shadow, and try to use any previously
-# defined authentication token (chosen password) set by any prior module
-password  required    pam_unix.so       sha512 shadow try_first_pass
+# check new passwords for strength (man pam_cracklib)
+password  required    pam_cracklib.so   type=Linux retry=3 difok=5 \
+                                        difignore=23 minlen=9 dcredit=1 \
+                                        ucredit=1 lcredit=1 ocredit=1 \
+                                        dictpath=/lib/cracklib/pw_dict
+# use sha512 hash for encryption, use shadow, and use the
+# authentication token (chosen password) set by pam_cracklib
+# above (or any previous modules)
+password  required    pam_unix.so       sha512 shadow use_authtok
 EOF
-
+    
     cat > $BUILD_PACK/etc/pam.d/other << "EOF"
 auth        required        pam_warn.so
 auth        required        pam_deny.so
