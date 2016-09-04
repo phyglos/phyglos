@@ -11,7 +11,7 @@ build_compile()
 	NSPR_INCLUDE_DIR=/usr/include/nspr  \
 	USE_SYSTEM_ZLIB=1                   \
 	ZLIB_LIBS=-lz                       \
-	$([ $(BANDIT_TARGET_ARCH) = x86_64 ] && echo USE_64=1) \
+	$([ "$BANDIT_TARGET_ARCH" = x86_64 ] && echo USE_64=1) \
 	$([ -f /usr/include/sqlite3.h ]      && echo NSS_USE_SYSTEM_SQLITE=1)
 }
 
