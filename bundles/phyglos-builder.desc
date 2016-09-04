@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BUILD_CMD=(
-#'script		run     phyglos-builder-start-1.8.0'
+'script		run     phyglos-builder-start-1.8.0'
 
 # Pass 1: build a new compiler 
 'package	do	binutils-2.26      tar.bz2    pass1-builder'
