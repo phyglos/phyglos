@@ -37,8 +37,7 @@ input:x:24:
 mail:x:34:
 games:x:60:
 nogroup:x:99:
-phy:x:1000:
-users:x:1001:
+users:x:1000:
 EOF
 
     bandit_log "Configuring profile and login scripts..."

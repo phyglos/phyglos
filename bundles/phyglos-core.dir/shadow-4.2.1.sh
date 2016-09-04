@@ -11,9 +11,6 @@ build_compile()
 	-e 's@/var/spool/mail@/var/mail@' \
 	-i etc/login.defs
 
-    # Set first group to 1001, after the phy group
-    sed -i 's/1000/1001/' etc/useradd
-
     ./configure                         \
 	--sysconfdir=/etc               \
         --with-group-name-max-length=32
