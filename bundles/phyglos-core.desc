@@ -98,6 +98,7 @@ BUILD_CMD=(
 
 # Add some core libraries and services
 'package	do	haveged-1.9.1            tar.gz'
+'package	do	gpm-1.20.7               tar.bz2'
 
 'package	do	libffi-3.2.1             tar.gz'
 'package	do	libidn-1.32              tar.gz'

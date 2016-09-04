@@ -85,7 +85,6 @@ BUILD_CMD=(
 'package	do	unzip60                    tar.gz'
 
 # System services
-'package	do	gpm-1.20.7                 tar.bz2'
 'package	do	ntp-4.2.8p6                tar.gz'
 
 # Console applications
