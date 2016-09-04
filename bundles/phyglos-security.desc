@@ -31,5 +31,6 @@ BUILD_CMD=(
 
 # Network utilities
 'package	do	curl-7.47.1              tar.lzma'
+'package	do	iproute2-4.4.0           tar.xz'
 )
 
