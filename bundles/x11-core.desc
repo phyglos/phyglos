@@ -80,10 +80,11 @@ BUILD_CMD=(
 'package	do	xcb-util-cursor-0.1.2		tar.bz2'
 
 # Mesa 3-D
-'package	do	libvdpau-1.1.1                  tar.bz2'
 'package	do	libdrm-2.4.67                   tar.bz2'
+'package	do	libvdpau-1.1.1                  tar.bz2'
 'package	do	mesa-11.1.2                     tar.xz'
 'package	do	libepoxy-1.3.1			tar.bz2'
+'package	do	libva-1.6.2                     tar.bz2'
 
 # X applications
 'package	do	xbitmaps-1.1.1                  tar.bz2'
