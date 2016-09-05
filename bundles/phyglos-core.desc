@@ -96,7 +96,9 @@ BUILD_CMD=(
 # Add BLFS bootscritps
 'package	do	blfs-bootscripts-20150924  tar.bz2'
 
-# Add some core libraries and services
+# Add some core utilities, libraries and services
+'package	do	which-2.21               tar.gz'
+
 'package	do	haveged-1.9.1            tar.gz'
 'package	do	gpm-1.20.7               tar.bz2'
 

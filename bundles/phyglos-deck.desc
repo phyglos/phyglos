@@ -4,8 +4,8 @@ BUILD_CMD=(
 # Perl CPAN and other modules
 'module         perl5	CPAN'
 'module         perl5	Log::Log4perl'
-'module         perl5	XML::Parser'
 'module         perl5	URI'
+'module         perl5	XML::Parser'
 
 # Internationalization tools
 'package	do_as	icu                        tgz        icu4c-56_1-src.tgz'
@@ -76,7 +76,6 @@ BUILD_CMD=(
 
 # System utilities
 'package	do	check-0.10.0               tar.gz'
-'package	do	which-2.21                 tar.gz'
 
 'package	do	time-1.7                   tar.gz'
 'package	do	tree-1.7.0                 tgz'
