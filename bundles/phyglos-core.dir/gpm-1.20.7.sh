@@ -21,9 +21,9 @@ build_pack()
     bandit_mkdir $BUILD_PACK/etc/sysconfig
     install -v -m644 conf/gpm-root.conf $BUILD_PACK/etc  
     cat > $BUILD_PACK/etc/sysconfig/mouse << EOF
-MDEVICE=$PHY_GPM_DEVICE
-PROTOCOL=$PHY_GPM_PROTOCOL
-GPMOPTS=""
+MDEVICE=${PHY_GPM_DEVICE}
+PROTOCOL=${PHY_GPM_PROTOCOL}
+GPMOPTS=${PHY_GPM_OPTIONS}
 EOF
 
     bandit_mkdir $BUILD_PACK/usr/share/doc/gpm-1.20.7
