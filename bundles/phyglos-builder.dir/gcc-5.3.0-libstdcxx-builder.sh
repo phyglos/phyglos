@@ -6,8 +6,8 @@ build_compile()
     cd build
 
     ../libstdc++-v3/configure           \
-	--host=$BANDIT_BUILDER_TRIPLET        \
-	--prefix=$BANDIT_BUILDER_DIR      \
+	--host=$BANDIT_BUILDER_TRIPLET  \
+	--prefix=$BANDIT_BUILDER_DIR    \
 	--disable-multilib              \
 	--disable-nls                   \
 	--disable-libstdcxx-threads     \

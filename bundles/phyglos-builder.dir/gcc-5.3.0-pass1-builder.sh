@@ -26,7 +26,7 @@ build_compile()
     cd gcc-build
 
     ../configure                                                    \
-        --target=$BANDIT_BUILDER_TRIPLET                               \
+        --target=$BANDIT_BUILDER_TRIPLET                            \
         --prefix=$BANDIT_BUILDER_DIR                                \
         --with-glibc-version=2.11                                   \
         --with-sysroot=$BANDIT_HOST_TGT_MNT                         \
@@ -45,7 +45,9 @@ build_compile()
         --disable-libssp                                 \
         --disable-libvtv                                 \
         --disable-libstdcxx                              \
-        --enable-languages=c,c++                         
+	--with-default-libstdcxx-abi=${PHY_DEFAULT_LIBSTDCXX_ABI} \
+	--enable-languages=c,c++
+
 
     make
 }
