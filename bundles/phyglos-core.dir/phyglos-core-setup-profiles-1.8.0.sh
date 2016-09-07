@@ -257,6 +257,9 @@ if [ -d "$HOME/bin" ] ; then
   append $HOME/bin
 fi
 
+# Set SHELL variable
+export SHELL=/bin/sh
+
 unset append
 EOF
 
