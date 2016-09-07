@@ -9,7 +9,6 @@ cat > /etc/passwd << EOF
 root:x:0:0:root:/root:/bin/bash
 bin:x:1:1:bin:/dev/null:/bin/false
 daemon:x:6:6:Daemon user:/dev/null:/bin/false
-messagebus:x:18:18:D-Bus daemon user:/var/run/dbus:/bin/false 
 games:x:60:60:Games user:/dev/null:/bin/false
 nobody:x:99:99:Unprivileged user:/dev/null:/bin/false
 EOF
@@ -32,7 +31,6 @@ utmp:x:13:
 usb:x:14:
 cdrom:x:15:
 adm:x:16:
-messagebus:x:18:
 input:x:24:
 mail:x:34:
 games:x:60:
