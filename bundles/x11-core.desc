@@ -2,7 +2,7 @@
 
 BUILD_CMD=( 
 # Prepare environment
-'script		run	X11-7.7-setup-environment'
+'script		run	x11-core-setup-environment'
 
 # Util macros
 'package	do	util-macros-1.19.0		tar.bz2'
@@ -184,7 +184,7 @@ BUILD_CMD=(
 'package	do	dbus-glib-0.106                 tar.gz' 
 
 # Minimal X environment
-'script		run	X11-7.7-configure'
+'script		run	x11-core-configure'
 'package	do	xinit-1.3.4			tar.bz2'
 'package	do	xterm-324			tgz'
 'package	do	fluxbox-1.3.7			tar.xz'
