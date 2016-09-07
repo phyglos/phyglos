@@ -18,7 +18,7 @@ build_pack()
 
 install_setup()
 {
-    pushd /opt/blfs-bootscripts
+    pushd $BANDIT_HOME/lib/blfs-bootscripts
       make install-haveged
       /etc/init.d/haveged start
     popd

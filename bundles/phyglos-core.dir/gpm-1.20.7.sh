@@ -36,8 +36,8 @@ install_setup()
 {
     install-info --dir-file=/usr/share/info/dir /usr/share/info/gpm.info
     
-    pushd /opt/blfs-bootscripts
-    make install-gpm
-    /etc/init.d/gpm start
+    pushd $BANDIT_HOME/lib/blfs-bootscripts
+      make install-gpm
+      /etc/init.d/gpm start
     popd
 }

@@ -22,7 +22,7 @@ build_pack()
 install_setup()
 {
     # Start the service
-    pushd /opt/blfs-bootscripts
+    pushd $BANDIT_HOME/lib/blfs-bootscripts
       make install-alsa
       /etc/init.d/alsa start
     popd

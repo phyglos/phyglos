@@ -63,8 +63,8 @@ EOF
 
 install_setup()
 {
-    pushd /opt/blfs-bootscripts
-    make install-ntpd
-    /etc/init.d/ntpd start
+    pushd $BANDIT_HOME/lib/blfs-bootscripts
+      make install-ntpd
+      /etc/init.d/ntpd start
     popd
 }

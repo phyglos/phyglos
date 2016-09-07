@@ -2,7 +2,7 @@
 
 build_pack()
 {
-    bandit_mkdir $BUILD_PACK/opt/blfs-bootscripts
-    cp -vR * $BUILD_PACK/opt/blfs-bootscripts
+    bandit_mkdir $BANDIT_HOME/lib/blfs-bootscripts
+    cp -vR * $BANDIT_HOME/lib/blfs-bootscripts
 }
 

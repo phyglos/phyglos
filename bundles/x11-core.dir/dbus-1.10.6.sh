@@ -28,8 +28,8 @@ build_pack()
 
 install_setup()
 {
-    pushd /opt/blfs-bootscripts
-    make install-dbus
-    /etc/init.d/dbus start
+    pushd $BANDIT_HOME/lib/blfs-bootscripts
+      make install-dbus
+      /etc/init.d/dbus start
     popd
 }
