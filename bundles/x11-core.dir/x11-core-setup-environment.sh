@@ -11,7 +11,7 @@ XORG_PREFIX=${PHY_XORG_PREFIX}
 export XORG_PREFIX
 
 # Set default directories for desktops
-export XDG_DATA_DIRS=${PHY_XORG_PREFIX}/usr/share
+export XDG_DATA_DIRS=${PHY_XORG_PREFIX}/share
 
 # Provide a convinient alias
 alias x="startx &> ~/.x11-session.log"
@@ -58,7 +58,7 @@ EOF
 	# Update man_db
 	bandit_backup /etc/man_db.conf
 	sed "s|/usr/X11R6|${PHY_XORG_PREFIX}|g" -i /etc/man_db.conf
-	mandb -c ${PHY_XORG_PREFIX}/usr/share/man
+	mandb -c ${PHY_XORG_PREFIX}/share/man
 	
 	# Create X11 links
 #	ln -svf ${PHY_XORG_PREFIX}              /usr/X11R6
