@@ -105,6 +105,7 @@ RED="\[\e[1;31m\]"
 GREEN="\[\e[32m\]"
 BLUE="\[\e[1;34m\]"
 
+# Set prompt
 CHROOT=""
 if [[ $PS1 =~ "BUILDER" ]]; then CHROOT="[BUILDER]:"; fi
 if [[ $PS1 =~ "TARGET" ]];  then CHROOT="[TARGET]:"; fi
@@ -115,6 +116,7 @@ else
   PS1="$GREEN\u@\h:$CHROOT$BLUE\w \$ $NORMAL"
 fi
 
+# Source profile.d scripts
 for script in /etc/profile.d/*.sh ; do
   if [ -r $script ] ; then
     . $script
@@ -202,11 +204,13 @@ EOF
     #---
 
     cat > /etc/bashrc << "EOF"
+# Define colors constants
 NORMAL="\[\e[0m\]"
 RED="\[\e[1;31m\]"
 GREEN="\[\e[32m\]"
 BLUE="\[\e[1;34m\]"
 
+# Set prompt
 CHROOT=""
 if [[ $PS1 =~ "BUILDER" ]]; then CHROOT="[BUILDER]:"; fi
 if [[ $PS1 =~ "TARGET" ]];  then CHROOT="[TARGET]:"; fi
