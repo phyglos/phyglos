@@ -26,7 +26,7 @@ BUILD_CMD=(
 'package	do	xfwm4-4.12.3                    tar.bz2'
 'package	do	xfdesktop-4.12.3                tar.bz2'
 
-'script         run     xfce4-setup'
+'script         run     xfce-core-setup'
 
 # LXDE utilities
 'package	do	lxrandr-0.3.1                   tar.xz'
