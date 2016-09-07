@@ -6,9 +6,14 @@ script_run()
 
     # Create xorg.sh in /etc/profile.d
     cat > /etc/profile.d/X11.sh <<EOF
+# Set X11 prefix
 XORG_PREFIX=${PHY_XORG_PREFIX}
 export XORG_PREFIX
 
+# Set default directories for desktops
+export XDG_DATA_DIRS=${PHY_XORG_PREFIX}/usr/share
+
+# Provide a convinient alias
 alias x="startx &> ~/.x11-session.log"
 EOF
     chmod 644 /etc/profile.d/X11.sh

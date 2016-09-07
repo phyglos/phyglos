@@ -99,9 +99,7 @@ fi
 export HISTSIZE=1000
 export HISTIGNORE="&:[bf]g:exit"
 
-# Set some defaults for graphical systems
-export XDG_DATA_DIRS=/usr/share
-
+# Define colors constants
 NORMAL="\[\e[0m\]"
 RED="\[\e[1;31m\]"
 GREEN="\[\e[32m\]"
