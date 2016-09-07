@@ -2,13 +2,6 @@
 
 build_compile()
 {
-    groupadd -g 87 ntpd
-    useradd -c "Network Time Protocol daemom" \
-	    -d /var/lib/ntp                   \
-	    -u 87 -g ntpd                     \
-	    -s /bin/false                     \
-	    ntpd
-
     ./configure               \
 	--prefix=/usr         \
 	--bindir=/usr/sbin    \
@@ -66,6 +59,14 @@ EOF
 
 install_setup()
 {
+    # Create the daemon user
+    groupadd -g 87 ntp
+    useradd -c "Network Time Protocol daemom" \
+	    -d /var/lib/ntp                   \
+	    -u 87 -g ntp                      \
+	    -s /bin/false                     \
+	    ntpd
+
     pushd $BANDIT_HOME/lib/blfs-bootscripts
       make install-ntpd
       /etc/init.d/ntpd start
