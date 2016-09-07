@@ -23,10 +23,12 @@ install_setup()
     # Configure startx
     bandit_backup /root/.xinitrc
     cat > /root/.xinitrc <<EOF
-#ck-launch-session dbus-launch --exit-with-session startxfce4
 dbus-launch --exit-with-session startxfce4
 EOF
 
+    # Copy configuration to /etc/skel
+    cp  -vR /root/.xinitrc /etc/skel/.xinitrc
+    
     # Copy configuration to phy user
     cp  -vR /root/.xinitrc /home/phy/.xinitrc
     chown -v phy:phy /home/phy/.xinitrc
