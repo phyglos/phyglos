@@ -57,8 +57,7 @@ EOF
 
 	# Update man_db
 	bandit_backup /etc/man_db.conf
-	sed "s|/usr/X11R6|${PHY_XORG_PREFIX}|g" -i /etc/man_db.conf
-	mandb -c ${PHY_XORG_PREFIX}/share/man
+	sed "s|/usr/X11R6|${PHY_XORG_PREFIX}/share/man|g" -i /etc/man_db.conf
 	
 	# Create X11 links
 #	ln -svf ${PHY_XORG_PREFIX}              /usr/X11R6
