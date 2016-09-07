@@ -2,9 +2,12 @@
 
 build_compile()
 {
-    groupadd -g 87 ntp
-    useradd -c "Network Time Protocol" -d /var/lib/ntp \
-	    -u 87 -g ntp -s /bin/false ntp
+    groupadd -g 87 ntpd
+    useradd -c "Network Time Protocol daemom" \
+	    -d /var/lib/ntp                   \
+	    -u 87 -g ntpd                     \
+	    -s /bin/false                     \
+	    ntpd
 
     ./configure               \
 	--prefix=/usr         \
