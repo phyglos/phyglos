@@ -167,10 +167,10 @@ if [ $EUID -gt 99 ]; then
     pathappend .
 fi
 
-# Set MANPATH
-pathappend /usr/share/man  MANPATH
+# Set MANPATH to include /etc/man_db.conf
+pathappend : MANPATH
 
-# Set MANPATH
+# Set INFOPATH
 pathappend /usr/share/info INFOPATH
 EOF
 
