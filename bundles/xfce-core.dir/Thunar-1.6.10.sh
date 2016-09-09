@@ -5,7 +5,7 @@ build_compile()
     ./configure           \
 	--prefix=/usr     \
         --sysconfdir=/etc \
-        --docdir=/usr/share/doc/Thunar-1.6.3
+        --docdir=/usr/share/doc/Thunar-1.6.10
     
     make
 }
