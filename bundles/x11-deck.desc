@@ -47,7 +47,6 @@ BUILD_CMD=(
 # Desktop libraries
 'package	do	libgudev-230                    tar.xz'
 'package	do	libnotify-0.7.6                 tar.xz'
-#'package	do	libwnck-3.20.1                  tar.xz' 
 
 # Desktop utilities
 'package	do	desktop-file-utils-0.22         tar.xz'
