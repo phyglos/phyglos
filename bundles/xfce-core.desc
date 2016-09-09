@@ -26,6 +26,8 @@ BUILD_CMD=(
 'package	do	xfwm4-4.12.3                    tar.bz2'
 'package	do	xfdesktop-4.12.3                tar.bz2'
 
+'package	do	Thunar-1.6.10                   tar.bz2'
+
 'script         run     xfce-core-setup'
 
 # LXDE utilities
