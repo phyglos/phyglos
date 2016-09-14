@@ -12,7 +12,7 @@ BUILD_CMD=(
 'package	do	linux-4.4.2              tar.xz   headers'
 'package	do	glibc-2.23               tar.xz'
 'script		run	phyglos-core-setup-locales-1.8.0'
-'package	do_in	tzdata2016a              tzdata2016a.tar.gz'
+'package	do	tzdata2016a              tar.xz'
 'script		run	phyglos-core-adjust-builder-1.8.0'
 
 # Start building the TARGET system
