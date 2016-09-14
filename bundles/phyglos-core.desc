@@ -30,8 +30,8 @@ BUILD_CMD=(
 'package	do	bzip2-1.0.6              tar.gz'
 'package	do	pkg-config-0.29          tar.gz'
 'package	do	ncurses-6.0              tar.gz'
-'package	do_as	attr-2.4.47              tar.gz    attr-2.4.47.src.tar.gz'
-'package	do_as	acl-2.2.52               tar.gz    acl-2.2.52.src.tar.gz'
+'package	do	attr-2.4.47              tar.gz'
+'package	do	acl-2.2.52               tar.gz'
 'package	do	libcap-2.25              tar.xz'
 'package	do	sed-4.2.2                tar.bz2'
 'package	do	shadow-4.2.1             tar.xz'
@@ -78,7 +78,7 @@ BUILD_CMD=(
 'package	do	texinfo-6.1              tar.xz'
 'package	do	eudev-3.1.5              tar.gz'
 'package	do	man-db-2.7.5             tar.xz'
-'package	do_as	vim74                    tar.bz2    vim-7.4.tar.bz2'
+'package	do	vim74                    tar.bz2'
 
 # Set up TARGET configuration files
 'script		run	phyglos-core-setup-etc-1.8.0'
