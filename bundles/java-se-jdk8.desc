@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	jdk1.8.0_101		tar.gz'
+'script	        run	java-se-jdk8-setup'
+)
