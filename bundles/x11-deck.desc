@@ -25,7 +25,7 @@ BUILD_CMD=(
 'package	do	librsvg-2.40.13                 tar.xz'
 
 # Tk
-'package	do_as	tk8.6.4                         tar.gz      tk8.6.4-src.tar.gz'
+'package	do	tk8.6.4                         tar.gz'
 
 # Icons libraries
 'package	do	startup-notification-0.12	tar.gz'
