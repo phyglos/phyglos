@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BUILD_CMD=(
+# GTK+ utilities
+'package	do	epdfview-0.1.8                  tar.bz2'
+
+# LXDE utilities
+'package	do	lxrandr-0.3.1                   tar.xz'
+)
