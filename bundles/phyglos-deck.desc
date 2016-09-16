@@ -37,6 +37,7 @@ BUILD_CMD=(
 'package	do	libpng-1.6.21              tar.xz'
 'package	do	pixman-0.34.0              tar.gz'
 'package	do	libjpeg-turbo-1.4.2        tar.gz'
+'package	do	openjpeg-1.5.2             tar.gz'
 'package	do	tiff-4.0.6                 tar.gz'
 
 # Fonts
