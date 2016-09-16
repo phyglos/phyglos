@@ -1,7 +1,6 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-
 # phyglos-deck ?
 #'package	do	gobject-introspection-1.46.0    tar.xz'
 
@@ -43,6 +42,9 @@ BUILD_CMD=(
 
 # Fonts 
 'package	do	dejavu-fonts-ttf-2.37	        tar.bz2'
+
+# Postcript and PDF
+'package	do	poppler-0.41.0 	                tar.xz'
 
 # Desktop libraries
 'package	do	libgudev-230                    tar.xz'
