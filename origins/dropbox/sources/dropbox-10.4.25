@@ -1,0 +1,20 @@
+#!/bin/bash
+
+case $BANDIT_TARGET_ARCH in
+    x86)
+        URL=https://www.dropbox.com/download?plat=lnx.x86
+	MD5=ff8ce058e1530822855687cff1456c6f
+	ARCH=x86
+	;;
+    x86_64)
+        URL=https://www.dropbox.com/download?plat=lnx.x86_64
+	MD5=d1116f4139fd5058737f04659d5d5b38
+	ARCH=x86_64
+	;;
+esac	  
+
+sources_prepare()
+{
+    bandit_source_rename download?plat=lnx.$ARCH dropbox-10.4.25.tar.gz
+    bandit_source_repackage_into dropbox-10.4.25.tar.gz dropbox-10.4.25
+}
