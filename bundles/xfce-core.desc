@@ -29,6 +29,7 @@ BUILD_CMD=(
 'package	do	tumbler-0.1.31                  tar.bz2'
 'package	do	Thunar-1.6.10                   tar.bz2'
 'package	do	thunar-volman-0.8.1             tar.bz2'
+'package	do	thunar-archive-plugin-0.3.1     tar.bz2'
 
 'script         run     xfce-core-setup'
 )
