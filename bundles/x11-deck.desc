@@ -53,6 +53,7 @@ BUILD_CMD=(
 # Desktop utilities
 'package	do	desktop-file-utils-0.22         tar.xz'
 'package	do	shared-mime-info-1.5            tar.xz'
+'package	do	xarchiver-0.5.4                 tar.bz2'
 
 'script	        run	x11-deck-1.8.0-setup'
 )
