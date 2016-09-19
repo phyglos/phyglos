@@ -6,8 +6,8 @@ script_run()
     bandit_log "Creating /etc/passwd and /etc/group files..."
 
 cat > /etc/passwd << EOF
-root:x:0:0:root:/root:/bin/bash
-bin:x:1:1:bin:/dev/null:/bin/false
+root:x:0:0::/root:/bin/bash
+bin:x:1:1::/dev/null:/bin/false
 daemon:x:6:6:Daemon user:/dev/null:/bin/false
 games:x:60:60:Games user:/dev/null:/bin/false
 nobody:x:99:99:Unprivileged user:/dev/null:/bin/false
