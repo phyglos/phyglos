@@ -15,7 +15,9 @@ build_compile()
 
 build_pack()
 {
-    make DESTDIR=$BUILD_PACK install
+    make DESTDIR=$BUILD_PACK \
+	 prefix=/usr         \
+	 install
 
     make DESTDIR=$BUILD_PACK install-ti
 
