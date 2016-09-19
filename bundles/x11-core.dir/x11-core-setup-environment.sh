@@ -11,7 +11,8 @@ XORG_PREFIX=${PHY_XORG_PREFIX}
 export XORG_PREFIX
 
 # Set default directories for desktops
-export XDG_DATA_DIRS=${PHY_XORG_PREFIX}/share
+export XDG_CONFIG_DIRS=/etc/xdg/
+export XDG_DATA_DIRS=/usr/share/
 
 # Provide a convinient alias
 alias x="startx &> ~/.x11-session.log"

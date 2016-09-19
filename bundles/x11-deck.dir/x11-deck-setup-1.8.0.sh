@@ -2,6 +2,9 @@
 
 script_run()
 {
+    # Update desktop applications
+    update-desktop-database
+    
     # Update again icons cache
     gtk-update-icon-cache -qf /usr/share/icons/hicolor
     gtk-update-icon-cache -qf /usr/share/icons/Adwaita

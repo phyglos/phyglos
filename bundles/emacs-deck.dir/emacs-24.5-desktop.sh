@@ -23,7 +23,7 @@ EOF
 
 install_setup()
 {
-    update-desktop-database /usr/share/applications
+    update-desktop-database
     
     gtk-update-icon-cache -t -f --include-image-data /usr/share/icons/hicolor
 }

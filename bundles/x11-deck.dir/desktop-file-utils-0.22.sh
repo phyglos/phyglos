@@ -15,5 +15,5 @@ build_pack()
 
 install_setup()
 {
-    update-desktop-database /usr/share/applications
+    update-desktop-database
 }

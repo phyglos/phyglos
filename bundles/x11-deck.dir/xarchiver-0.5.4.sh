@@ -19,3 +19,10 @@ build_pack()
          DOCDIR=/usr/share/doc/xarchiver-0.5.4 \
 	 install   
 }
+
+install_setup()
+{
+    update-desktop-database
+    
+    gtk-update-icon-cache -t -f --include-image-data /usr/share/icons/hicolor
+}
