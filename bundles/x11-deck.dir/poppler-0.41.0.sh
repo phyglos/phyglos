@@ -32,7 +32,9 @@ build_pack()
     # Install additional encoding data
     cd poppler-data-0.4.7
 
-    make DESTDIR=$BUILD_PACK install
+    make DESTDIR=$BUILD_PACK \
+	 prefix=/usr         \
+	 install
 
     cd ..
 }
