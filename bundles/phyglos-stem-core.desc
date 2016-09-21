@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BUILD_CMD=(
+'package	do	gsl-2.1                  tar.gz'
+)
