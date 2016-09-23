@@ -11,7 +11,7 @@ build_compile()
     make              
 }
 
-build_test_level=0
+build_test_level=4
 build_test()
 {
     make check
