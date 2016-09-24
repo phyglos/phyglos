@@ -3,5 +3,5 @@ MD5="c4a2d71ff56aec5ebfab2a3f059be99d"
 
 sources_prepare()
 {
-  bandit_rename_source icu4c-56_1-src.tgz icu.tgz
+  bandit_source_rename icu4c-56_1-src.tgz icu.tgz
 }
