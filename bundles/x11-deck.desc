@@ -51,9 +51,10 @@ BUILD_CMD=(
 'package	do	libnotify-0.7.6                 tar.xz'
 
 # Desktop utilities
+#'package	do	xdg-utils-1.1.1                 tar.gz'
 'package	do	desktop-file-utils-0.22         tar.xz'
 'package	do	shared-mime-info-1.5            tar.xz'
 'package	do	xarchiver-0.5.4                 tar.bz2'
 
-'script	        run	x11-deck-1.8.0-setup'
+'script	        run	x11-deck-setup-1.8.0'
 )
