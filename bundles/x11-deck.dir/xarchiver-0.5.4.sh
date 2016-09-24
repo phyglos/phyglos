@@ -24,5 +24,5 @@ install_setup()
 {
     update-desktop-database
     
-    gtk-update-icon-cache -t -f --include-image-data /usr/share/icons/hicolor
+    gtk-update-icon-cache -qt -f --include-image-data /usr/share/icons/hicolor
 }

@@ -12,5 +12,5 @@ build_pack()
 
 install_setup()
 {
-    gtk-update-icon-cache -f /usr/share/icons/hicolor
+    gtk-update-icon-cache -qf /usr/share/icons/hicolor
 }
