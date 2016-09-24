@@ -12,5 +12,5 @@ build_pack()
 
 install_setup()
 {
-    gtk-update-icon-cache -f /usr/share/icons/nuoveXT2
+    gtk-update-icon-cache -qf /usr/share/icons/nuoveXT2
 }
