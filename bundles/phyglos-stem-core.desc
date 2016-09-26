@@ -2,5 +2,5 @@
 
 BUILD_CMD=(
 'package	do	gsl-2.1                  tar.gz'
-'package	do	boost-1.60.0             tar.gz'
+'package	do	boost_1_60_0             tar.gz'
 )
