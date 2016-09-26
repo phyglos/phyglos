@@ -2,6 +2,8 @@
 
 BUILD_CMD=( 
 '# System utilities'
+'package	   do	    lsof_4.89                 tar.bz2'
+'package	   do	    strace-4.5.19             tar.bz2'
 'package           do       pciutils-3.4.1            tar.xz'
 
 '# Network utilities'
