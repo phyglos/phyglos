@@ -2,4 +2,5 @@
 
 BUILD_CMD=( 
 'package	do	apr-1.5.2 		tar.bz2'
+'package	do	apr-util-1.5.4 		tar.bz2'
 )
