@@ -81,6 +81,7 @@ BUILD_CMD=(
 'package	do	time-1.7                   tar.gz'
 'package	do	tree-1.7.0                 tgz'
 
+'package	do	libarchive-3.2.1           tar.gz'
 'package	do	zip30                      tgz'
 'package	do	unzip60                    tar.gz'
 
