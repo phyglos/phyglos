@@ -40,8 +40,11 @@ BUILD_CMD=(
 'package	do	gnome-icon-theme-3.12.0 	tar.xz'
 'package	do	lxde-icon-theme-0.5.1   	tar.xz'
 
-# Fonts 
+# More fonts 
 'package	do	dejavu-fonts-ttf-2.37	        tar.bz2'
+
+# Color management
+'package	do	lcms2-2.7 	                tar.gz'
 
 # Postcript and PDF
 'package	do	poppler-0.41.0 	                tar.xz'
