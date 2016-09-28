@@ -48,6 +48,7 @@ BUILD_CMD=(
 
 # Postcript and PDF
 'package	do	poppler-0.41.0 	                tar.xz'
+'package	do	ghostscript-9.19                tar.bz2'
 
 # Desktop libraries
 'package	do	libgudev-230                    tar.xz'

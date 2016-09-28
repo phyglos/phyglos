@@ -1,0 +1,8 @@
+URL=(https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs919/ghostscript-9.19.tar.gz
+     http://downloads.sourceforge.net/gs-fonts/ghostscript-fonts-std-8.11.tar.gz
+     http://downloads.sourceforge.net/gs-fonts/gnu-gs-fonts-other-6.0.tar.gz
+    )
+MD5=(c9682ce6b852f9197c69905a43928907
+     6865682b095f8c4500c54b285ff05ef6
+     33457d3f37de7ef03d2eea05a9e6aa4f
+    )
