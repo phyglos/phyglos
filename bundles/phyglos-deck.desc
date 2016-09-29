@@ -34,6 +34,7 @@ BUILD_CMD=(
 
 # Graphics
 'package        do      giflib-5.1.2               tar.bz2'
+'package        do      ijs-0.35                   tar.bz2'
 'package	do	libpng-1.6.21              tar.xz'
 'package	do	pixman-0.34.0              tar.gz'
 'package	do	libjpeg-turbo-1.4.2        tar.gz'
