@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BUILD_CMD=(
-# Netscape libraries
+'package	do	npapi-sdk-0.27.2                tar.bz2'
 'package	do	nspr-4.12                       tar.gz'
 'package	do	nss-3.23                        tar.gz'
 )
