@@ -26,7 +26,7 @@ build_pack()
 {
     make DESTDIR=$BUILD_PACK install
 
-    bandit_mkdir $BUILD_PACK/usr/share/doc/
-    mv -v   /usr/share/libatomic_ops/*  $BUILD_PACK/usr/share/doc/libatomic_ops-7.4.2
-    rm -vrf $BUILD_PACK/usr/share/libatomic_ops   
+    bandit_mkdir $BUILD_PACK/usr/share/doc/libatomic_ops-7.4.2
+    mv     $BUILD_PACK/usr/share/libatomic_ops/* $BUILD_PACK/usr/share/doc/libatomic_ops-7.4.2
+    rm -rf $BUILD_PACK/usr/share/libatomic_ops   
 }
