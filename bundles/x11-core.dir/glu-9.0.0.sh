@@ -1,8 +1,16 @@
 #!/bin/bash
 
-./configure --prefix=$XORG_PREFIX \
-            --disable-static &&
-make
+build_compile()
+{   
+    ./configure \
+	--prefix=$XORG_PREFIX \
+        --disable-static
 
-make install
+    make
+}
+
+build_pack()
+{
+    make DESTDIR=$BUILD_PACK install
+}
 
