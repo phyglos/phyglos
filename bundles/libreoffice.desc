@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'module	        perl5 	Archive::Zip'
+
+'package	do	clucene-core-2.3.3.4 		tar.gz'
+'package	do	openldap-2.4.44 		tgz        client'
+
+'package	do	libreoffice-5.1.0.3 		tar.xz'
+)
