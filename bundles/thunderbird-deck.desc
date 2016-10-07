@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=(
+# Thunderbird
+'package	do	thunderbird-38.6.0           tar.xz'
+)

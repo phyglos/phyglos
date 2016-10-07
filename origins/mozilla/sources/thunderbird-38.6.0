@@ -1,0 +1,8 @@
+URL=https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.6.0/source/thunderbird-38.6.0.source.tar.bz2
+MD5=110a1a31bb4fe7d50cfbfbfd65e5968b
+
+sources_prepare()
+{
+  bandit_source_rename thunderbird-38.6.0.source.tar.bz2 thunderbird-38.6.0.tar.bz2
+  bandit_source_repackage_into thunderbird-38.6.0.tar.bz2 thunderbird-38.6.0
+}
