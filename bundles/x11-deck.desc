@@ -17,6 +17,7 @@ BUILD_CMD=(
 'package	do	libxklavier-5.4                 tar.bz2'
 
 # Graphics libraries
+'package	do	libexif-0.6.21                  tar.bz2'
 'package	do	gdk-pixbuf-2.32.3       	tar.xz'
 'package	do	libcroco-0.6.11                 tar.xz'
 'package	do	cairo-1.14.6       		tar.xz'
