@@ -88,6 +88,8 @@ BUILD_CMD=(
 'package	do	zip30                      tgz'
 'package	do	unzip60                    tar.gz'
 
+'package	do	hd2u-1.0.3                 tgz'
+
 # SQLite system database
 'package	do	sqlite-autoconf-3140100    tar.gz'
 
