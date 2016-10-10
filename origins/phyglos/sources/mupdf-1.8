@@ -1,0 +1,10 @@
+URL=(http://www.mupdf.com/downloads/archive/mupdf-1.8-source.tar.gz
+     file://srv/bandit/phyglos/mupdf-1.8-openjpeg21-1.patch)
+MD5=(3205256d78d8524d67dd2a47c7a345fa
+     fc2b32a51cbc3513aae17e241d6ac185)
+
+sources_prepare()
+{
+  bandit_source_rename mupdf-1.8-source.tar.gz mupdf-1.8.tar.gz
+  bandit_source_repackage_into mupdf-1.8.tar.gz mupdf-1.8
+}

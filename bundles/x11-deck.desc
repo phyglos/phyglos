@@ -51,6 +51,7 @@ BUILD_CMD=(
 'package	do	ghostscript-9.19                tar.bz2'
 'package	do	poppler-0.41.0 	                tar.xz'
 'package	do	qpdf-6.0.0 	                tar.gz'
+'package	do	mupdf-1.8 	                tar.gz'
 
 # Desktop libraries
 'package	do	libgudev-230                    tar.xz'
