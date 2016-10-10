@@ -3,8 +3,5 @@
 BUILD_CMD=( 
 # System C compiler cache'
 'package	do	ccache-3.2.7             tar.xz'
-
-# CMake 
-'package	do	cmake-3.4.3              tar.gz'
 )
 
