@@ -92,6 +92,8 @@ BUILD_CMD=(
 
 'package	do	hd2u-1.0.3                 tgz'
 
+'package	do	logrotate-3.9.1            tar.gz'
+
 # SQLite system database
 'package	do	sqlite-autoconf-3140100    tar.gz'
 
