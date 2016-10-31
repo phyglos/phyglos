@@ -6,7 +6,7 @@ script_run()
     
     groupadd -g 22 cron
     useradd -u 22 -g cron        \
-	    -c "FCron  daemom"   \
+	    -c "FCron daemom"    \
 	    -d /dev/null         \
 	    -s /bin/false        \
 	    crond

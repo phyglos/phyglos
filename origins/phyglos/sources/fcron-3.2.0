@@ -1,0 +1,7 @@
+URL=http://fcron.free.fr/archives/fcron-3.2.0.src.tar.gz
+MD5=4b031c2fba32a98fa814d1557158b0e9
+
+sources_prepare()
+{
+  bandit_source_rename fcron-3.2.0.src.tar.gz fcron-3.2.0.tar.gz
+}
