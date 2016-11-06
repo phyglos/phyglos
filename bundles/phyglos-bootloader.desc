@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	grub-2.02~beta3 		tar.xz'
+'script		run	phyglos-bootloader-1.8.0-setup'
+)
