@@ -21,7 +21,7 @@ build_pack()
 {
     make -j1 DESTDIR=$BUILD_PACK install             \
 	SLSH_DOC_DIR=/usr/share/doc/slang-2.3.1/slsh \
-	install_doc_dir=/usr/share/doc/slang-2.3.1   \
+	install_doc_dir=/usr/share/doc/slang-2.3.1
 
     chmod -v 755 $BUILD_PACK/usr/lib/libslang.so.2.3.1
     chmod -v 755 $BUILD_PACK/usr/lib/slang/v2/modules/*.so
