@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'script 	run 	vsftpd-core-setup-1.8.0'
+'package	do	vsftpd-3.0.3 		tar.gz'
+)
