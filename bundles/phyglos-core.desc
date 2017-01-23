@@ -15,6 +15,9 @@ BUILD_CMD=(
 'package	do	tzdata2016a              tar.xz'
 'script		run	phyglos-core-adjust-builder-1.8.0'
 
+# Rebuild porg using the new libC
+'package	do	porg-0.8                 tar.gz'
+
 # Start building the TARGET system
 'package	do	zlib-1.2.8               tar.xz'  
 'package	do	file-5.25                tar.gz'
