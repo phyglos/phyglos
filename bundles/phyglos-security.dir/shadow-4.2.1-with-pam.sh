@@ -10,8 +10,6 @@ build_compile()
     sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' \
 	-e 's@/var/spool/mail@/var/mail@' etc/login.defs &&
 
-    sed -i 's/1000/1001/' etc/useradd
-
     ./configure           \
 	--sysconfdir=/etc \
 	--with-group-name-max-length=32
