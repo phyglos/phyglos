@@ -6,8 +6,14 @@ export PHY_KERNEL_CFG=$PHY_KERNEL_SRC-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
 _get_config_file()
 {
     if [ ! -e /boot/$PHY_KERNEL_CFG.config ]; then
-	echo "Copying a new .config file..."
-	cp -v $BUILD_SOURCES/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
+	if [ -e $BUILD_SOURCES/$PHY_KERNEL_CFG.config ]; then
+	    echo "Copying a new .config file..."
+	    cp -v $BUILD_SOURCES/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
+	else
+	    echo "Creating a defaulf .config file..."
+	    make defconfig
+	    cp -v .config /boot/$PHY_KERNEL_CFG.config 
+	fi
     else
 	echo "Using .config file from /boot directory..."
     fi
@@ -80,8 +86,9 @@ EOF
 	# Clean source tree again
 	bandit_log "Cleaning source tree..."
 	rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
-	
 	make clean
+	
+	bandit_log "Saving source tree..."
 	bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
 	cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source	
     fi
