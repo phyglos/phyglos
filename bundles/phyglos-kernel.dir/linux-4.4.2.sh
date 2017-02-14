@@ -1,7 +1,7 @@
 #!/bin/bash 
 
-export PHY_KERNEL_SRC=linux-$PHY_KERNEL_VER
-export PHY_KERNEL_CFG=$PHY_KERNEL_SRC-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
+PHY_KERNEL_SRC=linux-$PHY_KERNEL_VER
+PHY_KERNEL_CFG=$PHY_KERNEL_SRC-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
 
 _get_config_file()
 {
@@ -17,7 +17,9 @@ _get_config_file()
     else
 	echo "Using .config file from /boot directory..."
     fi
+    # Get proper .config file
     cp -v /boot/$PHY_KERNEL_CFG.config .config
+    echo
 }
 
 build_config()
@@ -27,6 +29,9 @@ build_config()
 
     make menuconfig 
 
+    # Save .config file
+    echo
+    echo "Saving .config file in /boot directory..."
     cp -v /boot/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config.last
     cp -v .config /boot/$PHY_KERNEL_CFG.config
     echo
@@ -67,27 +72,24 @@ install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
 EOF
 
     # Pack a copy of the kernel build directory 
+    rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
     if [ $PHY_KERNEL_KEEP_BUILD = "yes" ]; then
 	bandit_log "Saving build tree..."
-	rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
-
 	bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
 	cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
 
 	# Make a link from build to sources if they are not saved later
 	if [ $PHY_KERNEL_KEEP_SOURCE != "yes" ]; then
 	    rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
-	    ln -s /lib/modules/$PHY_KERNEL_VER/build $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
+	    ln -s build $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
 	fi
     fi
     
     # Pack a clean copy of the kernel source directory 
     if [ $PHY_KERNEL_KEEP_SOURCE = "yes" ]; then
 	# Clean source tree again
-	bandit_log "Cleaning source tree..."
 	rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
 	make clean
-	
 	bandit_log "Saving source tree..."
 	bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
 	cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source	
@@ -99,4 +101,3 @@ EOF
     rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source/Documentation
     rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build/Documentation
 }
-
