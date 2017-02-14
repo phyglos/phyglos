@@ -1,7 +1,28 @@
-#URL=(https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.2.tar.xz
-#     http://phyglos.org/download/phyglos-01.08.a3/sources/phyglos/linux-4.4.2-x86_64-vmware-generic.config)
-#MD5=(d1b8be99e6c12cbc52b2af0520d550bb
-#     1599a7267d03d3af05ec52711bf4c4b0)
+case $PHY_KERNEL_ARCH in
+     x86)
+	case $PHY_KERNEL_HW in
+	     pc_generic) 
+	     	MD5_CONFIG=
+		;;
+	     vmware_generic) 
+	     	MD5_CONFIG=
+		;;
+	esac
+     ;;
+     x86_64)
+	case $PHY_KERNEL_HW in
+	     pc_generic) 
+	     	MD5_CONFIG=eb7aaa069c42e5bdae55d07279fbdd45
+		;;
+	     vmware_generic) 
+	     	MD5_CONFIG=20e48cbcece0154af67742c4fd8efb02
+		;;
+	esac
+     ;;
+esac
 
-URL=https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.2.tar.xz   
-MD5=d1b8be99e6c12cbc52b2af0520d550bb
+URL=(https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.2.tar.xz
+     ftp://phyglos.org/archive/phyglos-1.8.a3/sources/phyglos/linux-${PHY_KERNEL_VER}-${PHY_KERNEL_ARCH}-${PHY_KERNEL_HW}.config )
+MD5=(d1b8be99e6c12cbc52b2af0520d550bb
+     ${MD5_CONFIG} )
+
