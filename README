@@ -1,0 +1,25 @@
+#
+# README - General description of the contents of the tarball
+#
+# Copyright (C) 2015-2017 Angel Linares Zapater
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License, version 2, as 
+# published by the Free Software Foundation. See the COPYING file.
+#
+# This program is distributed WITHOUT ANY WARRANTY; without even the 
+# implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+#
+
+The phyglos catalog
+===================
+
+The phyglos catalog is a set of bundles and origins needed to install a phyglos distribution using the BANDIT toolkit. 
+
+The COPYING file contains the GNU License for this software.
+The INSTALL file describes how to install the catalog in the BANDIT toolkit. 
+The RELEASE file describes the main changes in this release.
+
+Visit http://phy.wiki for more information.
+
+
