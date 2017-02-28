@@ -19,7 +19,7 @@ BUILD_CMD=(
 'package	do	porg-0.8                 tar.gz'
 
 # Start building the TARGET system
-'package	do	zlib-1.2.8               tar.xz'  
+'package	do	zlib-1.2.11              tar.xz'  
 'package	do	file-5.25                tar.gz'
 'package	do	binutils-2.26            tar.bz2'
 
