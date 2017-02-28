@@ -1,3 +1,12 @@
+#
+# Determine .config file for the kernel
+source $BUILD_BUNDLES/phyglos-kernel.conf
+
+# Set URL_CONFIG
+URL_CONFIG="ftp://phyglos.org/download/linux-configs"
+URL_CONFIG="$URL_CONFIG/linux-${PHY_KERNEL_VER}-${PHY_KERNEL_ARCH}-${PHY_KERNEL_HW}.config"
+
+# Set MD5_CONFIG
 case $PHY_KERNEL_ARCH in
      x86)
 	case $PHY_KERNEL_HW in
@@ -22,7 +31,7 @@ case $PHY_KERNEL_ARCH in
 esac
 
 URL=(https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.2.tar.xz
-     ftp://phyglos.org/archive/phyglos-1.8.a3/sources/phyglos/linux-${PHY_KERNEL_VER}-${PHY_KERNEL_ARCH}-${PHY_KERNEL_HW}.config )
+     ${URL_CONFIG} )
 MD5=(d1b8be99e6c12cbc52b2af0520d550bb
      ${MD5_CONFIG} )
 
