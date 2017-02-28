@@ -20,6 +20,9 @@ $ tar xvf phyglos
 
 As root, copy the bundles and origins directories into the $BANDIT_HOME/etc directory
 # cd phyglos-x.y.z
-# mv bundles $BANDIT_HOME/etc
-# mv origins $BANDIT_HOME/etc
+# cp bundles $BANDIT_HOME/etc
+# cp origins $BANDIT_HOME/etc
 # chown -R root.root $BANDIT_HOME/etc
+
+Check for the new available bundles
+$ bandit search --bundles all 
