@@ -20,9 +20,6 @@ script_run()
 phy ALL=(ALL) NOPASSWD: ALL
 EOF
 
-    # Give ownership of $BANDIT_HOME to phy user
-    chown -R phy:phy $BANDIT_HOME
-
     # Set a random password of the root user and lock the account
     bandit_log "Locking root account..."
 
