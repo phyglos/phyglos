@@ -17,8 +17,8 @@ build_compile()
 	no-ssl2               \
 	no-ssl3               \
 	no-weak-ssl-ciphers   \
-        no-comp               \               
-        no-zlib               
+        no-comp               \
+        no-zlib
 
     make depend
     make
