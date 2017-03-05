@@ -2,7 +2,6 @@
 
 script_run()
 {
-
     bandit_log "Creating user 'phy' in group 'phy'..."
 
     # Create group and user phy 
@@ -24,7 +23,13 @@ EOF
     # Give ownership of $BANDIT_HOME to phy user
     chown -R phy:phy $BANDIT_HOME
 
-    bandit_log "Locking down root account..."
+    # Set a random password of the root user and lock the account
+    bandit_log "Locking root account..."
 
+    local password
+    bandit_random_string password
+    echo "root:${password}" | chpasswd
+    unset password
+    
     passwd -l root
 }
