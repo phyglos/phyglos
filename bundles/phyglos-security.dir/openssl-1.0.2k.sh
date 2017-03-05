@@ -3,10 +3,9 @@
 build_compile()
 {
     # Always build with an empty CCache
-    which ccache 2>&1 >/dev/null
-    [[ $? == 0 ]] && ccache -C
+    bandit_system_has ccache && ccache -C
 
-    # Remove unneeded encryptation methods
+    # Remove unneeded encryptation and compression methods
     ./config                  \
 	--prefix=/usr         \
         --openssldir=/etc/ssl \
@@ -14,13 +13,15 @@ build_compile()
         shared                \
         no-idea               \
 	no-rc5                \
+	no-psk                \
 	no-ssl2               \
 	no-ssl3               \
 	no-weak-ssl-ciphers   \
+        no-comp               \               
         no-zlib               
 
     make depend
-    make 
+    make
 }
 
 build_test_level=1
@@ -39,6 +40,6 @@ build_pack()
 	MANSUFFIX=ssl \
 	install 
 
-    install -dv -m755 $BUILD_PACK/usr/share/doc/openssl-1.0.2h
-    cp -vfr doc/*     $BUILD_PACK/usr/share/doc/openssl-1.0.2h
+    install -dv -m755 $BUILD_PACK/usr/share/doc/openssl-1.0.2k
+    cp -vfr doc/*     $BUILD_PACK/usr/share/doc/openssl-1.0.2k
 }
