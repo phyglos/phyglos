@@ -10,8 +10,6 @@ build_compile()
 	--disable-static
     
     make
- 
-    make install 
 }
 
 build_pack()
@@ -19,9 +17,4 @@ build_pack()
     make DESTDIR=$BUILD_PACK install 
 }
  
-install_setup()
-{
-    # Make porg available in porg database
-    make logme
-}
 
