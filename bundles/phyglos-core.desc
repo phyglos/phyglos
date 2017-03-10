@@ -1,8 +1,8 @@
 #!/bin/bash
 
 BUILD_CMD=(
-# Prepare to build the TARGET system
-'package	do	porg-0.10                tar.gz'
+# Build porg using BUILDER libC
+'package	do	porg-0.10                tar.gz   pre-libc'
 
 #---
 # Start a new LFS build
