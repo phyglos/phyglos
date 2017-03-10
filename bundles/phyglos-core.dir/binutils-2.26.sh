@@ -23,5 +23,7 @@ build_test()
 
 build_pack()
 {
-    make tooldir=$BUILD_PACK/usr install
+    make DESTDIR=$BUILD_PACK \
+	 tooldir=/usr        \
+	 install
 }
