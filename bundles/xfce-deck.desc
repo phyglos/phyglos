@@ -2,6 +2,7 @@
 
 BUILD_CMD=(
 #XFCE Apps
+'package	do	xfce4-screenshooter-1.8.2       tar.bz2'
 #'package	do	xfce4-volumed-0.1.13            tar.bz2'
 
 'package	do	ristretto-0.8.0                 tar.bz2'
