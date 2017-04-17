@@ -2,6 +2,7 @@
 
 BUILD_CMD=(
 # GNOME libraries for XFCE
+'package	do	glib-networking-2.50.0          tar.xz'
 'package	do	libwnck-2.30.7                  tar.xz'
 'package	do	vte-0.28.2                      tar.xz'
 
