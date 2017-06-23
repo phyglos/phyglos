@@ -4,7 +4,7 @@ build_compile()
 {
     ./configure                           \
 	--prefix=/usr                     \
-        --docdir=/usr/share/doc/pcre-8.38 \
+        --docdir=/usr/share/doc/pcre-8.40 \
         --enable-unicode-properties       \
         --enable-pcre16                   \
         --enable-pcre32                   \
