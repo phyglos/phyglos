@@ -17,7 +17,6 @@ The phyglos catalog
 The phyglos catalog is a set of bundles and origins needed to install a phyglos distribution using the BANDIT toolkit. 
 
 The COPYING file contains the GNU License for this software.
-The INSTALL file describes how to install the catalog in the BANDIT toolkit. 
 The RELEASE file describes the main changes in this release.
 
 Visit http://phy.wiki for more information.
