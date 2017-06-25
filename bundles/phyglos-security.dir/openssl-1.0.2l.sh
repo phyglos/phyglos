@@ -21,7 +21,7 @@ build_compile()
         no-zlib
 
     make depend
-    make
+    make -j1
 }
 
 build_test_level=1
@@ -40,6 +40,6 @@ build_pack()
 	MANSUFFIX=ssl \
 	install 
 
-    install -dv -m755 $BUILD_PACK/usr/share/doc/openssl-1.0.2k
-    cp -vfr doc/*     $BUILD_PACK/usr/share/doc/openssl-1.0.2k
+    install -dv -m755 $BUILD_PACK/usr/share/doc/openssl-1.0.2l
+    cp -vfr doc/*     $BUILD_PACK/usr/share/doc/openssl-1.0.2l
 }
