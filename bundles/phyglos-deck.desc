@@ -18,7 +18,7 @@ BUILD_CMD=(
 # System libraries'
 'package	do	libatomic_ops-7.4.2        tar.gz'
 'package	do	libarchive-3.2.1           tar.gz'
-'package	do	libevent-2.0.22-stable     tar.gz'
+'package	do	libevent-2.1.8-stable      tar.gz'
 'package	do	libusb-1.0.20              tar.bz2'
 'package	do	pcre-8.40                  tar.bz2'
 'package	do	popt-1.16                  tar.gz'
