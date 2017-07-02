@@ -34,6 +34,6 @@ BUILD_CMD=(
 'package	do	curl-7.47.1              tar.lzma'
 'package	do	iproute2-4.4.0           tar.xz'
 'script		run	phyglos-security-setup-ssh-1.8.0'
-'package	do	openssh-7.3p1            tar.gz'
+'package	do	openssh-7.5p1            tar.gz'
 )
 

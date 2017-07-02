@@ -2,11 +2,13 @@
 
 build_compile()
 {
-    ./configure                 \
-	--prefix=/usr           \
-        --sysconfdir=/etc/ssh   \
-        --with-pam              \
-	--with-md5-passwords    \
+    patch -Np1 -i $BUILD_SOURCES/openssh-7.5p1-openssl-1.1.0-1.patch
+
+    ./configure                                 \
+	--prefix=/usr                           \
+        --sysconfdir=/etc/ssh                   \
+        --with-pam                              \
+	--with-md5-passwords                    \
         --with-privsep-path=/var/lib/sshd
 
     make 
@@ -15,14 +17,12 @@ build_compile()
 build_test_level=1
 build_test()
 {
-: ###    make test
+    make test
 }
 
 build_pack()
 {
-echo "installing"
     make DESTDIR=$BUILD_PACK install
-echo "installed"
     
     bandit_mkdir $BUILD_PACK/usr/bin
     install -v -m755 contrib/ssh-copy-id $BUILD_PACK/usr/bin
@@ -30,8 +30,8 @@ echo "installed"
     bandit_mkdir $BUILD_PACK/usr/share/man/man1
     install -v -m644 contrib/ssh-copy-id.1 $BUILD_PACK/usr/share/man/man1         
 
-    bandit_mkdir $BUILD_PACK/usr/share/doc/openssh-7.3p1
-    install -v -m644 INSTALL LICENCE OVERVIEW README* $BUILD_PACK/usr/share/doc/openssh-7.3p1   
+    bandit_mkdir $BUILD_PACK/usr/share/doc/openssh-7.5p1
+    install -v -m644 INSTALL LICENCE OVERVIEW README* $BUILD_PACK/usr/share/doc/openssh-7.5p1   
 }
 
 install_setup()
