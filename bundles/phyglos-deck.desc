@@ -101,7 +101,7 @@ BUILD_CMD=(
 'package	do	sqlite-autoconf-3140100    tar.gz'
 
 # System services
-'package	do	ntp-4.2.8p6                tar.gz'
+'package	do	ntp-4.2.8p10               tar.gz'
 'package	do	fuse-2.9.7                 tar.gz'
 
 # Console applications

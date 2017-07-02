@@ -2,13 +2,19 @@
 
 build_compile()
 {
-    ./configure               \
-	--prefix=/usr         \
-	--bindir=/usr/sbin    \
-	--sysconfdir=/etc     \
-	--enable-linuxcaps    \
+    # Fix update-leap command
+    sed -e "s/https/http/"              \
+        -e 's/"(\\S+)"/"?([^\\s"]+)"?/' \
+        -i scripts/update-leap/update-leap.in
+    
+    CFLAGS="-O2 -g -fPIC"            \
+    ./configure                      \
+	--prefix=/usr                \
+	--bindir=/usr/sbin           \
+	--sysconfdir=/etc            \
+	--enable-linuxcaps           \
 	--with-lineeditlibs=readline \
-	--docdir=/usr/share/doc/ntp-4.2.8p6
+	--docdir=/usr/share/doc/ntp-4.2.8p10
     
     make
 }
