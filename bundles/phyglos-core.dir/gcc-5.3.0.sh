@@ -103,21 +103,21 @@ install_verify()
     echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	x86)
-	    echo "SEARCH_DIR(\"/usr/i686-unknown-linux-gnu/lib32\")"
+	    echo "SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib32\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib32\")"
 	    echo "SEARCH_DIR(\"/lib32\")"
 	    echo "SEARCH_DIR(\"/usr/lib32\")"
-	    echo "SEARCH_DIR(\"/usr/i686-unknown-linux-gnu/lib\")"
+	    echo "SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib\")"
 	    echo "SEARCH_DIR(\"/lib\")"
 	    echo "SEARCH_DIR(\"/usr/lib\");"
 	    ;;
 	x86_64)
-	    echo "SEARCH_DIR(\"/usr/x86_64-unknown-linux-gnu/lib64\")"
+	    echo "SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib64\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib64\")"
 	    echo "SEARCH_DIR(\"/lib64\")"
 	    echo "SEARCH_DIR(\"/usr/lib64\")"
-	    echo "SEARCH_DIR(\"/usr/x86_64-unknown-linux-gnu/lib\")"
+	    echo "SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib\")"
 	    echo "SEARCH_DIR(\"/lib\")"
 	    echo "SEARCH_DIR(\"/usr/lib\");"
