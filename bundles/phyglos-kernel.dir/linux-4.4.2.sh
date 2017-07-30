@@ -6,16 +6,20 @@ PHY_KERNEL_CFG=$PHY_KERNEL_SRC-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
 _get_config_file()
 {
     if [ ! -e /boot/$PHY_KERNEL_CFG.config ]; then
+	if [ ! -e $BUILD_SOURCES/$PHY_KERNEL_CFG.config ]; then
+	    tar -xvf $BUILD_SOURCES/linux-configs-$PHY_KERNEL_VER.tar.xz \
+		-C $BUILD_SOURCES $PHY_KERNEL_CFG.config
+	fi
 	if [ -e $BUILD_SOURCES/$PHY_KERNEL_CFG.config ]; then
-	    echo "Copying a new .config file..."
-	    cp -v $BUILD_SOURCES/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
+	    echo "Creating a new .config file $PHY_KERNEL_CFG.config in /boot directory..."
+	    cp $BUILD_SOURCES/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
 	else
-	    echo "Creating a defaulf .config file..."
+	    echo "Creating a defaulf .config file in /boot directory..."
 	    make defconfig
 	    cp -v .config /boot/$PHY_KERNEL_CFG.config 
 	fi
     else
-	echo "Using .config file from /boot directory..."
+	echo "Using existing .config file from /boot directory..."
     fi
     # Get proper .config file
     cp -v /boot/$PHY_KERNEL_CFG.config .config
