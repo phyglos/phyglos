@@ -20,6 +20,10 @@ build_test()
 build_pack()
 {
     make DESTDIR=$BUILD_PACK install
+
+    # Install man pages package
+    tar -xf $BUILD_SOURCES/git-manpages-2.13.3.tar.xz -C $BUILD_PACK/usr/share/man \
+	--no-same-owner --no-overwrite-dir
 }
 
 install_setup()
