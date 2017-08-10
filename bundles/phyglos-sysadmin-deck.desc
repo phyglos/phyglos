@@ -2,6 +2,7 @@
 
 BUILD_CMD=( 
 '# System utilities'
-'package	   do	    strace-4.5.19             tar.bz2'
+'package	do	gpm-1.20.7                tar.bz2'
+'package	do      strace-4.5.19             tar.bz2'
 )
 
