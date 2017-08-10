@@ -3,7 +3,7 @@
 BUILD_CMD=( 
 '# System utilities'
 'package	   do	    lsof_4.89                 tar.bz2'
-'package           do       pciutils-3.4.1            tar.xz'
+'package           do       pciutils-3.5.5            tar.xz'
 'package	   do	    usbutils-008              tar.xz'
 
 '# Network utilities'
