@@ -30,7 +30,7 @@ build_pack()
     make DESTDIR=$BUILD_PACK install
 
     bandit_mkdir $BUILD_PACK/var/lib
-    install -v -o ntp -g ntp -d $BUILD_PACK/var/lib/ntp
+    install -v -o ntpd -g ntp -d $BUILD_PACK/var/lib/ntp
 
     bandit_mkdir $BUILD_PACK/etc
     cat > $BUILD_PACK/etc/ntp.conf << "EOF"
