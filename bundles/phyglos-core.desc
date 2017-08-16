@@ -11,9 +11,9 @@ BUILD_CMD=(
 'package	do	man-pages-4.04           tar.xz'
 'package	do	linux-4.4.2              tar.xz   headers'
 'package	do	glibc-2.23               tar.xz'
-'script		run	phyglos-core-setup-locales-1.8.0'
+'script		run	phyglos-core-setup-locales'
 'package	do	tzdata2016a              tar.xz'
-'script		run	phyglos-core-adjust-builder-1.8.0'
+'script		run	phyglos-core-adjust-builder'
 
 # Rebuild porg using the new libC
 'package	do	porg-0.10                tar.gz'
@@ -84,14 +84,14 @@ BUILD_CMD=(
 'package	do	vim74                    tar.bz2'
 
 # Set up TARGET configuration files
-'script		run	phyglos-core-setup-etc-1.8.0'
-'script		run	phyglos-core-setup-site-1.8.0'
+'script		run	phyglos-core-setup-etc'
+'script		run	phyglos-core-setup-site'
 'package	do	lsb-release-1.4          tar.gz'
-'script		run	phyglos-core-setup-profiles-1.8.0'
+'script		run	phyglos-core-setup-profiles'
 
 'package	do	util-linux-2.27.1        tar.xz' `# Requires tty group after setup-profiles`
 
-'script		run	phyglos-core-setup-network-1.8.0'
+'script		run	phyglos-core-setup-network'
 #---
 # End the LFS build
 #---
@@ -110,6 +110,6 @@ BUILD_CMD=(
 'package	do	libtasn1-4.7             tar.gz'
 'package	do	libtirpc-1.0.1           tar.bz2'
 
-'script		run	phyglos-core-end-1.8.0'
+'script		run	phyglos-core-end'
 )
 

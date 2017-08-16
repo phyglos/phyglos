@@ -3,7 +3,7 @@
 BUILD_CMD=( 
 # Add phy group and phy user with sudo capabilities before Linux-PAM
 'package	do	sudo-1.8.15              tar.gz'
-'script		run	phyglos-security-setup-users-1.8.0'
+'script		run	phyglos-security-setup-users'
 
 # Enforce strong passwords use
 'package	do	cracklib-2.9.6           tar.gz'
@@ -24,16 +24,16 @@ BUILD_CMD=(
 
 # Network security 
 'package	do	iptables-1.6.0           tar.bz2'
-'script		run	phyglos-security-setup-firewall-1.8.0'
+'script		run	phyglos-security-setup-firewall'
 
 # Setup PKI 
 'package	do	wget-1.17.1              tar.xz'
-'script		run	phyglos-security-setup-CAcerts-1.8.0'
+'script		run	phyglos-security-setup-CAcerts'
 
 # Network utilities
 'package	do	curl-7.47.1              tar.lzma'
 'package	do	iproute2-4.4.0           tar.xz'
-'script		run	phyglos-security-setup-ssh-1.8.0'
+'script		run	phyglos-security-setup-ssh'
 'package	do	openssh-7.5p1            tar.gz'
 )
 

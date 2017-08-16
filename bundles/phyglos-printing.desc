@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-'script	        run     phyglos-printing-setup-1.8.0'
+'script	        run     phyglos-printing-setup'
     
 'package	do	cups-2.1.3              tar.bz2'
 'package	do	cups-filters-1.8.2      tar.xz'

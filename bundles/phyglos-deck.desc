@@ -81,7 +81,7 @@ BUILD_CMD=(
 #'package	do	 gst-ffmpeg-0.10.13         tar.bz2'
 
 # System /etc configuration
-'script         run     phyglos-deck-setup-etc-1.8.0'
+'script         run     phyglos-deck-setup-etc'
 
 # System utilities
 'package	do	check-0.10.0               tar.gz'
