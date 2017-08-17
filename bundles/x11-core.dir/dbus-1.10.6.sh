@@ -14,7 +14,7 @@ build_compile()
         --with-console-auth-dir=/run/console/ \
         --docdir=/usr/share/doc/dbus-1.10.6   \
 	--with-dbus-user=dbusd
-y
+
     make
 }
 
