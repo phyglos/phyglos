@@ -25,8 +25,9 @@ EOF
 	# Create X11 libs dirs
 	install -v -m755 -d ${PHY_XORG_PREFIX}
 	case ${BANDIT_TARGET_ARCH} in
-	    x86) 
-		install -v -m755 -d ${PHY_XORG_PREFIX}/lib
+	    i?86) 
+		install -v -m755 -d ${PHY_XORG_PREFIX}/lib32
+		ln -svf lib32 ${PHY_XORG_PREFIX}/lib
 		;;
 	    x86_64) 
 		install -v -m755 -d ${PHY_XORG_PREFIX}/lib64

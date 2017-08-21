@@ -35,9 +35,9 @@ install_verify()
     echo
     readelf -l a.out | grep ": $BANDIT_BUILDER_DIR"
     echo "Compare line above with:"
-    case $(uname -m) in
-	x86)
-	    echo "      [Requesting program interpreter: $BANDIT_BUILDER_DIR/lib/ld-linux-x86.so.2]"
+    case $BANDIT_TARGET_ARCH in
+	i?86)
+	    echo "      [Requesting program interpreter: $BANDIT_BUILDER_DIR/lib/ld-linux.so.2]"
 	    ;;
 	x86_64)
 	    echo "      [Requesting program interpreter: $BANDIT_BUILDER_DIR/lib64/ld-linux-x86-64.so.2]"

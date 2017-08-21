@@ -26,8 +26,8 @@ script_test()
     readelf -l a.out | grep ': /lib'
     echo "Compare with:"
     case $BANDIT_TARGET_ARCH in
-	x86)
-	    echo "      [Requesting program interpreter: /lib64/ld-linux-x86.so.2]"
+	i?86)
+	    echo "      [Requesting program interpreter: /lib/ld-linux.so.2]"
 	    ;;
 	x86_64)
 	    echo "      [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]"
@@ -35,10 +35,10 @@ script_test()
     esac
     echo
 
-    grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log
+    grep -o '/usr/lib*/crt[1in].*succeeded' dummy.log
     echo "Compare with:"
     case $BANDIT_TARGET_ARCH in
-	x86)
+	i?86)
 	    echo "/usr/lib/crt1.o succeeded"
 	    echo "/usr/lib/crti.o succeeded"
 	    echo "/usr/lib/crtn.o succeeded"
@@ -66,7 +66,7 @@ script_test()
     grep "/lib.*/libc.so.6 " dummy.log
     echo "Compare with:"
     case $BANDIT_TARGET_ARCH in
-	x86)
+	i?86)
 	    echo "attempt to open /lib/libc.so.6 succeeded"
 	    ;;
 	x86_64)
@@ -78,8 +78,8 @@ script_test()
     grep found dummy.log
     echo "Compare with:"
     case $BANDIT_TARGET_ARCH in
-	x86)
-	    echo "found ld-linux-x86.so.2 at /lib64/ld-linux-x86.so.2"
+	i?86)
+	    echo "found ld-linux.so.2 at /lib/ld-linux.so.2"
 	    ;;
 	x86_64)
 	    echo "found ld-linux-x86-64.so.2 at /lib64/ld-linux-x86-64.so.2"
