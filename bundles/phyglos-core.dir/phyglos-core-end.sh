@@ -4,7 +4,7 @@ script_run()
 {
     # Strip debug symbols
     $BANDIT_BUILDER_DIR/bin/find /{,usr/}{bin,lib,sbin} -type f \
-	-exec $BANDIT_BUILDER_DIR/bin/strip --strip-debug '{}' ';'
+	-exec $BANDIT_BUILDER_DIR/bin/strip --strip-debug '{}' ';' 2>&1
 
     # Remove unnecessary libraries
     rm -vf /usr/lib/lib{bfd,opcodes}.a
