@@ -40,7 +40,7 @@ build_pack()
     ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/5.3.0/liblto_plugin.so $BUILD_PACK/usr/lib/bfd-plugins/
 
     mkdir -pv $BUILD_PACK/usr/share/gdb/auto-load/usr/lib
-    mv -v $BUILD_PACK/usr/lib/*gdb.py $BUILD_PACK/usr/share/gdb/auto-load/usr/lib
+    mv -v $BUILD_PACK/usr/lib*/*gdb.py $BUILD_PACK/usr/share/gdb/auto-load/usr/lib
 }
 
 install_verify()
