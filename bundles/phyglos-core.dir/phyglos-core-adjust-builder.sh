@@ -37,7 +37,7 @@ script_verify()
     echo
 
     echo "CHECK: C runtime files"
-    grep -o '/usr/lib*/crt[1in].*succeeded' dummy.log
+    grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log
     echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
