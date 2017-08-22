@@ -50,6 +50,7 @@ install_verify()
     echo 'int main(){}' > dummy.c
     cc dummy.c -v -Wl,--verbose &> dummy.log
 
+    echo "CHECK: Compiling and linking"
     readelf -l a.out | grep ': /lib'
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in
@@ -62,69 +63,70 @@ install_verify()
     esac
     echo
 
+    echo "CHECK: C runtime files"
     grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log
     echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
-	    echo "/usr/lib/gcc/.../lib/crt1.o succeeded"
-	    echo "/usr/lib/gcc/.../lib/crti.o succeeded"
-	    echo "/usr/lib/gcc/.../lib/crtn.o succeeded"
+	i?86)
+	    echo "/usr/lib/crt1.o succeeded"
+	    echo "/usr/lib/crti.o succeeded"
+	    echo "/usr/lib/crtn.o succeeded"
 	    ;;
 	x86_64)
-	    echo "/usr/lib/gcc/.../lib64/crt1.o succeeded"
-	    echo "/usr/lib/gcc/.../lib64/crti.o succeeded"
-	    echo "/usr/lib/gcc/.../lib64/crtn.o succeeded"
+	    echo "/usr/lib64/crt1.o succeeded"
+	    echo "/usr/lib64/crti.o succeeded"
+	    echo "/usr/lib64/crtn.o succeeded"
 	    ;;
     esac
     echo
 
+    echo "CHECK: Search for C header files"
     grep -B4 '^ /usr/include' dummy.log
     echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
 	    echo "#include <...> search starts here:"
 	    echo " /usr/lib/gcc/.../include"
-	    echo " /usr/local/include"
 	    echo " /usr/lib/gcc/.../include-fixed"
+	    echo " /usr/local/include"
 	    echo " /usr/include"
 	    ;;
 	x86_64)
 	    echo "#include <...> search starts here:"
 	    echo " /usr/lib/gcc/.../include"
-	    echo " /usr/local/include"
 	    echo " /usr/lib/gcc/.../include-fixed"
+	    echo " /usr/local/include"
 	    echo " /usr/include"
 	    ;;
     esac
     echo
 
-    echo "Compare:"
+    echo "CHECK: Search paths"
     grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
     echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
-	    echo "SEARCH_DIR(\"/usr/i?86-pc-linux-gnu/lib32\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib32\")"
 	    echo "SEARCH_DIR(\"/lib32\")"
 	    echo "SEARCH_DIR(\"/usr/lib32\")"
-	    echo "SEARCH_DIR(\"/usr/i?86-pc-linux-gnu/lib\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib\")"
 	    echo "SEARCH_DIR(\"/lib\")"
 	    echo "SEARCH_DIR(\"/usr/lib\");"
 	    ;;
 	x86_64)
-	    echo "SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib64\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib64\")"
 	    echo "SEARCH_DIR(\"/lib64\")"
 	    echo "SEARCH_DIR(\"/usr/lib64\")"
-	    echo "SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib\")"
 	    echo "SEARCH_DIR(\"/usr/local/lib\")"
 	    echo "SEARCH_DIR(\"/lib\")"
 	    echo "SEARCH_DIR(\"/usr/lib\");"
 	    ;;
     esac
+    echo "Ignore extra lines with '-linux-gnu'"
     echo
     
+    echo "CHECK: C library"
     grep "/lib*/libc.so.6 " dummy.log
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in
@@ -137,6 +139,7 @@ install_verify()
     esac
     echo
 
+    echo "CHECK: dynamic linker"
     grep found dummy.log
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in
@@ -150,5 +153,4 @@ install_verify()
     echo
 
     rm -v dummy.c a.out dummy.log
-    echo
 }

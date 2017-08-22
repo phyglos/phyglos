@@ -58,6 +58,8 @@ install_verify()
 
     echo 'void main(){}' > dummy.c
     cc dummy.c
+
+    echo "CHECK: Compiling and linking"
     readelf -l a.out | grep ": $BANDIT_BUILDER_DIR"
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in

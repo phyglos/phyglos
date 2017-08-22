@@ -2,7 +2,7 @@
 
 script_run()
 {
-    bandit_log "Adjusting BUILDER to use the new C LIBRARY..."
+    bandit_log "Adjusting BUILDER to use the new C library..."
 
     mv -v $BANDIT_BUILDER_DIR/bin/{ld,ld-old}
     mv -v $BANDIT_BUILDER_DIR/$BANDIT_TARGET_ARCH-pc-linux-gnu/bin/{ld,ld-old}
@@ -19,12 +19,14 @@ script_run()
 script_test_level=1
 script_test()
 {
+    bandit_log "Checking the new C/C++ toolchain..."
+
     echo 'int main(){}' > dummy.c
     cc dummy.c -v -Wl,--verbose &> dummy.log
-    echo
 
+    echo "CHECK: Compiling and linking"
     readelf -l a.out | grep ': /lib'
-    echo "Compare with:"
+    echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
 	    echo "      [Requesting program interpreter: /lib/ld-linux.so.2]"
@@ -35,8 +37,9 @@ script_test()
     esac
     echo
 
+    echo "CHECK: C runtime files"
     grep -o '/usr/lib*/crt[1in].*succeeded' dummy.log
-    echo "Compare with:"
+    echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
 	    echo "/usr/lib/crt1.o succeeded"
@@ -51,20 +54,24 @@ script_test()
     esac
     echo
 
+    echo "CHECK: Search for C header files"
     grep -B1 '^ /usr/include' dummy.log
-    echo "Compare with:"
+    echo "Compare lines above with:"
     echo "#include <...> search starts here:"
     echo " /usr/include"
     echo
 
+    echo "CHECK: Search paths"
     grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
-    echo "Compare with:"
+    echo "Compare lines above with:"
     echo "SEARCH_DIR(\"/usr/lib\")"
     echo "SEARCH_DIR(\"/lib\");"
+    echo "Ignore extra lines with '-linux-gnu'"
     echo 
 
+    echo "CHECK: C library"
     grep "/lib.*/libc.so.6 " dummy.log
-    echo "Compare with:"
+    echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
 	    echo "attempt to open /lib/libc.so.6 succeeded"
@@ -75,8 +82,9 @@ script_test()
     esac
     echo
 
+    echo "CHECK: dynamic linker"
     grep found dummy.log
-    echo "Compare with:"
+    echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
 	    echo "found ld-linux.so.2 at /lib/ld-linux.so.2"

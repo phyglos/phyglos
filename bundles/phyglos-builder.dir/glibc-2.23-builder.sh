@@ -32,7 +32,7 @@ install_verify()
     echo 'int main(){}' > dummy.c
     $BANDIT_BUILDER_TRIPLET-gcc dummy.c
 
-    echo
+    echo "CHECK: Compiling and linking"
     readelf -l a.out | grep ": $BANDIT_BUILDER_DIR"
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in
