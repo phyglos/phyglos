@@ -68,7 +68,6 @@ install_verify()
     echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
-	i?86)
 	    echo "/usr/lib/crt1.o succeeded"
 	    echo "/usr/lib/crti.o succeeded"
 	    echo "/usr/lib/crtn.o succeeded"
