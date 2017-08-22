@@ -2,6 +2,18 @@
 
 build_compile()
 {
+    # Always set ABI
+    local gmp_abi=""
+    case $BANDIT_TARGET_ARCH in
+	i?86)
+	    gmp_abi=32
+	    ;;
+	x86_64)
+	    gmp_abi=64
+	    ;;
+    esac
+
+    ABI=$gmp_abi          \
     ./configure           \
 	--prefix=/usr     \
 	--enable-cxx      \
