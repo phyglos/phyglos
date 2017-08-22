@@ -16,8 +16,7 @@ script_run()
                        > `dirname $(gcc --print-libgcc-file-name)`/specs
 }
 
-script_test_level=1
-script_test()
+script_verify()
 {
     bandit_log "Checking the new C/C++ toolchain..."
 
