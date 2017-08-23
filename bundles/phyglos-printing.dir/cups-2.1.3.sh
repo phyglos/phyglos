@@ -120,16 +120,10 @@ install_setup()
 {
     gtk-update-icon-cache
 
-    # Add user phy to lpadmin group
-    gpasswd -a phy lpadmin
-
     /etc/init.d/cups start
 }
 
 remove_setup()
 {
     /etc/init.d/cups stop   
-
-    # Remove user phy from lpadmin group
-    gpasswd -d phy lpadmin
 }
