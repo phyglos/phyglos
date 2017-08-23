@@ -96,9 +96,6 @@ BUILD_CMD=(
 # End the LFS build
 #---
 
-# Add BLFS bootscritps
-'package	do	blfs-bootscripts-20150924  tar.bz2'
-
 # Add some core utilities, libraries and services
 'package	do	which-2.21               tar.gz'
 
