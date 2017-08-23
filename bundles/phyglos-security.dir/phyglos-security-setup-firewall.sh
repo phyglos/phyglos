@@ -6,14 +6,25 @@ script_run()
     bandit_log "Setting up initial firewall'..."
 
     cat > /etc/init.d/firewall << "EOF"
-#!/bin/sh
+#!/bin/bash
+#
+# Copyright (C) 2017 Angel Linares Zapater
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License, version 2, as 
+# published by the Free Software Foundation. See the COPYING file.
+#
+# This program is distributed WITHOUT ANY WARRANTY; without even the 
+# implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+#
 ### BEGIN INIT INFO
 # Provides:          firewall
 # Required-Start:    mountkernfs $local_fs
 # Required-Stop:     $local_fs
 # Default-Start:     3 4 5
 # Default-Stop:      0 1 2 6
-# Short-Description: Set up simple firewall with iptables rules
+# Short-Description: phyglos-firewall
+# Description:       Simple iptables firewall
 ### END INIT INFO
 
 . /lib/lsb/init-functions
@@ -96,16 +107,14 @@ case "$1" in
 	exit 1
 	;;
 esac
-
 exit 0
 EOF
     chmod 754 /etc/init.d/firewall
-
-    for i in 0 1 2 6; do
-	ln -svf ../init.d/firewall /etc/rc.d/rc$i.d/K60firewall
-    done
     for i in 3 4 5; do
 	ln -svf ../init.d/firewall /etc/rc.d/rc$i.d/S15firewall
+    done
+    for i in 0 1 2 6; do
+	ln -svf ../init.d/firewall /etc/rc.d/rc$i.d/K60firewall
     done
 }
 
