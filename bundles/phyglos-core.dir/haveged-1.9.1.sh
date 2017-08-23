@@ -19,7 +19,7 @@ build_pack()
     cat > $BUILD_PACK/etc/init.d/haveged <<"EOF"
 #!/bin/bash
 #
-# Copyright (C) 2107 Angel Linares Zapater
+# Copyright (C) 2017 Angel Linares Zapater
 # Based on the work of the Linux from Scratch project
 #
 # This program is free software; you can redistribute it and/or modify
