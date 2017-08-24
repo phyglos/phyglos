@@ -6,14 +6,14 @@ build_compile()
 
     autoreconf -i -Wnone
     
-    ./configure             \
-	--prefix=/usr       \
-	--sysconfdir=/etc   \
-	--without-gtkmm     \
-	--without-kernel-modules    \
-	--without-ssl       \
-	--without-xerces    \
-	--with-x            \
+    ./configure                  \
+	--prefix=/usr            \
+	--sysconfdir=/etc        \
+	--without-gtkmm          \
+	--without-kernel-modules \
+	--without-ssl            \
+	--without-xerces         \
+	--with-x                 \
 	--disable-static
 
     make
@@ -31,17 +31,20 @@ build_pack()
 
     chmod 644 $BUILD_PACK/etc/pam.d/vmtoolsd
 
-    # Create SysV init scripts
-    bandit_mkdir $BUILD_PACK/etc/init.d/  
-    cat > $BUILD_PACK/etc/init.d/vmtoolsd <<EOF
-#!/bin/sh
+    bandit_mkdir $BUILD_PACK/etc/init.d
+    cat > $BUILD_PACK/etc/init.d/vmtoolsd <<"EOF"
+#!/bin/bash
 #
-# vmtoolsd - Open VM Tools Daemon
+# Copyright (C) 2017 Angel Linares Zapater
 #
-# Description : Starts Open VM Tools for VMware guests
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License, version 2, as 
+# published by the Free Software Foundation. See the COPYING file.
 #
-# Author      : alz@phyglos.org
+# This program is distributed WITHOUT ANY WARRANTY; without even the 
+# implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
 #
+### BEGIN INIT INFO
 # Provides:            vmtoolsd
 # Required-Start:      
 # Should-Start:
@@ -49,48 +52,43 @@ build_pack()
 # Should-Stop:
 # Default-Start:       S
 # Default-Stop:        0 1 6
-# Short-Description:   Starts Open VM Tools for VMware guests
-# Description:         Starts Open VM Tools for VMware guests
+# Short-Description:   vmtools daemon
+# Description:         Open VM Tools for VMware guests
+### END INIT INFO
 
 . /lib/lsb/init-functions
 
-case "\$1" in
+case "$1" in
    start)
-      log_info_msg "Starting Open VM Tools Daemon..."
+      log_info_msg "Starting Open VM Tools..."
       /usr/bin/vmtoolsd --background=/var/run/vmtoolsd.pid
       evaluate_retval
       ;;
-
    stop)
-      log_info_msg "Stopping Open VM Tools Daemon..."
-      kill \$(cat /var/run/vmtoolsd.pid)
+      log_info_msg "Stopping Open VM Tools..."
+      kill $(cat /var/run/vmtoolsd.pid)
       evaluate_retval
       ;;
-
    restart)
-      \$0 stop
-      \$0 start
+      $0 stop
+      $0 start
       ;;
-
    *)
-      echo "Usage: \$0 {start|stop}"
+      echo "Usage: $0 {start|stop}"
       exit 1
       ;;
 esac
 EOF
     chmod 754 $BUILD_PACK/etc/init.d/vmtoolsd
+    for i in S; do
+	bandit_mkdir $BUILD_PACK/etc/rc.d/rc$i.d
+	ln -svf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc$i.d/S80vmtoolsd
+    done
+    for i in 0 2 6; do
+	bandit_mkdir $BUILD_PACK/etc/rc.d/rc$i.d
+	ln -svf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc$i.d/K05vmtoolsd
+    done
     
-    mkdir -pv $BUILD_PACK/etc/rc.d/rc{0,1,2,3,4,5,6,S}.d  
-    ln -sf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc2.d/S80vmtoolsd
-    ln -sf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc3.d/S80vmtoolsd
-    ln -sf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc4.d/S80vmtoolsd
-    ln -sf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc5.d/S80vmtoolsd
-
-    ln -sf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc0.d/K05vmtoolsd
-    ln -sf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc1.d/K05vmtoolsd
-    ln -sf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rc6.d/K05vmtoolsd
-    # ln -sf ../init.d/vmtoolsd $BUILD_PACK/etc/rc.d/rcS.d/S80vmtoolsd
-
     # Keep clean /sbin
     rm -rd $BUILD_PACK/sbin
 }
@@ -98,5 +96,10 @@ EOF
 install_setup()
 {
     /etc/init.d/vmtoolsd start
+}
+
+remove_setup()
+{
+    /etc/init.d/vmtoolsd stop
 }
 
