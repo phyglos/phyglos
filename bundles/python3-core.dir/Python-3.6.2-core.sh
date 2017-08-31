@@ -17,7 +17,7 @@ build_pack()
 {
     make DESTDIR=$BUILD_PACK install
 
-    chmod -v 755 $BUILD_PACK/usr/lib/libpython3.5m.so
+    chmod -v 755 $BUILD_PACK/usr/lib/libpython3.6m.so
     chmod -v 755 $BUILD_PACK/usr/lib/libpython3.so
 }
 

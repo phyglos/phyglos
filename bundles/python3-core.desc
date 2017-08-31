@@ -1,5 +1,5 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-'package	do	Python-3.5.2 		tar.xz     core'
+'package	do	Python-3.6.2 		tar.xz     core'
 )
