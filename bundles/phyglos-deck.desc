@@ -59,17 +59,17 @@ BUILD_CMD=(
 'package	do	slang-2.3.1                tar.bz2'
 
 # Python2 for system scripting
-'package	do	Python-2.7.11              tar.xz'
+'package	do	Python-2.7.13              tar.xz'
 
 # System libraries depending on Python2
 'package	do	glib-2.46.2                tar.xz'
 'package	do	glibmm-2.46.3              tar.xz'
 
-# Fonts depending on Pyhton or GLib-2
+# Fonts depending on Python or GLib-2
 'package	do	harfbuzz-1.2.4             tar.bz2'
 'package	do	freetype-2.6.3             tar.bz2' `# Needed to reinstall after harfbuzz`
   
-# Sound depending on Pyhton or GLib-2
+# Sound depending on Python or GLib-2
 'package	do	x264-snapshot-20160220-2245-stable    tar.bz2'
 
 'package	do 	gstreamer-1.6.3            tar.xz'

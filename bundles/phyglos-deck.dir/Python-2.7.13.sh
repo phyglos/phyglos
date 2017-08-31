@@ -2,11 +2,11 @@
 
 build_compile()
 {
-    ./configure             \
-	--prefix=/usr       \
-        --enable-shared     \
-        --with-system-expat \
-        --with-system-ffi   \
+    ./configure              \
+	--prefix=/usr        \
+        --enable-shared      \
+        --with-system-expat  \
+        --with-system-ffi    \
         --enable-unicode=ucs4 
 
     make
