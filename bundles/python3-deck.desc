@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	 Python-3.6.2 		tar.xz     deck'
+)
