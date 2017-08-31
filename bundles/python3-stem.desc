@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	  Python-3.6.2 		tar.xz     stem'   
+'module 	python3	  cython'
+'module 	python3	  numpy'
+'module 	python3	  scipy'
+)
