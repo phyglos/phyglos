@@ -12,7 +12,7 @@ BUILD_CMD=(
 'package	do	linux-4.4.2              tar.xz   headers'
 'package	do	glibc-2.23               tar.xz'
 'script		run	phyglos-core-setup-locales'
-'package	do	tzdata2016a              tar.xz'
+'package	do	tzdata2017b              tar.xz'
 'script		run	phyglos-core-adjust-builder'
 
 # Rebuild porg using the new libC
