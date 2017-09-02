@@ -2,7 +2,6 @@
 
 build_compile()
 {
-    echo "#define VSF_BUILD_SSL" >> builddefs.h
     make
 }
 
