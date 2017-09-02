@@ -109,23 +109,38 @@ EOF
     for i in 0 1 2 6; do
 	bandit_mkdir $BUILD_PACK/etc/rc.d/rc$i.d
 	ln -svf ../init.d/sshd $BUILD_PACK/etc/rc.d/rc$i.d/K30sshd
-    done  
+    done
+
+    # Add PAM configuration file
+    bandit_mkdir $BUILD_PACK/etc/pam.d
+    sed 's@d/login@d/sshd@g' /etc/pam.d/login > $BUILD_PACK/etc/pam.d/sshd
+    chmod 644 $BUILD_PACK/etc/pam.d/sshd
+
+    ## Configure SSHd
+    cat >> $BUILD_PACK/etc/ssh/sshd_config <<EOF
+
+#---
+# Options added by phyglos-security
+#---
+# Use PAM for ssh login
+UsePAM yes
+
+# Disable root login
+PermitRootLogin no
+
+# Increase connection interval duration
+ClientAliveInterval 300
+ClientAliveCountMax 4
+
+EOF
 }
 
 install_setup()
 {
-    # Use PAM for ssh login
-    sed 's@d/login@d/sshd@g' /etc/pam.d/login > /etc/pam.d/sshd
-    chmod 644 /etc/pam.d/sshd
-    echo "UsePAM yes" >> /etc/ssh/sshd_config
-
-    # Disable root login
-    echo "PermitRootLogin no" >> /etc/ssh/sshd_config
-    
     # Generate server keys
     yes | ssh-keygen -f /etc/ssh/ssh_host_rsa_key     -N '' -t rsa -b 2048
-    yes | ssh-keygen -f /etc/ssh/ssh_host_dsa_key     -N '' -t dsa -b 2048
-    yes | ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key   -N '' -t ecdsa -b 2048
+    yes | ssh-keygen -f /etc/ssh/ssh_host_dsa_key     -N '' -t dsa -b 1024
+    yes | ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key   -N '' -t ecdsa -b 521
     yes | ssh-keygen -f /etc/ssh/ssh_host_ed25519_key -N '' -t ed25519 -b 2048
 
     # Start the service
@@ -135,7 +150,4 @@ install_setup()
 remove_setup()
 {
     /etc/init.d/sshd stop
-
-    # Remove PAM configuration
-    rm /etc/pam.d/sshd
 }
