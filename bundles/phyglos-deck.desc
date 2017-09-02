@@ -92,6 +92,7 @@ BUILD_CMD=(
 'package	do	zip30                      tgz'
 'package	do	unzip60                    tar.gz'
 
+'package	do      acpid-2.0.28               tar.xz'
 'package	do	hd2u-1.0.3                 tgz'
 
 'package	do	fcron-3.2.0                tar.gz'
@@ -138,9 +139,5 @@ OLD_BUILD_CMD=(
 
 
 # System utilities
-'package	build	 gpm-1.20.7                 tar.bz2'
-'package	build	 acpid-2.0.22               tar.xz'
-'package	build	 pciutils-3.2.1             tar.xz'
-'package	build	 usbutils-007               tar.xz'
 
 )
