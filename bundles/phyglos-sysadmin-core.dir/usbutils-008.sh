@@ -15,12 +15,4 @@ build_compile()
 build_pack()
 {
     make DESTDIR=$BUILD_PACK install
-
-    install -dm755 $BUILD_PACK/usr/share/hwdata/
-}
-
-install_setup()
-{
-    bandit_msg "Downloading usb.ids..."
-    wget http://www.linux-usb.org/usb.ids -O /usr/share/hwdata/usb.ids
 }

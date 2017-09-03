@@ -6,6 +6,7 @@ BUILD_CMD=(
 'package           do       pciutils-3.5.5            tar.xz'
 'package	   do	    usbutils-008              tar.xz'
 'package	   do	    lshw-B.02.18              tar.gz'
+'script            run      phyglos-sysadmin-core-update-files'
 
 '# Network utilities'
 'package	   do	    traceroute-2.1.0          tar.gz'
