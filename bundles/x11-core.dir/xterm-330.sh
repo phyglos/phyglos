@@ -3,7 +3,7 @@
 
 build_compile()
 {
-    sed -i '/v0/,+1s/new:/new:kb=^?:/' termcap
+    sed -i '/v0/{n;s/new:/new:kb=^?:/}' termcap
     echo -e '\tkbs=\\177,' >> terminfo
 
     TERMINFO=/usr/share/terminfo  \
