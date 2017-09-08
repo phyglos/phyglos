@@ -84,7 +84,7 @@ BUILD_CMD=(
 'package	do	libva-1.6.2                     tar.bz2'
 'package	do	libvdpau-1.1.1                  tar.bz2'
 #'package	do	libvdpau-va-gl-0.4.0            tar.gz'
-'package	do	mesa-11.1.2                     tar.xz'
+'package	do	mesa-12.0.1                     tar.xz'
 'package	do	glu-9.0.0                       tar.bz2'
 'package	do	libepoxy-1.3.1			tar.bz2'
 

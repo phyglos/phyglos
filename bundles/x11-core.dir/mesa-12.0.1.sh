@@ -1,10 +1,12 @@
 #!/bin/bash
- 
 
 build_compile()
 {
-    patch -Np1 -i $BUILD_SOURCES/mesa-11.1.2-add_xdemos-1.patch
+    patch -Np1 -i $BUILD_SOURCES/mesa-12.0.1-add_xdemos-1.patch
 
+    sed -i "/pthread-stubs/d" configure.ac
+    sed -i "/seems to be moved/s/^/: #/" bin/ltmain.sh
+    
     CFLAGS="-O2" CXXFLAGS="-O2"        \
     ./autogen.sh                       \
         --prefix=$PHY_XORG_PREFIX      \
@@ -34,8 +36,10 @@ build_pack()
 {
     make DESTDIR=$BUILD_PACK install
 
-    install -v -dm755 $BUILD_PACK/usr/share/doc/MesaLib-11.1.2
-    cp -vrf docs/*    $BUILD_PACK/usr/share/doc/MesaLib-11.1.2
+    bandit_mkdir $BUILD_PACK/usr/share/doc/mesa-12.0.1
+    cp -rf docs/* $BUILD_PACK/usr/share/doc/mesa-12.0.1
 
-    make DESTDIR=$BUILD_PACK -C xdemos DEMOS_PREFIX=$XORG_PREFIX install
+    make DESTDIR=$BUILD_PACK \
+	 DEMOS_PREFIX=$XORG_PREFIX \
+	 -C xdemos install
 }
