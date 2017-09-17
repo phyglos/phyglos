@@ -13,8 +13,8 @@ build_pack()
 {
     make DESTDIR=$BUILD_PACK install
 
-    bandit_mkdir $BUILD_PACK/etc/acpid/events
-    chmod -R 755 $BUILD_PACK/etc/acpid/events
+    bandit_mkdir $BUILD_PACK/etc/acpi/events
+    chmod -R 755 $BUILD_PACK/etc/acpi/events
     
     bandit_mkdir $BUILD_PACK/usr/share/doc/acpid-2.0.28
     cp -r samples $BUILD_PACK/usr/share/doc/acpid-2.0.28
