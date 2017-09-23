@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=(
+# Flash Player for Firefox 
+"package	do	flash-player-27.0.0.130-npapi         tar.gz"
+)
