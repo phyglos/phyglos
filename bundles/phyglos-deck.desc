@@ -105,6 +105,7 @@ BUILD_CMD=(
 # System services
 'package	do	ntp-4.2.8p10               tar.gz'
 'package	do	fuse-2.9.7                 tar.gz'
+'package	do	ntfs-3g_ntfsprogs-2017.3.23 tgz'
 
 # Console applications
 'package	do	links-2.14                 tar.bz2'
