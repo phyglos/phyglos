@@ -1,0 +1,5 @@
+URL=(http://www.mupdf.com/downloads/archive/mupdf-1.10a-source.tar.gz
+     http://www.linuxfromscratch.org/patches/blfs/8.0/mupdf-1.10a-shared_libs-1.patch)
+MD5=(f80fbba2524d1d52f6ed09237d382411
+     15a98a1d268d3df946e7ade10caa63a0)
+     
