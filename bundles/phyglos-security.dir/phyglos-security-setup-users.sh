@@ -12,7 +12,13 @@ script_run()
     echo "phy:${PHY_PHYUSER_PSW}" | chpasswd
 
     # Configure phy user and phy groups as sudoers
-    cat > /etc/sudoers.d/phyglos << "EOF"
+    cat > /etc/sudoers.d/_phyglos << "EOF"
+## Keep variables needed for BANDIT
+Defaults:%phy env_keep += "BANDIT_HOME"
+Defaults:%phy env_keep += "EDITOR"
+Defaults:%phy env_keep += "PKG_CONFIG_PATH"
+Defaults:%phy env_keep += "PRUNEPATHS"
+
 ## Allow the phy group to sudo all WITH password
 %phy ALL=(ALL) ALL
 
