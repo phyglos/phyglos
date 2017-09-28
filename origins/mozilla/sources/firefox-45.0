@@ -1,7 +1,0 @@
-URL=https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/45.0/source/firefox-45.0.source.tar.xz
-MD5=09cbada824841f9e1d77f095e7cd02c1
-
-sources_prepare()
-{
-  bandit_source_rename firefox-45.0.source.tar.xz firefox-45.0.tar.xz
-}

@@ -90,31 +90,27 @@ build_pack()
     make -f client.mk \
 	DESTDIR=$BUILD_PACK INSTALL_SDK= \
 	install
-    chown -R 0:0 $BUILD_PACK/usr/lib/firefox-45.0  
 
     bandit_mkdir $BUILD_PACK/usr/lib/mozilla/plugins 
-    ln -sfv ../../mozilla/plugins $BUILD_PACK/usr/lib/firefox-45.0/browser
-}
+    ln -sfv ../../mozilla/plugins $BUILD_PACK/usr/lib/firefox-45.9.0/browser
 
-install_setup()
-{
-    mkdir -pv /usr/share/applications
-    mkdir -pv /usr/share/pixmaps
+    bandit_mkdir $BUILD_PACK/usr/share/pixmaps
+    ln -sfv /usr/lib/firefox-45.9.0/browser/icons/mozicon128.png \
+            $BUILD_PACK/usr/share/pixmaps/firefox.png
 
-    cat > /usr/share/applications/firefox.desktop << "EOF"
+    bandit_mkdir $BUILD_PACK/usr/share/applications
+    cat > $BUILD_PACK/usr/share/applications/firefox.desktop << "EOF"
 [Desktop Entry]
 Encoding=UTF-8
 Name=Firefox Web Browser
 Comment=Browse the World Wide Web
 GenericName=Web Browser
-Exec=firefox %u
-Terminal=false
 Type=Application
 Icon=firefox
 Categories=GNOME;GTK;Network;WebBrowser;
 MimeType=application/xhtml+xml;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+Exec=firefox %u
+Terminal=false
 StartupNotify=true
 EOF
-
-    ln -sfv /usr/lib/firefox-45.0/browser/icons/mozicon128.png /usr/share/pixmaps/firefox.png
 }

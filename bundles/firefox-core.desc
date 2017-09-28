@@ -1,7 +1,5 @@
 #!/bin/bash
 
 BUILD_CMD=(
-# Firefox
-'package	do	firefox-45.0           tar.xz'
-#'script         run     firefox-setup'
+'package	do	firefox-45.9.0esr           tar.xz'
 )
