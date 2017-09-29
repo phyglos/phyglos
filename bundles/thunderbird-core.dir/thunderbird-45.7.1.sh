@@ -2,8 +2,6 @@
 
 build_compile()
 {
-    cd comm-esr38
-    
     cat > mozconfig << "EOF"
 # If you have a multicore machine, the build may be faster if using parallel
 # jobs. The build system automatically adds -jN to the "make" flags, where N
@@ -40,8 +38,8 @@ ac_add_options --disable-gconf
 # Comment out following options if you have not installed
 # recommended dependencies:
 # Do not use system SQLite for Thunderbird 45.x
-#ac_add_options --enable-system-sqlite
-ac_add_options --with-system-libevent
+# ac_add_options --enable-system-sqlite
+#ac_add_options --with-system-libevent
 ac_add_options --with-system-libvpx
 ac_add_options --with-system-nspr
 ac_add_options --with-system-nss
@@ -52,7 +50,6 @@ ac_add_options --prefix=/usr
 ac_add_options --enable-application=mail
 
 ac_add_options --disable-crashreporter
-ac_add_options --disable-installer
 ac_add_options --disable-updater
 ac_add_options --disable-debug
 ac_add_options --disable-tests
@@ -93,10 +90,13 @@ build_pack()
 	 INSTALL_SDK=        \
 	 install
     
-    chown -R 0:0 $BUILD_PACK/usr/lib/thunderbird-38.6.0
+#    chown -R 0:0 $BUILD_PACK/usr/lib/thunderbird-45.7.1
+
+    bandit_mkdir $BUILD_PACK/usr/share/pixmaps
+    ln -sfv /usr/lib/thunderbird-45.7.1/chrome/icons/default/default256.png \
+       $BUILD_PACK/usr/share/pixmaps/thunderbird.png
 
     bandit_mkdir $BUILD_PACK/usr/share/applications
-    bandit_mkdir $BUILD_PACK/usr/share/pixmaps
     cat > $BUILD_PACK/usr/share/applications/thunderbird.desktop << "EOF"
 [Desktop Entry]
 Encoding=UTF-8
@@ -111,8 +111,5 @@ Categories=Application;Network;Email;
 MimeType=application/xhtml+xml;text/xml;application/xhtml+xml;application/xml;application/rss+xml;x-scheme-handler/mailto;
 StartupNotify=true
 EOF
-
-    ln -sfv /usr/lib/thunderbird-38.6.0/chrome/icons/default/default256.png \
-       $BUILD_PACK/usr/share/pixmaps/thunderbird.png
 }
 
