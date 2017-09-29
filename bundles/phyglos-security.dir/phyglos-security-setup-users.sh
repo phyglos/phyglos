@@ -13,11 +13,17 @@ script_run()
 
     # Configure phy user and phy groups as sudoers
     cat > /etc/sudoers.d/_phyglos << "EOF"
+## Set a well defined secure path 
+Defaults:%phy secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+## Keep locale variables
+Defaults:%phy env_keep += "LANG LANGUAGE LC_*
+
 ## Keep variables needed for BANDIT
 Defaults:%phy env_keep += "BANDIT_HOME"
 Defaults:%phy env_keep += "EDITOR"
-Defaults:%phy env_keep += "PKG_CONFIG_PATH"
-Defaults:%phy env_keep += "PRUNEPATHS"
+Defaults:%phy env_keep += "LIBRARY_PATH PKG_CONFIG_PATH"
+Defaults:%phy env_keep += "PRUNE_BIND_MOUNTS PRUNENAMES PRUNEPATHS PRUNEFS"
 
 ## Allow the phy group to sudo all WITH password
 %phy ALL=(ALL) ALL
