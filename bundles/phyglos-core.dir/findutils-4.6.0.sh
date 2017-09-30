@@ -24,8 +24,8 @@ build_pack()
     mv -v $BUILD_PACK/usr/bin/find $BUILD_PACK/bin
     sed -i 's|find:=${BINDIR}|find:=/bin|' $BUILD_PACK/usr/bin/updatedb
 
-    # Set environment PRUNE vars to limit some searches for updatedb script
-    cat $BUILD_PACK/etc/profile.d/updatebd.sh <<"EOF" 
+    # Set environment PRUNE* vars to limit some searches for updatedb script
+    cat $BUILD_PACK/etc/profile.d/updatedb.sh <<"EOF" 
 export PRUNE_BIND_MOUNTS="1"
 export PRUNENAMES=".bzr .git .hg .svn"
 export PRUNEPATHS="/media /mnt /tmp /usr/tmp /var/spool /var/tmp"
