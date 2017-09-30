@@ -1,6 +1,8 @@
 #!/bin/bash
 
-BUILD_CMD=( 
+BUILD_CMD=(
+# System debugger
+'package	do	gdb-8.0.1                tar.gz'
 # System C compiler cache'
 'package	do	ccache-3.2.7             tar.xz'
 )
