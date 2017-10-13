@@ -1,0 +1,7 @@
+URL=file:/srv/bandit/oracle/jdk-9_linux-x64_bin.tar.gz
+MD5=abe68b8ba280d11cb8f937410543750c
+
+sources_prepare()
+{
+  bandit_source_rename jdk-9_linux-x64_bin.tar.gz jdk-9.tar.gz
+}

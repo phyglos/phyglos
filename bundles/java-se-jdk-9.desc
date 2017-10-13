@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	jdk-9	                tar.gz'
+'script	        run	jdk-9-setup'
+)
