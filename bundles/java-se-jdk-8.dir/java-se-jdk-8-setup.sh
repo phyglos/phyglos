@@ -2,7 +2,7 @@
 
 script_run()
 {
-    cat > /etc/profile.d/java-jdk8.sh <<EOF
+    cat > /etc/profile.d/jdk-8.sh <<EOF
 export JAVA_HOME=${PHY_JAVA_HOME}
 export PATH=\$PATH:\$JAVA_HOME/bin
 EOF
@@ -10,5 +10,5 @@ EOF
 
 script_reverse()
 {
-    rm -f /etc/profile.d/java-jdk8.sh
+    rm -f /etc/profile.d/jdk-8.sh
 }
