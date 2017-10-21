@@ -5,6 +5,7 @@ BUILD_CMD=(
     
 'package	do	cups-2.1.3              tar.bz2'
 'package	do	cups-filters-1.8.2      tar.xz'
+'package	do	cups-pdf-3.0.1          tar.gz'
 
 #'package	do	gutenprint-5.2.11       tar.xz'
 )
