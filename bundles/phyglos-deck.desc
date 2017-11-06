@@ -50,6 +50,7 @@ BUILD_CMD=(
 'package	do	fontconfig-2.11.1          tar.bz2'
 
 # Sound
+'package	do	libogg-1.3.2               tar.xz'
 'package	do	alsa-lib-1.1.0             tar.bz2'
 'package	do	alsa-plugins-1.1.0         tar.bz2'
 'package	do	alsa-utils-1.1.0           tar.bz2'
@@ -127,7 +128,6 @@ OLD_BUILD_CMD=(
 'package	build	 dvd+rw-tools-7.1           tar.gz'
 
 # Sound
-'package	build	 libogg-1.3.2               tar.xz'
 'package	build	 libvorbis-1.3.4            tar.xz'
 
 # Postcript and PDF
