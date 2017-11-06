@@ -51,6 +51,7 @@ BUILD_CMD=(
 
 # Sound
 'package	do	libogg-1.3.2               tar.xz'
+'package	do	libvorbis-1.3.5            tar.xz'
 'package	do	alsa-lib-1.1.0             tar.bz2'
 'package	do	alsa-plugins-1.1.0         tar.bz2'
 'package	do	alsa-utils-1.1.0           tar.bz2'
@@ -126,9 +127,6 @@ OLD_BUILD_CMD=(
 'package	build	 libdvdread-4.9.9           tar.xz'
 'package	build	 libdvdnav-4.2.1            tar.xz'
 'package	build	 dvd+rw-tools-7.1           tar.gz'
-
-# Sound
-'package	build	 libvorbis-1.3.4            tar.xz'
 
 # Postcript and PDF
 'package	build_as psutils-p17.tar.gz         psutils                    tar.gz'
