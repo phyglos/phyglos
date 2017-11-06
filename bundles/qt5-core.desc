@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	qt-everywhere-opensource-src-5.9.2	tar.xz'
+)
