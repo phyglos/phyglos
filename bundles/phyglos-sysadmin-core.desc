@@ -9,6 +9,7 @@ BUILD_CMD=(
 'script            run      phyglos-sysadmin-core-update-files'
 
 '# Network utilities'
+'package	   do       libpcap-1.8.1             tar.gz'
 'package	   do	    traceroute-2.1.0          tar.gz'
 'package	   do	    bind-9.11.2               tar.gz   utilities'
 )
