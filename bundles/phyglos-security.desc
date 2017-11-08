@@ -22,6 +22,8 @@ BUILD_CMD=(
 'package	do	p11-kit-0.23.2           tar.gz'
 'package	do	gnutls-3.4.9             tar.xz'
 
+'package	do	libgpg-error-1.27        tar.bz2'
+
 # Network security 
 'package	do	iptables-1.6.0           tar.bz2'
 'script		run	phyglos-security-setup-firewall'
