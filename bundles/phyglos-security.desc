@@ -23,6 +23,7 @@ BUILD_CMD=(
 'package	do	gnutls-3.4.9             tar.xz'
 
 'package	do	libgpg-error-1.27        tar.bz2'
+'package	do	libgcrypt-1.8.0          tar.bz2'
 
 # Network security 
 'package	do	iptables-1.6.0           tar.bz2'
