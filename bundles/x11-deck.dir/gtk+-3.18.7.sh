@@ -21,7 +21,12 @@ build_test()
 
 build_pack()
 {
-     make DESTDIR=$BUILD_PACK install
+    make DESTDIR=$BUILD_PACK install
+
+    bandit_mkdir $BUILD_PACK/etc/profile.d
+    cat > $BUILD_PACK/etc/profile.d/gtk3.sh <<"EOF"
+export GTK_THEME="${PHY_GTK_THEME}"
+EOF
 }
 
 install_setup()
