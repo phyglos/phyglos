@@ -39,6 +39,7 @@ BUILD_CMD=(
 
 # More icon libraries
 'package	do	gnome-icon-theme-3.12.0 	tar.xz'
+'package	do	gnome-icon-theme-extras-3.12.0   tar.xz'
 'package	do	gnome-icon-theme-symbolic-3.12.0 tar.xz'
 'package	do	lxde-icon-theme-0.5.1   	tar.xz'
 
