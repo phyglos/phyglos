@@ -6,4 +6,5 @@ BUILD_CMD=(
 
 # LXDE utilities
 'package	do	lxrandr-0.3.1                   tar.xz'
+'package	do	lxappearance-0.6.3              tar.xz'
 )
