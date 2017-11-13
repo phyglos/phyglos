@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'script 	run 	openldap-core-setup'
+'package	do	openldap-2.4.45 		tgz'
+)

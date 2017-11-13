@@ -1,0 +1,4 @@
+URL=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-2.4.45.tgz
+     http://www.linuxfromscratch.org/patches/blfs/8.1/openldap-2.4.45-consolidated-1.patch)
+MD5=(00ff8301277cdfd0af728a6927042a13
+     04e1222766861e465ee7b50f62b7c4a3)
