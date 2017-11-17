@@ -1,0 +1,7 @@
+URL=http://downloads.xvid.org/downloads/xvidcore-1.3.3.tar.gz
+MD5=8ecddfe488cb3a82d792fc7efbf51d62
+
+sources_prepare()
+{
+  bandit_source_rename xvidcore-1.3.3.tar.gz xvidcore.tar.gz
+}

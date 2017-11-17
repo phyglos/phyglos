@@ -53,8 +53,9 @@ BUILD_CMD=(
 #'package	do	 alsa-tools-1.1.0          tar.bz2'
 
 # Video
-'package	do	libvpx-1.5.0               tar.bz2'
 'package	do	libtheora-1.1.1            tar.xz'
+'package	do	libvpx-1.5.0               tar.bz2'
+'package	do	xvidcore                   tar.gz'
 
 # Fonts
 'package	do	freetype-2.6.3             tar.bz2' `# Reinstall it again after harfbuzz`
@@ -136,12 +137,4 @@ OLD_BUILD_CMD=(
 'package	build_as psutils-p17.tar.gz         psutils                    tar.gz'
 'package	build	 a2ps-4.14                  tar.gz'
 'package	build	 poppler-0.26.3             tar.xz'
-
-# Video
-'package	build	 libvpx-v1.3.0              tar.xz'
-'package	build_as xvidcore-1.3.3.tar.gz      xvidcore                   tar.gz'
-
-
-# System utilities
-
 )
