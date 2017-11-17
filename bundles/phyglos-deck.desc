@@ -55,6 +55,7 @@ BUILD_CMD=(
 # Video
 'package	do	libtheora-1.1.1            tar.xz'
 'package	do	libvpx-1.5.0               tar.bz2'
+'package	do	x264-snapshot-20170212-2245-stable    tar.bz2'
 'package	do	xvidcore                   tar.gz'
 
 # Fonts
@@ -76,8 +77,6 @@ BUILD_CMD=(
 'package	do	freetype-2.6.3             tar.bz2' `# Needed to reinstall after harfbuzz`
   
 # Sound depending on Python or GLib-2
-'package	do	x264-snapshot-20160220-2245-stable    tar.bz2'
-
 'package	do 	gstreamer-1.6.3            tar.xz'
 'package	do	gst-plugins-base-1.6.3     tar.xz'
 'package	do	gst-plugins-good-1.6.3     tar.xz'
