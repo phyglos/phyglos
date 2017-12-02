@@ -11,13 +11,13 @@ build_compile()
         --openssldir=/etc/ssl    \
         --libdir=lib             \
         shared                   \
-        no-comp                  \
-        no-zlib                  \
         no-idea                  \
-        no-psk                   \
         no-rc5                   \
+        no-psk                   \
         no-ssl3                  \
-        no-weak-ssl-ciphers      
+        no-weak-ssl-ciphers      \
+        no-comp                  \
+        no-zlib
 
     make depend
     make 
@@ -35,10 +35,9 @@ build_pack()
     sed -i 's# libcrypto.a##;s# libssl.a##;/INSTALL_LIBS/s#libcrypto.a##' Makefile
 
     make DESTDIR=$BUILD_PACK \
-	 MANDIR=/usr/share/man \
 	 MANSUFFIX=ssl \
 	 install
 
-    bandit_mkdir $BUILD_PACK/usr/share/doc/openssl-1.1.0f
-    cp -vfr doc/* $BUILD_PACK/usr/share/doc/openssl-1.1.0f
+    bandit_mkdir $BUILD_PACK/usr/share/doc/openssl-1.1.0g
+    cp -vfr doc/* $BUILD_PACK/usr/share/doc/openssl-1.1.0g
 }

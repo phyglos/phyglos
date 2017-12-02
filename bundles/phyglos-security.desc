@@ -16,7 +16,7 @@ BUILD_CMD=(
 
 # Security suites
 'package	do	openssl-1.0.2m           tar.gz'
-'package	do	openssl-1.1.0f           tar.gz'
+'package	do	openssl-1.1.0g           tar.gz'
 
 'package	do	nettle-3.2               tar.gz'
 'package	do	p11-kit-0.23.2           tar.gz'
