@@ -5,14 +5,14 @@ build_compile()
     # Always build with an empty CCache
     bandit_system_has ccache && ccache -C
 
-    patch -Np1 -i $BUILD_SOURCES/openssl-1.0.2l-compat_versioned_symbols-1.patch
+    patch -Np1 -i $BUILD_SOURCES/openssl-1.0.2m-compat_versioned_symbols-1.patch
     
     # Remove unneeded encryptation and compression methods
     ./config                     \
         --prefix=/usr            \
         --openssldir=/etc/ssl    \
         --libdir=lib/openssl-1.0 \
-        shared                   \
+	shared                   \
         no-idea                  \
         no-rc5                   \
         no-psk                   \
@@ -34,16 +34,24 @@ build_test()
 
 build_pack()
 {
-    make INSTALL_PREFIX=$BUILD_PACK \
-	MANDIR=/usr/share/man \
-	MANSUFFIX=ssl \
-	install_sw
+    # Disable static libraries
+    sed -i 's# libcrypto.a##;s# libssl.a##;/INSTALL_LIBS/s#libcrypto.a##' Makefile
 
+    # Install in a temporary destination directory
+    make INSTALL_PREFIX=$BUILD_PACK/bandit install_sw
+
+    bandit_mkdir $BUILD_PACK/usr/lib/openssl-1.0
+    cp -vR $BUILD_PACK/bandit/usr/lib/openssl-1.0/* $BUILD_PACK/usr/lib/openssl-1.0
+    
     mv -v  $BUILD_PACK/usr/lib/openssl-1.0/lib{crypto,ssl}.so.1.0.0 $BUILD_PACK/usr/lib 
-    ln -sv ../libssl.so.1.0.0         $BUILD_PACK/usr/lib/openssl-1.0        
-    ln -sv ../libcrypto.so.1.0.0      $BUILD_PACK/usr/lib/openssl-1.0        
+    ln -sv ../libssl.so.1.0.0    $BUILD_PACK/usr/lib/openssl-1.0        
+    ln -sv ../libcrypto.so.1.0.0 $BUILD_PACK/usr/lib/openssl-1.0        
 
-    mv -v $BUILD_PACK/usr/include/openssl $BUILD_PACK/usr/include/openssl-1.0
+    bandit_mkdir $BUILD_PACK/usr/include/openssl-1.0
+    cp -vR $BUILD_PACK/bandit/usr/include/openssl $BUILD_PACK/usr/include/openssl-1.0
     
     sed 's@/include$@/include/openssl-1.0@' -i $BUILD_PACK/usr/lib/openssl-1.0/pkgconfig/*.pc
+
+    # Remove temporary dir
+    rm -rf $BUILD_PACK/bandit
 }

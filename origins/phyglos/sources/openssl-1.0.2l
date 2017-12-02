@@ -1,4 +1,0 @@
-URL=(ftp://openssl.org/source/openssl-1.0.2l.tar.gz
-     http://www.linuxfromscratch.org/patches/blfs/svn/openssl-1.0.2l-compat_versioned_symbols-1.patch)
-MD5=(f85123cd390e864dfbe517e7616e6566
-     b94d4b17b2fdddf8bfe422041320e174)
