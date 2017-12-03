@@ -4,9 +4,8 @@ build_compile()
 {  
     ./configure       \
 	--prefix=/usr \
-	--with-package-name="GStreamer Good Plugins 1.6.3 BLFS" \
-	--with-package-origin="http://www.linuxfromscratch.org/blfs/view/svn/"
-
+	--with-package-name="GStreamer Base 1.12.2" \
+	--with-package-origin="http://www.phyglos.org"
     make
 }
 

@@ -77,12 +77,12 @@ BUILD_CMD=(
 'package	do	harfbuzz-1.2.4             tar.bz2'
 'package	do	freetype-2.6.3             tar.bz2' `# Needed to reinstall after harfbuzz`
   
-# Sound depending on Python or GLib-2
-'package	do 	gstreamer-1.6.3            tar.xz'
-'package	do	gst-plugins-base-1.6.3     tar.xz'
-'package	do	gst-plugins-good-1.6.3     tar.xz'
-'package	do	gst-plugins-bad-1.6.3      tar.xz'
-'package	do	gst-plugins-ugly-1.6.3     tar.xz'
+# Multimedia depending on Python or GLib-2
+'package	do 	gstreamer-1.12.2           tar.xz'
+'package	do	gst-plugins-base-1.12.2    tar.xz'
+'package	do	gst-plugins-good-1.12.2    tar.xz'
+'package	do	gst-plugins-bad-1.12.2     tar.xz'
+'package	do	gst-plugins-ugly-1.12.2    tar.xz'
 
 #'package	do	 gst-ffmpeg-0.10.13         tar.bz2'
 
