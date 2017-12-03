@@ -83,8 +83,7 @@ BUILD_CMD=(
 'package	do	gst-plugins-good-1.12.2    tar.xz'
 'package	do	gst-plugins-bad-1.12.2     tar.xz'
 'package	do	gst-plugins-ugly-1.12.2    tar.xz'
-
-#'package	do	 gst-ffmpeg-0.10.13         tar.bz2'
+'package	do	gst-libav-1.12.2           tar.xz'
 
 # System /etc configuration
 'script         run     phyglos-deck-setup-etc'
