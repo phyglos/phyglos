@@ -47,6 +47,7 @@ BUILD_CMD=(
 # Sound
 'package	do	fdk-aac-0.1.5              tar.gz'
 'package	do	libogg-1.3.2               tar.xz'
+'package	do	flac-1.3.2                 tar.xz'
 'package	do	libvorbis-1.3.5            tar.xz'
 'package	do	alsa-lib-1.1.0             tar.bz2'
 'package	do	alsa-plugins-1.1.0         tar.bz2'
