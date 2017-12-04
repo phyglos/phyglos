@@ -60,6 +60,7 @@ BUILD_CMD=(
 'package	do	x264-snapshot-20170212-2245-stable    tar.bz2'
 'package	do	x265_2.3                   tar.gz'
 'package	do	xvidcore                   tar.gz'
+'package	do	ffmpeg-3.3.3               tar.xz'
 
 # Fonts
 'package	do	freetype-2.6.3             tar.bz2' `# Reinstall it again after harfbuzz`
