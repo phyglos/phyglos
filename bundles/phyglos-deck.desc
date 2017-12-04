@@ -45,6 +45,7 @@ BUILD_CMD=(
 'package	do	openjpeg-2.1.0             tar.gz'
 
 # Sound
+'package	do	fdk-aac-0.1.5              tar.gz'
 'package	do	libogg-1.3.2               tar.xz'
 'package	do	libvorbis-1.3.5            tar.xz'
 'package	do	alsa-lib-1.1.0             tar.bz2'
