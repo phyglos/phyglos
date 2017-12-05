@@ -37,7 +37,7 @@ BUILD_CMD=(
 'package	do	gtk+-2.24.29 			tar.xz'
 'package	do	gtk+-3.18.7 			tar.xz'
 
-# More icon libraries
+# More icon libraries depending on GTK+
 'package	do	gnome-icon-theme-3.12.0 	tar.xz'
 'package	do	gnome-icon-theme-extras-3.12.0   tar.xz'
 'package	do	gnome-icon-theme-symbolic-3.12.0 tar.xz'
@@ -57,6 +57,9 @@ BUILD_CMD=(
 
 # ImageMagick suite
 'package	do	ImageMagick-7.0.6-10            tar.xz'
+
+# More icon libraries depending on ImageMagick
+'package	do	tango-icon-theme-0.8.90   	tar.gz'
 
 # Desktop libraries
 'package	do	libgudev-230                    tar.xz'
