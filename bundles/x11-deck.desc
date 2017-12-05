@@ -55,6 +55,9 @@ BUILD_CMD=(
 'package	do	qpdf-6.0.0 	                tar.gz'
 'package	do	mupdf-1.10a 	                tar.gz'
 
+# ImageMagick suite
+'package	do	ImageMagick-7.0.6-10            tar.xz'
+
 # Desktop libraries
 'package	do	libgudev-230                    tar.xz'
 'package	do	libnotify-0.7.6                 tar.xz'
