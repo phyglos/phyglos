@@ -62,6 +62,9 @@ BUILD_CMD=(
 'package	do	xvidcore                   tar.gz'
 'package	do	ffmpeg-3.3.3               tar.xz'
 
+# CD and DVD 
+'package	do      libisofs-1.4.8             tar.gz'
+
 # Fonts
 'package	do	freetype-2.6.3             tar.bz2' `# Reinstall it again after harfbuzz`
 'package	do	fontconfig-2.11.1          tar.bz2'
