@@ -65,6 +65,7 @@ BUILD_CMD=(
 # CD and DVD 
 'package	do      libisofs-1.4.8             tar.gz'
 'package	do      libburn-1.4.8              tar.gz'
+'package	do      libisoburn-1.4.8           tar.gz'
 
 # Fonts
 'package	do	freetype-2.6.3             tar.bz2' `# Reinstall it again after harfbuzz`
