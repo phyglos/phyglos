@@ -6,4 +6,5 @@ BUILD_CMD=(
 #'package	do	xfce4-volumed-0.1.13            tar.bz2'
 
 'package	do	ristretto-0.8.0                 tar.bz2'
+'package	do	parole-0.8.1                    tar.bz2'
 )
