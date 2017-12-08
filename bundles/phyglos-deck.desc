@@ -69,6 +69,7 @@ BUILD_CMD=(
 'package	do	libdvdcss-1.4.0            tar.bz2'
 'package	do	libdvdread-5.0.3           tar.bz2'
 'package	do	libdvdnav-5.0.3            tar.bz2'
+'package	do	cdrtools-3.02              tar.bz2'
 
 # Fonts
 'package	do	freetype-2.6.3             tar.bz2' `# Reinstall it again after harfbuzz`

@@ -1,0 +1,7 @@
+URL=https://downloads.sourceforge.net/cdrtools/cdrtools-3.02a07.tar.bz2
+MD5=ea362a6a42d8aa0d5fc154d195f47926
+
+sources_prepare()
+{
+  bandit_source_rename cdrtools-3.02a07.tar.bz2 cdrtools-3.02.tar.bz2
+}
