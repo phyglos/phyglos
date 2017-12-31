@@ -26,8 +26,7 @@ EOF
 
 cat > /etc/resolv.conf << EOF
 domain $PHY_DOMAINNAME
-nameserver $PHY_LAN_IP4_DNS1
-nameserver $PHY_LAN_IP4_DNS2
+nameserver $PHY_LAN_IP4_DNS
 EOF
 
 }
