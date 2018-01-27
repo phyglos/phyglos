@@ -1,4 +1,4 @@
 URL=(http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz
-     http://www.linuxfromscratch.org/patches/blfs/svn/openssh-7.5p1-openssl-1.1.0-1.patch)
+     http://www.linuxfromscratch.org/patches/blfs/8.1/openssh-7.5p1-openssl-1.1.0-1.patch)
 MD5=(652fdc7d8392f112bef11cacf7e69e23
      f5aa210fd557cac83508ec3a71cfafa1)
