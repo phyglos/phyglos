@@ -17,7 +17,7 @@ script_run()
 Defaults:%phy secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 ## Keep locale variables
-Defaults:%phy env_keep += "LANG LANGUAGE LC_*
+Defaults:%phy env_keep += "LANG LANGUAGE LC_*"
 
 ## Keep variables needed for BANDIT
 Defaults:%phy env_keep += "BANDIT_HOME"
