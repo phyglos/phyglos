@@ -126,7 +126,7 @@ install_verify()
     echo
     
     echo "CHECK: C library"
-    grep "/lib*/libc.so.6 " dummy.log
+    grep "/lib.*/libc.so.6 " dummy.log
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
