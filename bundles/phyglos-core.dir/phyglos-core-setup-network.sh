@@ -31,5 +31,5 @@ EOF
 	cat >> /etc/resolv.conf << EOF
 nameserver $PHY_LAN_IP4_DNS2
 EOF
-    if
+    fi
 }
