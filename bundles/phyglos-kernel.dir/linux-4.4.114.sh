@@ -4,23 +4,29 @@ PHY_KERNEL_SRC=linux-$PHY_KERNEL_VER
 PHY_KERNEL_CFG=$PHY_KERNEL_SRC-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
 
 _get_config_file()
-{
-    if [ ! -e /boot/$PHY_KERNEL_CFG.config ]; then
+{  
+    if [ -e /boot/$PHY_KERNEL_CFG.config ]; then
+	echo "Using existing .config file from /boot directory..."
+    else
+	# Use the cached .config file...
 	if [ ! -e $BUILD_SOURCES/$PHY_KERNEL_CFG.config ]; then
-	    tar -xvf $BUILD_SOURCES/linux-configs-$PHY_KERNEL_VER.tar.xz \
-		-C $BUILD_SOURCES $PHY_KERNEL_CFG.config
+	    # ...or try to get a .config file from linux-configs package if available
+	    if [ -r $BUILD_SOURCES/linux-configs-$PHY_KERNEL_VER.tar.xz ]; then
+		tar -xvf $BUILD_SOURCES/linux-configs-$PHY_KERNEL_VER.tar.xz \
+		    -C $BUILD_SOURCES $PHY_KERNEL_CFG.config
+	    fi    
 	fi
+	# Use the .config file if exists, otherwie create a default one
 	if [ -e $BUILD_SOURCES/$PHY_KERNEL_CFG.config ]; then
-	    echo "Creating a new .config file $PHY_KERNEL_CFG.config in /boot directory..."
+	    echo "Creating a .config file $PHY_KERNEL_CFG.config in /boot directory..."
 	    cp $BUILD_SOURCES/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
 	else
 	    echo "Creating a defaulf .config file in /boot directory..."
 	    make defconfig
 	    cp -v .config /boot/$PHY_KERNEL_CFG.config 
 	fi
-    else
-	echo "Using existing .config file from /boot directory..."
     fi
+    
     # Get proper .config file
     cp -v /boot/$PHY_KERNEL_CFG.config .config
     echo
@@ -81,20 +87,13 @@ EOF
 	bandit_log "Saving build tree..."
 	bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
 	cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
-
-	# Make a link from build to sources if they are not saved later
-	if [ $PHY_KERNEL_KEEP_SOURCE != "yes" ]; then
-	    rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
-	    ln -s build $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
-	fi
     fi
     
     # Pack a clean copy of the kernel source directory 
+    rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
     if [ $PHY_KERNEL_KEEP_SOURCE = "yes" ]; then
-	# Clean source tree again
-	rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
-	make clean
 	bandit_log "Saving source tree..."
+	make clean
 	bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
 	cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source	
     fi
