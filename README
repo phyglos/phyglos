@@ -1,7 +1,7 @@
 #
 # README - General description of the contents of the tarball
 #
-# Copyright (C) 2015-2017 Angel Linares Zapater
+# Copyright (C) 2015-2018 Angel Linares Zapater
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License, version 2, as 
@@ -19,6 +19,6 @@ The phyglos catalog is a set of bundles and origins needed to install a phyglos 
 The COPYING file contains the GNU License for this software.
 The RELEASE file describes the main changes in this release.
 
-Visit http://phy.wiki for more information.
+Visit https://phy.wiki for more information.
 
 
