@@ -8,7 +8,7 @@ BUILD_CMD=(
 'package	do	gcc-5.3.0          tar.bz2    pass1-builder'  
 
 # Pass 2: build a new libC and headers using the new compiler
-'package	do	linux-4.4.2        tar.xz     headers-builder'
+'package	do	linux-4.4.114      tar.xz     headers-builder'
 'package	do	glibc-2.23         tar.xz     builder'
 'package	do	gcc-5.3.0          tar.bz2    libstdcxx-builder'
 
