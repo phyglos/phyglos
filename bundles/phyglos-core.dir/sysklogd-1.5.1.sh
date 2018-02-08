@@ -10,8 +10,9 @@ build_compile()
 
 build_pack()
 {
-    make DESTDIR=$BUILD_PACK BINDIR=/sbin install
-
+    bandit_mkdir $BUILD_PACK/sbin
+    make BINDIR=$BUILD_PACK/sbin install
+    
     bandit_mkdir $BUILD_PACK/etc
     cat > $BUILD_PACK/etc/syslog.conf << "EOF"
 auth,authpriv.* -/var/log/auth.log
