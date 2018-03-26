@@ -9,7 +9,7 @@ BUILD_CMD=(
 #---
 # Prepare a new TARGET libC to be used by the BUILDER
 'package	do	man-pages-4.04           tar.xz'
-'package	do	linux-4.4.114            tar.xz   headers'
+'package	do	linux-4.4.123            tar.xz   headers'
 'package	do	glibc-2.23               tar.xz'
 'script		run	phyglos-core-setup-locales'
 'package	do	tzdata2017b              tar.xz'

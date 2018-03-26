@@ -4,22 +4,13 @@ PHY_KERNEL_SRC=linux-$PHY_KERNEL_VER
 PHY_KERNEL_CFG=$PHY_KERNEL_SRC-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
 
 _get_config_file()
-{  
+{
     if [ -e /boot/$PHY_KERNEL_CFG.config ]; then
 	echo "Using existing .config file from /boot directory..."
     else
-	# Use the cached .config file...
-	if [ ! -e $BUILD_SOURCES/$PHY_KERNEL_CFG.config ]; then
-	    # ...or try to get a .config file from linux-configs package if available
-	    if [ -r $BUILD_SOURCES/linux-configs-$PHY_KERNEL_VER.tar.xz ]; then
-		tar -xvf $BUILD_SOURCES/linux-configs-$PHY_KERNEL_VER.tar.xz \
-		    -C $BUILD_SOURCES $PHY_KERNEL_CFG.config
-	    fi    
-	fi
-	# Use the .config file if exists, otherwie create a default one
-	if [ -e $BUILD_SOURCES/$PHY_KERNEL_CFG.config ]; then
-	    echo "Creating a .config file $PHY_KERNEL_CFG.config in /boot directory..."
-	    cp $BUILD_SOURCES/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
+	if [ -e /var/lib/phyglos/linux-configs/$PHY_KERNEL_CFG.config ]; then
+	    echo "Copying the .config file from linux-configs package in /boot directory..."
+	    cp -v /var/lib/phyglos/linux-configs/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
 	else
 	    echo "Creating a defaulf .config file in /boot directory..."
 	    make defconfig
