@@ -2,4 +2,5 @@
 
 BUILD_CMD=(
 'package	do	glpk-4.60                tar.gz'
+'package	do	liblinear-220            tar.gz'
 )
