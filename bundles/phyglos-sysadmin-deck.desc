@@ -7,5 +7,6 @@ BUILD_CMD=(
 
 '# Network utilities'
 'package	do      tcpdump-4.9.2             tar.gz'
+'package	do      nmap-7.60                 tar.bz2'
 )
 
