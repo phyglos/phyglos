@@ -206,6 +206,14 @@ fi
 EOF
 
     #---
+    # Create /etc/bash_completion.d
+    #---
+
+    install --directory --mode=0755 --owner=root --group=root /etc/bash_completion.d
+
+    ln -vs $BANDIT_HOME/bin/bandit_bash_completion /etc/bash_completion.d
+    
+    #---
     # Create /etc/bashrc
     #---
 
