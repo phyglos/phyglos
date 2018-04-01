@@ -133,6 +133,14 @@ export BANDIT_HOME=$BANDIT_HOME
 export PATH=\$PATH:$BANDIT_HOME/bin
 EOF
 
+    cat > /etc/profile.d/bash_completion.sh << "EOF"
+for script in /etc/bash_completion.d/* ; do
+    if [ -r $script ] ; then
+      . $script
+    fi
+done
+EOF
+
     cat > /etc/profile.d/dircolors.sh << "EOF"
 # Setup for /bin/ls and /bin/grep to support color, the alias is in /etc/bashrc.
 
@@ -145,7 +153,7 @@ if [ -f "/etc/dircolors" ] ; then
 fi
 EOF
 
-     cat > /etc/profile.d/extrapaths.sh << "EOF"
+    cat > /etc/profile.d/extrapaths.sh << "EOF"
 # Set PCK_CONFIG_PATH
 if [ -d /usr/local/lib/pkgconfig ] ; then
     pathappend /usr/local/lib/pkgconfig PKG_CONFIG_PATH
@@ -172,7 +180,7 @@ pathappend : MANPATH
 pathappend /usr/share/info INFOPATH
 EOF
 
-     cat > /etc/profile.d/i18n.sh << EOF
+    cat > /etc/profile.d/i18n.sh << EOF
 export LANG=${PHY_LOCALES[0]}
 EOF
 
@@ -181,14 +189,14 @@ alias grep='grep --color=auto'
 alias ls='ls -h --color=auto'
 EOF
 
-     cat > /etc/profile.d/readline.sh << "EOF"
+    cat > /etc/profile.d/readline.sh << "EOF"
 if [ -z "$INPUTRC" -a ! -f "$HOME/.inputrc" ] ; then
   INPUTRC=/etc/inputrc
 fi
 export INPUTRC
 EOF
 
-     cat > /etc/profile.d/umask.sh << "EOF"
+    cat > /etc/profile.d/umask.sh << "EOF"
 # By default, the umask should be set.
 if [ "$(id -gn)" = "$(id -un)" -a $EUID -gt 99 ] ; then
   umask 002
