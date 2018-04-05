@@ -2,5 +2,5 @@
 
 BUILD_CMD=( 
 'package	do	linux-configs-0.2.1		tar.gz'
-'package	do	linux-4.4.123			tar.xz'
+'package	do	linux-4.4.126			tar.xz'
 )
