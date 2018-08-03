@@ -37,7 +37,7 @@ BUILD_CMD=(
 'package	do	acl-2.2.52               tar.gz'
 'package	do	libcap-2.25              tar.xz'
 'package	do	sed-4.2.2                tar.bz2'
-'package	do	shadow-4.2.1             tar.xz'
+'package	do	shadow-4.5               tar.xz'
 'package	do	psmisc-22.21             tar.gz'
 'package	do	procps-ng-3.3.11         tar.xz'
 'package	do	e2fsprogs-1.42.13        tar.gz'
