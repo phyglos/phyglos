@@ -7,8 +7,9 @@ build_compile()
     find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \; 
     find man -name Makefile.in -exec sed -i 's/passwd\.5 / /'   {} \; 
 
-    sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' \
-	-e 's@/var/spool/mail@/var/mail@' etc/login.defs &&
+    sed -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' \
+	-e 's@/var/spool/mail@/var/mail@' \
+	-i etc/login.defs
 
     ./configure           \
 	--sysconfdir=/etc \
