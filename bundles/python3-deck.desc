@@ -2,4 +2,8 @@
 
 BUILD_CMD=( 
 'package	do	 Python-3.6.2 		tar.xz     deck'
+
+# Rebuild a newer version of iso-codes after Python3 is available
+# Temporary workaround. To be removed.
+'package	do	iso-codes-3.79          tar.xz'  
 )

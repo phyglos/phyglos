@@ -9,7 +9,7 @@ BUILD_CMD=(
 # Internationalization tools
 'package	do	icu                        tgz'
 'package	do	intltool-0.51.0            tar.gz'
-'package	do	iso-codes-3.79             tar.xz'
+'package	do	iso-codes-3.65             tar.xz' `# Rebuild a newer version after Python3`
 
 # XML, CSS
 'package	do	libxml2-2.9.3              tar.gz'
