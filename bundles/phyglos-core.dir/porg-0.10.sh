@@ -10,6 +10,11 @@ build_compile()
 	--disable-static
     
     make
+
+    # Remove the use of deprecated "have" funtion
+    sed -e "/have porg/d" \
+	-e "s/\[ \"\$have\" \] \&\& //g" \
+	-i scripts/porg_bash_completion
 }
 
 build_pack()
