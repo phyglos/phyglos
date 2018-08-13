@@ -14,9 +14,16 @@
 RELEASE NOTES for the phyglos catalog
 =====================================
 
-This is the revision "1.11.z" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.11.0" of the phyglos catalog.
+This is a "STABLE" release.
 
 Visit https://phy.wiki for more information.
 
+
+MAJOR CHANGES in 1.11.0
+=======================
+
+* Allow not updating the system databases after new kernel is raised
+* Keep installing iso-codes-3.65 with phyglos-deck bundle.
+* Provide iso-codes-3.79 with Python3-deck bundle for convinience.
 
