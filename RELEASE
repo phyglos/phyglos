@@ -14,16 +14,9 @@
 RELEASE NOTES for the phyglos catalog
 =====================================
 
-This is the revision "1.10.z" of the phyglos catalog.
+This is the revision "1.11.z" of the phyglos catalog.
 This is a "DEVELOPMENT" release.
 
 Visit https://phy.wiki for more information.
 
 
-MAJOR CHANGES in 1.10
-=====================
-
-* Added support for Bash completion scripts.
-* Install Bash completion support for BANDIT when raising a TARGET system
-* Added support for the linux-configs package
-* Upgraded the phyglos-sysadmin-deck bundle
