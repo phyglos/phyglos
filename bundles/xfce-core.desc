@@ -3,6 +3,7 @@
 BUILD_CMD=(
 # GNOME libraries for XFCE
 'package	do	gobject-introspection-1.46.0    tar.xz'
+'package	do	GConf-3.2.6                     tar.xz'
 'package	do	libsecret-0.18.4                tar.xz'
 'package	do	glib-networking-2.50.0          tar.xz'
 'package	do	libsoup-2.56.0                  tar.xz'
