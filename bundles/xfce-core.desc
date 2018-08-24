@@ -2,12 +2,13 @@
 
 BUILD_CMD=(
 # GNOME libraries for XFCE
+'package	do	gobject-introspection-1.46.0    tar.xz'
 'package	do	glib-networking-2.50.0          tar.xz'
 'package	do	libsoup-2.56.0                  tar.xz'
 'package	do	libwnck-2.30.7                  tar.xz'
 'package	do	vte-0.28.2                      tar.xz'
 
-# XFCE XS
+# XFCE
 'package	do	gtk-xfce-engine-3.2.0           tar.bz2'
 
 'package	do	libxfce4util-4.12.1             tar.bz2'

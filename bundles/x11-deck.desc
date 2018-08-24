@@ -1,9 +1,6 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-# phyglos-deck ?
-#'package	do	gobject-introspection-1.46.0    tar.xz'
-
 # Perl libraries
 'module         perl5   HTML::Parser'
 'module         perl5   XML::Simple'
