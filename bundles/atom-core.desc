@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	atom-1.29.0           	tar.gz'
+)
