@@ -117,7 +117,7 @@ EOF
     done
     for i in 0 1 2 6; do
 	bandit_mkdir $BUILD_PACK/etc/rc.d/rc$i.d
-	ln -svf ../init.d/gpm $BUILD_PACK/etc/rc.d/rc$i.d/K1ogpm
+	ln -svf ../init.d/gpm $BUILD_PACK/etc/rc.d/rc$i.d/K10gpm
     done  
 }
 
