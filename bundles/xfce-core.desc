@@ -6,6 +6,7 @@ BUILD_CMD=(
 'package	do	GConf-3.2.6                     tar.xz'
 'package	do	libsecret-0.18.4                tar.xz'
 'package	do	glib-networking-2.50.0          tar.xz'
+'package	do	gvfs-1.26.2                     tar.xz'
 'package	do	libsoup-2.56.0                  tar.xz'
 'package	do	libwnck-2.30.7                  tar.xz'
 'package	do	vte-0.28.2                      tar.xz'
