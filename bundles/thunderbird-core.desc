@@ -1,6 +1,5 @@
 #!/bin/bash
 
 BUILD_CMD=(
-# Thunderbird
-'package	do	thunderbird-45.7.1           tar.xz'
+'package	do	thunderbird-52.9.1           tar.xz'
 )
