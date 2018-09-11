@@ -2,7 +2,7 @@
 
 build_compile()
 {
-    patch -Np1 -i $BUILD_SOURCES/nss-3.26-standalone-1.patch
+    patch -Np1 -i $BUILD_SOURCES/nss-3.29-standalone-1.patch
 
     cd nss
     

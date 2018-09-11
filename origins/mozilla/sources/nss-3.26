@@ -1,4 +1,0 @@
-URL=(https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_26_RTM/src/nss-3.26.tar.gz
-     http://www.linuxfromscratch.org/patches/blfs/7.10/nss-3.26-standalone-1.patch)
-MD5=(b71ab412cf07af436726679b204b0777
-     03408ee80b8750c8eb84c05f9be88d8f)
