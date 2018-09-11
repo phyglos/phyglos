@@ -1,5 +1,6 @@
 #!/bin/bash
 
 BUILD_CMD=(
+'package	do	autoconf-2.13               tar.xz'
 'package	do	firefox-45.9.0esr           tar.xz'
 )
