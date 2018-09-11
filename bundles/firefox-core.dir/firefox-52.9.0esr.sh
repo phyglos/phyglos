@@ -16,49 +16,43 @@ build_compile()
 # this line
 ac_add_options --disable-necko-wifi
 
-# GStreamer is necessary for H.264 video playback in HTML5 Video Player if
-# FFmpeg is not found at runtime;
-# to be enabled, also remember to set "media.gstreamer.enabled" to "true"
-# in about:config. If you have GStreamer 1.x.y, comment out this line and
-# uncomment the following one:
-#ac_add_options --disable-gstreamer
-ac_add_options --enable-gstreamer=1.0
-
-# Uncomment this option if you wish to build with gtk+-3
-#ac_add_options --enable-default-toolkit=cairo-gtk3
+# Uncomment this option if you wish to build with gtk+-2
+#ac_add_options --enable-default-toolkit=cairo-gtk2
 
 # Uncomment these lines if you have installed optional dependencies:
 #ac_add_options --enable-system-hunspell
 ac_add_options --enable-startup-notification
 
-# Comment out following option if you have PulseAudio installed
+# Uncomment the following option if you have not installed PulseAudio
 ac_add_options --disable-pulseaudio
+# and uncomment this if you installed alsa-lib instead of PulseAudio
+ac_add_options --enable-alsa
 
 # If you have installed GConf, comment out this line
-ac_add_options --disable-gconf
+#ac_add_options --disable-gconf
 
 # Comment out following options if you have not installed
 # recommended dependencies:
-
-####ac_add_options --enable-system-sqlite
-
+ac_add_options --enable-system-sqlite
 ac_add_options --with-system-libevent
 ac_add_options --with-system-libvpx
 ac_add_options --with-system-nspr
 ac_add_options --with-system-nss
-ac_add_options --with-system-icu
+
+####ac_add_options --with-system-icu
 
 # The BLFS editors recommend not changing anything below this line:
 ac_add_options --prefix=/usr
 ac_add_options --enable-application=browser
 
 ac_add_options --disable-crashreporter
-ac_add_options --disable-updater
+#ac_add_options --disable-updater
 ac_add_options --disable-tests
 
-ac_add_options --enable-optimize
-ac_add_options --enable-strip
-ac_add_options --enable-install-strip
+# Stripping is now enabled by default.
+# Uncomment these lines if you need to run a debugger:
+#ac_add_options --disable-strip
+#ac_add_options --disable-install-strip
 
 ac_add_options --enable-gio
 ac_add_options --enable-official-branding
@@ -92,7 +86,7 @@ build_pack()
 	install
 
     bandit_mkdir $BUILD_PACK/usr/lib/mozilla/plugins 
-    ln -sfv ../../mozilla/plugins $BUILD_PACK/usr/lib/firefox-45.9.0/browser
+    ln -sfv ../../mozilla/plugins $BUILD_PACK/usr/lib/firefox-52.9.0/browser
 
     bandit_mkdir $BUILD_PACK/usr/share/pixmaps
     ln -sfv /usr/lib/firefox-45.9.0/browser/icons/mozicon128.png \

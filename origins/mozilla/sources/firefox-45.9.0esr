@@ -1,7 +1,0 @@
-URL=https://archive.mozilla.org/pub/mozilla.org/firefox/releases/45.9.0esr/source/firefox-45.9.0esr.source.tar.xz
-MD5=f4d83c5150fc5085db20d71862497eb8
-
-sources_prepare()
-{
-  bandit_source_rename firefox-45.9.0esr.source.tar.xz firefox-45.9.0esr.tar.xz
-}

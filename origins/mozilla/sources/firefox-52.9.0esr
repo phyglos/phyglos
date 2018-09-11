@@ -1,0 +1,7 @@
+URL=https://archive.mozilla.org/pub/mozilla.org/firefox/releases/52.9.0esr/source/firefox-52.9.0esr.source.tar.xz
+MD5=b8c2f3619c684818be9a513f8aa1dbfd
+
+sources_prepare()
+{
+  bandit_source_rename firefox-52.9.0esr.source.tar.xz firefox-52.9.0esr.tar.xz
+}
