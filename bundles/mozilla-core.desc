@@ -2,6 +2,6 @@
 
 BUILD_CMD=(
 'package	do	npapi-sdk-0.27.2                tar.bz2'
-'package	do	nspr-4.12                       tar.gz'
+'package	do	nspr-4.13.1                     tar.gz'
 'package	do	nss-3.26                        tar.gz'
 )
