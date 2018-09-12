@@ -89,7 +89,7 @@ build_pack()
     ln -sfv ../../mozilla/plugins $BUILD_PACK/usr/lib/firefox-52.9.0/browser
 
     bandit_mkdir $BUILD_PACK/usr/share/pixmaps
-    ln -sfv /usr/lib/firefox-45.9.0/browser/icons/mozicon128.png \
+    ln -sfv /usr/lib/firefox-52.9.0/browser/icons/mozicon128.png \
             $BUILD_PACK/usr/share/pixmaps/firefox.png
 
     bandit_mkdir $BUILD_PACK/usr/share/applications
