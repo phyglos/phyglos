@@ -14,9 +14,17 @@
 RELEASE NOTES for the phyglos catalog
 =====================================
 
-This is the revision "1.11.z" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.12.0" of the phyglos catalog.
+This is a "STABLE" release.
 
 Visit https://phy.wiki for more information.
 
 
+MAJOR CHANGES IN RELEASE 1.12.0
+===============================
+
+* Added Node.js
+* Added Atom editor
+* Updated to Firefox 52 ESR
+* Updated to Flash Player 31
+* Updated to Thunderbird 52
