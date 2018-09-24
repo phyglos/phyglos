@@ -106,7 +106,7 @@ BUILD_CMD=(
 'package	do	libsigc++-2.6.2          tar.xz'
 'package	do	libtasn1-4.7             tar.gz'
 'package	do	libtasn1-4.10            tar.gz'
-'package	do	libtirpc-1.0.1           tar.bz2'
+'package	do	libtirpc-1.1.4           tar.bz2'
 
 'script		run	phyglos-core-end'
 )
