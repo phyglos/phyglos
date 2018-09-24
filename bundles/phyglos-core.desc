@@ -72,7 +72,7 @@ BUILD_CMD=(
 'package	do	kbd-2.0.3                tar.xz'
 'package	do	kmod-22                  tar.xz'
 'package	do	libpipeline-1.4.1        tar.gz'
-'package	do	make-4.1                 tar.bz2'
+'package	do	make-4.2.1               tar.bz2'
 'package	do	patch-2.7.5              tar.xz'
 'package	do	sysklogd-1.5.1           tar.gz'
 'package	do	sysvinit-2.88dsf         tar.bz2'
@@ -105,6 +105,7 @@ BUILD_CMD=(
 'package	do	libidn-1.32              tar.gz'
 'package	do	libsigc++-2.6.2          tar.xz'
 'package	do	libtasn1-4.7             tar.gz'
+'package	do	libtasn1-4.10            tar.gz'
 'package	do	libtirpc-1.0.1           tar.bz2'
 
 'script		run	phyglos-core-end'
