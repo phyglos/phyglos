@@ -3,8 +3,8 @@
 build_compile()
 {
     #Unpack embedded tarball
-    tar -xf lsof_4.89_src.tar
-    cd lsof_4.89_src           
+    tar -xf lsof_4.91_src.tar
+    cd lsof_4.91_src           
 
     ./Configure -n linux 
 
