@@ -14,9 +14,14 @@
 RELEASE NOTES for the phyglos catalog
 =====================================
 
-This is the revision "1.12.z" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.12.1" of the phyglos catalog.
+This is a "STABLE" release.
 
 Visit https://phy.wiki for more information.
 
 
+MAJOR CHANGES in 1.12.1
+=======================
+
+* Upgraded to make-4.2.1
+* Fixed URLs from some origins 
