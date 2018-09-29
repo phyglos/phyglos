@@ -104,7 +104,6 @@ BUILD_CMD=(
 'package	do	libffi-3.2.1             tar.gz'
 'package	do	libidn-1.32              tar.gz'
 'package	do	libsigc++-2.6.2          tar.xz'
-'package	do	libtasn1-4.7             tar.gz'
 'package	do	libtasn1-4.10            tar.gz'
 'package	do	libtirpc-1.1.4           tar.bz2'
 
