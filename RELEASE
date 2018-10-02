@@ -14,8 +14,8 @@
 RELEASE NOTES for the phyglos catalog
 =====================================
 
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.12.2" of the phyglos catalog.
+This is a "STABLE" release.
 
 Visit https://phy.wiki for more information.
 
@@ -23,4 +23,5 @@ Visit https://phy.wiki for more information.
 MAJOR CHANGES in "latest"
 =========================
 
-*
+* Upgraded to linux-configs-0.2.5 and linux-4.4.159
+
