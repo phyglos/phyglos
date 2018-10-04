@@ -118,7 +118,7 @@ BUILD_CMD=(
 'package	do	logrotate-3.12.2           tar.xz'
 
 # SQLite system database
-'package	do	sqlite-autoconf-3190300    tar.gz'
+'package	do	sqlite-autoconf-3240000    tar.gz'
 
 # System services
 'package	do	ntp-4.2.8p10               tar.gz'
