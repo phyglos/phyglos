@@ -1,6 +1,6 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-'package	do	linux-configs-0.2.5		tar.gz'
+'package	do	linux-configs-0.3.0		tar.gz'
 'package	do	linux-4.4.159			tar.xz'
 )
