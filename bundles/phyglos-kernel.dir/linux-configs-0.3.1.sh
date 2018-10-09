@@ -12,6 +12,7 @@ build_config()
 	echo "No .config file found in from /boot directory..."
 	if [ -e /var/lib/phyglos/linux-configs/$PHY_KERNEL_CFG.config ]; then
 	    echo "Copying the .config file from linux-configs package to the /boot directory..."
+	    bandit_mkdir /boot
 	    cp -v /var/lib/phyglos/linux-configs/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
 	else
 	    echo "Creating the /boot directory and copying the .config file..."
