@@ -9,7 +9,7 @@ build_compile()
     make
 }
 
-build_test_level=1
+build_test_level=4
 build_test()
 {
     make RUN_EXPENSIVE_TESTS=yes check
