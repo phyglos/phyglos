@@ -2,12 +2,10 @@
 
 build_compile()
 {
-    patch -Np1 -i $BUILD_SOURCES/mpfr-3.1.3-upstream_fixes-2.patch
-
     ./configure                            \
 	--prefix=/usr                      \
 	--enable-thread-safe               \
-	--docdir=/usr/share/doc/mpfr-3.1.3 \
+	--docdir=/usr/share/doc/mpfr-4.0.1 \
 	--disable-static    
 
     make

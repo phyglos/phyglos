@@ -2,12 +2,12 @@
 
 build_compile()
 {
-    tar -xf $BUILD_SOURCES/mpfr-3.1.3.tar.xz
-    mv -v mpfr-3.1.3 mpfr
-    tar -xf $BUILD_SOURCES/gmp-6.1.0.tar.xz
-    mv -v gmp-6.1.0 gmp
-    tar -xf $BUILD_SOURCES/mpc-1.0.3.tar.gz
-    mv -v mpc-1.0.3 mpc
+    tar -xf $BUILD_SOURCES/mpfr-4.0.1.tar.xz
+    mv -v mpfr-4.0.1 mpfr
+    tar -xf $BUILD_SOURCES/gmp-6.1.2.tar.xz
+    mv -v gmp-6.1.2 gmp
+    tar -xf $BUILD_SOURCES/mpc-1.1.0.tar.gz
+    mv -v mpc-1.1.0 mpc
 
     for file in $(find gcc/config -name linux64.h -o -name linux.h -o -name sysv4.h)
     do

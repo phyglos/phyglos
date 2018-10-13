@@ -18,12 +18,12 @@ build_compile()
 	touch $file.orig
     done
 
-    tar -xf $BUILD_SOURCES/mpfr-3.1.3.tar.xz
-    mv -v mpfr-3.1.3 mpfr
-    tar -xf $BUILD_SOURCES/gmp-6.1.0.tar.xz
-    mv -v gmp-6.1.0 gmp
-    tar -xf $BUILD_SOURCES/mpc-1.0.3.tar.gz
-    mv -v mpc-1.0.3 mpc
+    tar -xf $BUILD_SOURCES/mpfr-4.0.1.tar.xz
+    mv -v mpfr-4.0.1 mpfr
+    tar -xf $BUILD_SOURCES/gmp-6.1.2.tar.xz
+    mv -v gmp-6.1.2 gmp
+    tar -xf $BUILD_SOURCES/mpc-1.1.0.tar.gz
+    mv -v mpc-1.1.0 mpc
 
     mkdir -v build
     cd build

@@ -4,7 +4,7 @@ build_compile()
 {
     ./configure                           \
 	--prefix=/usr                     \
-	--docdir=/usr/share/doc/mpc-1.0.3 \
+	--docdir=/usr/share/doc/mpc-1.1.0 \
 	--disable-static   
 
     make
