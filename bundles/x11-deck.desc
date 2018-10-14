@@ -50,7 +50,7 @@ BUILD_CMD=(
 'package	do	ghostscript-9.19                tar.bz2'
 'package	do	poppler-0.41.0 	                tar.xz'
 'package	do	qpdf-6.0.0 	                tar.gz'
-'package	do	mupdf-1.10a 	                tar.gz'
+'package	do	mupdf-1.10a-source              tar.gz'
 
 # ImageMagick suite
 'package	do	ImageMagick-7.0.6-10            tar.xz'
