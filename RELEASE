@@ -14,13 +14,17 @@
 RELEASE NOTES for the phyglos catalog
 =====================================
 
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.13.0" of the phyglos catalog.
+This is a "STABLE" release.
 
 Visit https://phy.wiki for more information.
 
 
-MAJOR CHANGES in "latest"
+MAJOR CHANGES in "1.13.0"
 =========================
 
-*
+* Added support for multiple Linux kernels
+* Upgraded to linux-configs-0.3.2 and linux-4.4.161
+* Upgraded to gcc-5.5.0, gmp-6.1.2, mpc-1.1.0 and mpfr-4.0.1
+
+
