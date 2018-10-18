@@ -3,5 +3,5 @@
 BUILD_CMD=(
 'module         perl5   Module::Build'
 'module         perl5   Error'
-'package	do	git-2.13.3		tar.xz'
+'package	do	git-2.19.1		tar.xz'
 )
