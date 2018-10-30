@@ -40,7 +40,7 @@ BUILD_CMD=(
 'package	do	shadow-4.5               tar.xz'
 'package	do	psmisc-22.21             tar.gz'
 'package	do	procps-ng-3.3.11         tar.xz'
-'package	do	e2fsprogs-1.42.13        tar.gz'
+'package	do	e2fsprogs-1.44.4         tar.gz'
 'package	do	iana-etc-2.30            tar.bz2'
 'package	do	m4-1.4.17                tar.xz'
 'package	do	bison-3.0.4              tar.xz'
