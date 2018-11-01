@@ -2,7 +2,7 @@
 
 BUILD_CMD=(
 # System debugger
-'package	do	gdb-8.0.1                tar.gz'
+'package	do	gdb-8.2                  tar.gz'
 # System C compiler cache'
 'package	do	ccache-3.5               tar.xz'
 )
