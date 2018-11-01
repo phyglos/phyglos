@@ -1,0 +1,7 @@
+URL=https://www.iana.org/time-zones/repository/releases/tzdata2018f.tar.gz
+MD5=e5e84f00f9d18bd6ebc8b1affec91b15 
+
+sources_prepare()
+{
+  bandit_source_repackage_into tzdata2018f.tar.gz tzdata2018f
+}
