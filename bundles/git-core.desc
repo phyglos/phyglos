@@ -1,6 +1,7 @@
 #!/bin/bash
 
 BUILD_CMD=(
+'module         perl5   inc'
 'module         perl5   Module::Build'
 'module         perl5   Error'
 'package	do	git-2.19.1		tar.xz'
