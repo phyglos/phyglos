@@ -1,9 +1,12 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-# Perl libraries
+# Perl libraries   
 'module         perl5   HTML::Parser'
 'module         perl5   XML::Simple'
+
+# GNOME libraries
+'package	do	gobject-introspection-1.46.0    tar.xz'
 
 # Accessibility libraries
 'package	do	atk-2.18.0 			tar.xz'
