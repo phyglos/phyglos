@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KO_build_compile()
+build_compile()
 {
     ./configure               \
 	--prefix=/usr         \
