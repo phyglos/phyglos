@@ -23,6 +23,7 @@ Defaults:%phy env_keep += "LANG LANGUAGE LC_*"
 Defaults:%phy env_keep += "BANDIT_HOME"
 Defaults:%phy env_keep += "EDITOR"
 Defaults:%phy env_keep += "LIBRARY_PATH PKG_CONFIG_PATH"
+Defaults:%phy env_keep += "XORG_PREFIX"
 Defaults:%phy env_keep += "PRUNE_BIND_MOUNTS PRUNENAMES PRUNEPATHS PRUNEFS"
 
 ## Allow the phy group to sudo all WITH password
