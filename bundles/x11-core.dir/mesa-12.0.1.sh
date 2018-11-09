@@ -9,7 +9,7 @@ build_compile()
     
     CFLAGS="-O2" CXXFLAGS="-O2"        \
     ./autogen.sh                       \
-        --prefix=$PHY_XORG_PREFIX      \
+        --prefix=$XORG_PREFIX          \
         --sysconfdir=/etc              \
         --enable-texture-float         \
         --enable-gles1                 \
