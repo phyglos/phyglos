@@ -1,7 +1,8 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-'package	do	 Python-3.6.2 		tar.xz     deck'
+'package	do	 Python-3.7.1 		tar.xz     deck'
+'module         python3  pip'
 
 # Rebuild a newer version of iso-codes after Python3 is available
 # Temporary workaround. To be removed.
