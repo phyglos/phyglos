@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package	do	ruby-2.5.1 		tar.xz      core'
+)
