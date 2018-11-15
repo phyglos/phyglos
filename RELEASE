@@ -14,13 +14,17 @@
 RELEASE NOTES for the phyglos catalog
 =====================================
 
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.16.0" of the phyglos catalog.
+This is a "STABLE" release.
 
 Visit https://phy.wiki for more information.
 
 
-MAJOR CHANGES in "latest"
+MAJOR CHANGES in "1.16.0"
 =========================
 
-*
+*   Upgraded to slang-2.3.2
+*   Upgraded to Python-2.7.15
+*   Upgraded to Python-3.7.1
+*   Added ruby-2.5.1 
+
