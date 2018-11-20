@@ -1,6 +1,6 @@
 #!/bin/bash
 
 BUILD_CMD=(
-'package	do	glpk-4.60                tar.gz'
+'package	do	glpk-4.65                tar.gz'
 'package	do	liblinear-221            tar.gz'
 )

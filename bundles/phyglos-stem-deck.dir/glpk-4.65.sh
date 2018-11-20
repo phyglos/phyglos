@@ -21,7 +21,7 @@ build_pack()
 {
     make DESTDIR=$BUILD_PACK install
 
-    bandit_mkdir $BUILD_PACK/usr/share/doc/glpk-4.60
-    cp doc/glpk.pdf $BUILD_PACK/usr/share/doc/glpk-4.60
-    cp doc/gmpl.pdf $BUILD_PACK/usr/share/doc/glpk-4.60
+    bandit_mkdir $BUILD_PACK/usr/share/doc/glpk-4.65
+    cp doc/glpk.pdf $BUILD_PACK/usr/share/doc/glpk-4.65
+    cp doc/gmpl.pdf $BUILD_PACK/usr/share/doc/glpk-4.65
 }
