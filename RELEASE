@@ -14,13 +14,19 @@
 RELEASE NOTES for the phyglos catalog
 =====================================
 
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.16.1" of the phyglos catalog.
+This is a "STABLE" release.
 
-Visit https://phy.wiki for more information.
+See https://docs.phyglos.org/phyglos for more information.
 
 
-MAJOR CHANGES in "latest"
+MAJOR CHANGES in "1.16.1"
 =========================
 
-*
+* Upgraded to linux-4.4.166, linux-4.14.85 and linux-4.19.6
+* Upgraded to libqalculate-2.8.2 and qalculate-gtk-2.8.2
+* Upgraded to gsl-2.5
+* Upgraded to glpk-4.65
+* Upgraded to liblinear-221
+
+
