@@ -11,14 +11,33 @@
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
 #
 
-The phyglos catalog
+The phyglos Catalog
 ===================
 
-The phyglos catalog is a set of bundles and origins needed to install a phyglos distribution using the BANDIT toolkit. 
+The phyglos Catalog is a BANDIT catalog used to raise the phy GNU/linux operating
+system. The catalog contains the bundles of funcionality capable of raising a new
+phy system from a supported Linux distribution.
+
+
+How to use
+==========
+
+This catalog is used by the BANDIT toolkit to raise a new phy system. See the
+BANDIT documentation (https://docs.phyglos.org/bandit) to learn how to use the
+toolkit to install and remove bundles and packages.
+
+Status
+======
+
+The phyglos catalog is in STABLE status. With this catalog the BANDIT can create
+a new TARGET system and install phyglos in a free disk partition of the HOST system.
+
+More information
+================
 
 The COPYING file contains the GNU License for this software.
 The RELEASE file describes the main changes in this release.
 
-Visit https://phy.wiki for more information.
+See https://docs.phyglos.org/phyglos for more information.
 
 
