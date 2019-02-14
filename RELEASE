@@ -13,8 +13,8 @@
 
 RELEASE NOTES for the phyglos catalog
 =====================================
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.16.3" of the phyglos catalog.
+This is a "STABLE" release.
 
 See https://docs.phyglos.org/phyglos for more information.
 
@@ -22,4 +22,5 @@ See https://docs.phyglos.org/phyglos for more information.
 MAJOR CHANGES in "latest"
 =========================
 
-*
+* Upgraded to linux-configs-0.6.2, linux-4.4.174, linux-4.19.21 and linux-4.20.8
+
