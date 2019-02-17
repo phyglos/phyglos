@@ -1,5 +1,0 @@
-#!/bin/bash
-
-BUILD_CMD=( 
-'package	do	dropbox-35.4.20 		tar.xz'
-)
