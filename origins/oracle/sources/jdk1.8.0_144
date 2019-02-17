@@ -1,7 +1,0 @@
-URL=file:/srv/bandit/oracle/jdk-8u144-linux-x64.tar.gz
-MD5=2d59a3add1f213cd249a67684d4aeb83
-
-sources_prepare()
-{
-  bandit_source_rename jdk-8u144-linux-x64.tar.gz jdk1.8.0_144.tar.gz
-}
