@@ -13,13 +13,17 @@
 
 RELEASE NOTES for the phyglos catalog
 =====================================
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.17.0" of the phyglos catalog.
+This is a "STABLE" release.
 
 See https://docs.phyglos.org/phyglos for more information.
 
 
-MAJOR CHANGES in "latest"
-=========================
+MAJOR CHANGES
+=============
+* Added etc/release.conf file for the catalog
+* Removed dropbox-core bundle. Moved to the aliens catalog
+* Removed java-se-jdk-9 bundle. Moved to the aliens catalog
+* Removed java-se-jdk-8 bundle. Moved to the aliens catalog
+* Removed flash-player-31.0.0.108-npapi bundle. Moved to the aliens catalog
 
-*
