@@ -121,4 +121,15 @@ EOF
 /bin/bash
 EOF
 
+    #---
+    # Create /etc/os-release
+    #---
+
+    cat > /etc/os-release << EOF
+NAME=$PHY_DISTRIB_DESCRIPTION
+VERSION=$PHY_DISTRIB_RELEASE
+ID=$PHY_DISTRIB_ID
+VERSION_CODENAME=$PHY_DISTRIB_CODENAME
+EOF
+
 }

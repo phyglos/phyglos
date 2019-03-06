@@ -83,9 +83,9 @@ BUILD_CMD=(
 'package	do	vim74                    tar.bz2'
 
 # Set up TARGET configuration files
+'package	do	lsb-release-1.4          tar.gz'
 'script		run	phyglos-core-setup-etc'
 'script		run	phyglos-core-setup-site'
-'package	do	lsb-release-1.4          tar.gz'
 'script		run	phyglos-core-setup-profiles'
 
 'package	do	util-linux-2.27.1        tar.xz' `# Requires tty group after setup-profiles`
