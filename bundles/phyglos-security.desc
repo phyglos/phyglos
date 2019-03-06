@@ -6,7 +6,7 @@ BUILD_CMD=(
 'script		run	phyglos-security-setup-users'
 
 # Enforce strong passwords use
-'package	do	cracklib-2.9.6           tar.gz'
+'package	do	cracklib-2.9.7           tar.gz'
 
 # Do Linux-PAM and rebuild other packages with PAM support
 'package	do	Linux-PAM-1.2.1          tar.bz2'

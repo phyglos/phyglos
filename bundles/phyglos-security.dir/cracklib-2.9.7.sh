@@ -5,9 +5,9 @@ build_compile()
     sed -i '/skipping/d' util/packer.c
 
     ./configure   \
-	--prefix=/usr    \
-	--disable-static \
-	--with-default-dict=/lib/cracklib/pw_dict
+        --prefix=/usr    \
+        --disable-static \
+        --with-default-dict=/lib/cracklib/pw_dict
     
     make
 }
@@ -24,16 +24,15 @@ build_pack()
 
 
     # Create default list of forbidden words
-    install -v -m644 -D $BUILD_SOURCES/cracklib-words-2.9.6.gz \
-	                $BUILD_PACK/usr/share/dict/cracklib-words.gz    
+    install -v -m644 -D $BUILD_SOURCES/cracklib-words-2.9.7.gz \
+                        $BUILD_PACK/usr/share/dict/cracklib-words.gz    
     ln -svf cracklib-words $BUILD_PACK/usr/share/dict/words
 
     # Create a list of extra forbidden words
     cat > $BUILD_PACK/usr/share/dict/cracklib-extra-words << EOF
-    $(hostname)
-    bandit
-    phy
-    phyglos
+bandit
+phy
+phyglos
 EOF
 
     install -v -m755 -d $BUILD_PACK/lib/cracklib
@@ -46,6 +45,11 @@ install_setup()
 
     rm -rf cracklib-words
     gunzip cracklib-words.gz
+
+    # Add intallation time extra forbidden words
+    cat >> $BUILD_PACK/usr/share/dict/cracklib-extra-words << EOF
+$(hostname)
+EOF
 
     # Create first set of forbidden words
     create-cracklib-dict cracklib-words cracklib-extra-words   
