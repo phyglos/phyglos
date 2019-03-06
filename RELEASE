@@ -13,13 +13,15 @@
 
 RELEASE NOTES for the phyglos catalog
 =====================================
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.17.1" of the phyglos catalog.
+This is a "STABLE" release.
 
 See https://docs.phyglos.org/phyglos for more information.
 
 
-MAJOR CHANGES in "latest"
-=========================
-
-*
+MAJOR CHANGES
+=============
+* Upgraded to linux-configs-0.7.1, linux-4.4.176, linux-4.19.26 and linunx-4.20.13
+* Upgraded to cracklib-2.9.7
+* Added /etc/os-release file
+* Upgraded to tzdata2018i 
