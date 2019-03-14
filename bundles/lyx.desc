@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'package  do      lyx-2.3.2  tar.xz'
+)
