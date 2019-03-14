@@ -2,41 +2,41 @@
 
 BUILD_CMD=( 
 # Add phy group and phy user with sudo capabilities before Linux-PAM
-'package	do	sudo-1.8.15              tar.gz'
-'script		run	phyglos-security-setup-users'
+'package  do      sudo-1.8.15  tar.gz'
+'script   run     phyglos-security-setup-users'
 
 # Enforce strong passwords use
-'package	do	cracklib-2.9.7           tar.gz'
+'package  do      cracklib-2.9.7  tar.gz'
 
 # Do Linux-PAM and rebuild other packages with PAM support
-'package	do	Linux-PAM-1.2.1          tar.bz2'
-'package	do	libcap-2.25              tar.xz       with-pam'
-'package	do	shadow-4.5               tar.xz       with-pam'
-'package	do	sudo-1.8.15              tar.gz       with-pam'
+'package  do      Linux-PAM-1.2.1  tar.bz2'
+'package  do      libcap-2.25  tar.xz  with-pam'
+'package  do      shadow-4.5  tar.xz   with-pam'
+'package  do      sudo-1.8.15  tar.gz  with-pam'
 
 # Security suites
-'package	do	openssl-1.0.2m           tar.gz'
-'package	do	openssl-1.1.0g           tar.gz'
+'package  do      openssl-1.0.2m  tar.gz'
+'package  do      openssl-1.1.0g  tar.gz'
 
-'package	do	nettle-3.2               tar.gz'
-'package	do	p11-kit-0.23.10          tar.gz'
-'package	do	gnutls-3.4.17             tar.xz'
+'package  do      nettle-3.2  tar.gz'
+'package  do      p11-kit-0.23.10  tar.gz'
+'package  do      gnutls-3.4.17  tar.xz'
 
-'package	do	libgpg-error-1.27        tar.bz2'
-'package	do	libgcrypt-1.8.0          tar.bz2'
+'package  do      libgpg-error-1.27  tar.bz2'
+'package  do      libgcrypt-1.8.0  tar.bz2'
 
 # Network security 
-'package	do	iptables-1.6.0           tar.bz2'
-'script		run	phyglos-security-setup-firewall'
+'package  do      iptables-1.6.0  tar.bz2'
+'script   run     phyglos-security-setup-firewall'
 
 # Setup PKI 
-'package	do	wget-1.17.1              tar.xz'
-'script		run	phyglos-security-setup-CAcerts'
+'package  do      wget-1.17.1  tar.xz'
+'script   run     phyglos-security-setup-CAcerts'
 
 # Network utilities
-'package	do	curl-7.47.1              tar.lzma'
-'package	do	iproute2-4.4.0           tar.xz'
-'script		run	phyglos-security-setup-ssh'
-'package	do	openssh-7.5p1            tar.gz'
+'package  do      curl-7.64.0  tar.xz'
+'package  do      iproute2-4.4.0  tar.xz'
+'script   run     phyglos-security-setup-ssh'
+'package  do      openssh-7.5p1  tar.gz'
 )
 
