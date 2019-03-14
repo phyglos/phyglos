@@ -6,18 +6,18 @@ PHY_KERNEL_CFG=$PHY_KERNEL_SRC-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
 _get_config_file()
 {
     if [ -e /boot/$PHY_KERNEL_CFG.config ]; then
-	echo "Using existing .config file from /boot directory..."
+        echo "Using existing .config file from /boot directory..."
     else
-	if [ -e /var/lib/phyglos/linux-configs/$PHY_KERNEL_CFG.config ]; then
-	    echo "Copying the .config file from linux-configs package in /boot directory..."
-	    bandit_mkdir /boot
-	    cp -v /var/lib/phyglos/linux-configs/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
-	else
-	    echo "Creating a defaulf .config file in /boot directory..."
-	    make defconfig
-	    bandit_mkdir /boot
-	    cp -v .config /boot/$PHY_KERNEL_CFG.config 
-	fi
+        if [ -e /var/lib/phyglos/linux-configs/$PHY_KERNEL_CFG.config ]; then
+            echo "Copying the .config file from linux-configs package in /boot directory..."
+            bandit_mkdir /boot
+            cp -v /var/lib/phyglos/linux-configs/$PHY_KERNEL_CFG.config /boot/$PHY_KERNEL_CFG.config
+        else
+            echo "Creating a defaulf .config file in /boot directory..."
+            make defconfig
+            bandit_mkdir /boot
+            cp -v .config /boot/$PHY_KERNEL_CFG.config 
+        fi
     fi
     
     # Get proper .config file
@@ -55,7 +55,7 @@ build_pack()
     bandit_log "Installing the kernel..."
     bandit_mkdir $BUILD_PACK/boot
     cp -v arch/$PHY_KERNEL_ARCH/boot/bzImage \
-	             $BUILD_PACK/boot/vmlinuz-$PHY_KERNEL_VER-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
+       $BUILD_PACK/boot/vmlinuz-$PHY_KERNEL_VER-$PHY_KERNEL_ARCH-$PHY_KERNEL_HW
     cp -v System.map $BUILD_PACK/boot/System.map-$PHY_KERNEL_CFG
     cp -v .config    $BUILD_PACK/boot/$PHY_KERNEL_CFG.config
 
@@ -77,18 +77,18 @@ EOF
     # Pack a copy of the kernel build directory 
     rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
     if [ $PHY_KERNEL_KEEP_BUILD = "yes" ]; then
-	bandit_log "Saving build tree..."
-	bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
-	cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
+        bandit_log "Saving build tree..."
+        bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
+        cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/build
     fi
     
     # Pack a clean copy of the kernel source directory 
     rm -rf $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
     if [ $PHY_KERNEL_KEEP_SOURCE = "yes" ]; then
-	bandit_log "Saving source tree..."
-	make clean
-	bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
-	cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source	
+        bandit_log "Saving source tree..."
+        make clean
+        bandit_mkdir $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source
+        cp -R * $BUILD_PACK/lib/modules/$PHY_KERNEL_VER/source  
     fi
 
     # Pack documentation
