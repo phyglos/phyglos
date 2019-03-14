@@ -11,15 +11,18 @@
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
 #
 
-RELEASE NOTES for the phyglos catalog
-=====================================
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+RELEASE NOTES
+=============
+
+This is the revision "1.17.2" of the phyglos catalog.
+This is a "STABLE" release.
 
 See https://docs.phyglos.org/phyglos for more information.
 
+MAJOR CHANGES
+=============
 
-MAJOR CHANGES in "latest"
-=========================
+* Upgraded to curl-7.64.0
+* Upgraded to linux-configs-0.8.0, linux-4.19.28 and linux-5.0.1
+* Added lyx bundle
 
-*
