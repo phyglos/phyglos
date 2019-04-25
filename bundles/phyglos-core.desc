@@ -2,111 +2,111 @@
 
 BUILD_CMD=(
 # Build porg using BUILDER libC
-'package	do	porg-0.10                tar.gz   pre-libc'
+'package  do        porg-0.10                tar.gz   pre-libc'
 
 #---
 # Start a new LFS build
 #---
 # Prepare a new TARGET libC to be used by the BUILDER
-'package	do	man-pages-4.04           tar.xz'
-'package	do	linux-4.4.177            tar.xz   headers'
-'package	do	glibc-2.23               tar.xz'
-'script		run	phyglos-core-setup-locales'
-'package	do	tzdata2018i              tar.xz'
-'script		run	phyglos-core-adjust-builder'
+'package  do        man-pages-4.04           tar.xz'
+'package  do        linux-4.4.177            tar.xz   headers'
+'package  do        glibc-2.23               tar.xz'
+'script   run       phyglos-core-setup-locales'
+'package  do        tzdata2018i              tar.xz'
+'script   run       phyglos-core-adjust-builder'
 
 # Rebuild porg using the new libC
-'package	do	porg-0.10                tar.gz'
+'package  do        porg-0.10                tar.gz'
 
 # Start building the TARGET system
-'package	do	zlib-1.2.11              tar.xz'  
-'package	do	file-5.25                tar.gz'
-'package	do	binutils-2.26            tar.bz2'
+'package  do        zlib-1.2.11              tar.xz'  
+'package  do        file-5.25                tar.gz'
+'package  do        binutils-2.26            tar.bz2'
 
 # Prepare the new C system compiler
-'package	do	gmp-6.1.2                tar.xz'
-'package	do	mpfr-4.0.1               tar.xz'
-'package	do	mpc-1.1.0                tar.gz'
-'package	do	gcc-5.5.0                tar.xz'
+'package  do        gmp-6.1.2                tar.xz'
+'package  do        mpfr-4.0.1               tar.xz'
+'package  do        mpc-1.1.0                tar.gz'
+'package  do        gcc-5.5.0                tar.xz'
 
 # Build the rest of the TARGET system
-'package	do	bzip2-1.0.6              tar.gz'
-'package	do	pkg-config-0.29          tar.gz'
-'package	do	ncurses-6.0              tar.gz'
-'package	do	attr-2.4.47              tar.gz'
-'package	do	acl-2.2.52               tar.gz'
-'package	do	libcap-2.25              tar.xz'
-'package	do	sed-4.2.2                tar.bz2'
-'package	do	shadow-4.5               tar.xz'
-'package	do	psmisc-22.21             tar.gz'
-'package	do	procps-ng-3.3.11         tar.xz'
-'package	do	iana-etc-2.30            tar.bz2'
-'package	do	m4-1.4.17                tar.xz'
-'package	do	bison-3.0.4              tar.xz'
-'package	do	flex-2.6.0               tar.xz'
-'package	do	grep-2.23                tar.xz'
-'package	do	readline-6.3             tar.gz'
-'package	do	bash-4.3.30              tar.gz'
-'package	do	bc-1.06.95               tar.bz2'
-'package	do	libtool-2.4.6            tar.xz'
-'package	do	gdbm-1.11                tar.gz'
-'package	do	expat-2.1.0              tar.gz'
-'package	do	inetutils-1.9.4          tar.xz'
-'package	do	perl-5.22.1              tar.bz2'
-#'package	do	XML-Parser-2.44          tar.gz' `# Moved to phyglos-deck as perl5 module`
-'package	do	autoconf-2.69            tar.xz'
-'package	do	automake-1.15            tar.xz'
-'package	do	coreutils-8.25           tar.xz'
-'package	do	diffutils-3.3            tar.xz'
-'package	do	gawk-4.1.3               tar.xz'
-'package	do	findutils-4.6.0          tar.gz'
-'package	do	gettext-0.19.7           tar.xz'
-#'package	do	intltool-0.51.0          tar.gz' `# Moved to phyglos-deck after XML::Parser`
-'package	do	gperf-3.0.4              tar.gz'
-'package	do	groff-1.22.3             tar.gz'
-'package	do	xz-5.2.2                 tar.xz'
-'package	do	less-481                 tar.gz'
-'package	do	gzip-1.6                 tar.xz'
-#'package	do	iproute2-4.4.0           tar.xz' `# Moved to phyglos-security`
-'package	do	kbd-2.0.3                tar.xz'
-'package	do	kmod-22                  tar.xz'
-'package	do	libpipeline-1.4.1        tar.gz'
-'package	do	make-4.2.1               tar.bz2'
-'package	do	patch-2.7.5              tar.xz'
-'package	do	sysklogd-1.5.1           tar.gz'
-'package	do	sysvinit-2.88dsf         tar.bz2'
-'package	do	lfs-bootscripts-20150222 tar.bz2'
-'package	do	tar-1.28                 tar.xz'
-'package	do	texinfo-6.1              tar.xz'
-'package	do	eudev-3.1.5              tar.gz'
-'package	do	man-db-2.7.5             tar.xz'
-'package	do	vim74                    tar.bz2'
+'package  do        bzip2-1.0.6              tar.gz'
+'package  do        pkg-config-0.29          tar.gz'
+'package  do        ncurses-6.0              tar.gz'
+'package  do        attr-2.4.47              tar.gz'
+'package  do        acl-2.2.52               tar.gz'
+'package  do        libcap-2.25              tar.xz'
+'package  do        sed-4.2.2                tar.bz2'
+'package  do        shadow-4.5               tar.xz'
+'package  do        psmisc-22.21             tar.gz'
+'package  do        procps-ng-3.3.11         tar.xz'
+'package  do        iana-etc-2.30            tar.bz2'
+'package  do        m4-1.4.17                tar.xz'
+'package  do        bison-3.0.4              tar.xz'
+'package  do        flex-2.6.0               tar.xz'
+'package  do        grep-2.23                tar.xz'
+'package  do        readline-6.3             tar.gz'
+'package  do        bash-4.3.30              tar.gz'
+'package  do        bc-1.06.95               tar.bz2'
+'package  do        libtool-2.4.6            tar.xz'
+'package  do        gdbm-1.11                tar.gz'
+'package  do        expat-2.1.0              tar.gz'
+'package  do        inetutils-1.9.4          tar.xz'
+'package  do        perl-5.28.1              tar.bz2'
+#'package       do      XML-Parser-2.44          tar.gz' `# Moved to phyglos-deck as perl5 module`
+'package  do        autoconf-2.69            tar.xz'
+'package  do        automake-1.15            tar.xz'
+'package  do        coreutils-8.25           tar.xz'
+'package  do        diffutils-3.3            tar.xz'
+'package  do        gawk-4.1.3               tar.xz'
+'package  do        findutils-4.6.0          tar.gz'
+'package  do        gettext-0.19.7           tar.xz'
+#'package       do      intltool-0.51.0          tar.gz' `# Moved to phyglos-deck after XML::Parser`
+'package  do        gperf-3.0.4              tar.gz'
+'package  do        groff-1.22.3             tar.gz'
+'package  do        xz-5.2.2                 tar.xz'
+'package  do        less-481                 tar.gz'
+'package  do        gzip-1.6                 tar.xz'
+#'package       do      iproute2-4.4.0           tar.xz' `# Moved to phyglos-security`
+'package  do        kbd-2.0.3                tar.xz'
+'package  do        kmod-22                  tar.xz'
+'package  do        libpipeline-1.4.1        tar.gz'
+'package  do        make-4.2.1               tar.bz2'
+'package  do        patch-2.7.5              tar.xz'
+'package  do        sysklogd-1.5.1           tar.gz'
+'package  do        sysvinit-2.88dsf         tar.bz2'
+'package  do        lfs-bootscripts-20150222 tar.bz2'
+'package  do        tar-1.28                 tar.xz'
+'package  do        texinfo-6.1              tar.xz'
+'package  do        eudev-3.1.5              tar.gz'
+'package  do        man-db-2.7.5             tar.xz'
+'package  do        vim74                    tar.bz2'
 
 # Set up TARGET configuration files
-'package	do	lsb-release-1.4          tar.gz'
-'script		run	phyglos-core-setup-etc'
-'script		run	phyglos-core-setup-site'
-'script		run	phyglos-core-setup-profiles'
+'package  do        lsb-release-1.4          tar.gz'
+'script   run       phyglos-core-setup-etc'
+'script   run       phyglos-core-setup-site'
+'script   run       phyglos-core-setup-profiles'
 
-'package	do	util-linux-2.27.1        tar.xz' `# Requires tty group after setup-profiles`
-'package	do	e2fsprogs-1.44.4         tar.gz'
+'package  do        util-linux-2.27.1        tar.xz' `# Requires tty group after setup-profiles`
+'package  do        e2fsprogs-1.44.4         tar.gz'
 
-'script		run	phyglos-core-setup-network'
+'script   run       phyglos-core-setup-network'
 #---
 # End the LFS build
 #---
 
 # Add some core utilities, libraries and services
-'package	do	which-2.21               tar.gz'
+'package  do        which-2.21               tar.gz'
 
-'package	do	haveged-1.9.1            tar.gz'
+'package  do        haveged-1.9.1            tar.gz'
 
-'package	do	libffi-3.2.1             tar.gz'
-'package	do	libidn-1.32              tar.gz'
-'package	do	libsigc++-2.6.2          tar.xz'
-'package	do	libtasn1-4.10            tar.gz'
-'package	do	libtirpc-1.1.4           tar.bz2'
+'package  do        libffi-3.2.1             tar.gz'
+'package  do        libidn-1.32              tar.gz'
+'package  do        libsigc++-2.6.2          tar.xz'
+'package  do        libtasn1-4.10            tar.gz'
+'package  do        libtirpc-1.1.4           tar.bz2'
 
-'script		run	phyglos-core-end'
+'script   run       phyglos-core-end'
 )
 
