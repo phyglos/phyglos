@@ -31,7 +31,3 @@ build_pack()
     make DESTDIR=$BUILD_PACK install
 }
 
-install_setup()
-{
-    PERL_MM_USE_DEFAULT=1 cpan -i CPAN
-}
