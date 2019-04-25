@@ -2,131 +2,132 @@
 
 BUILD_CMD=(
 # Perl CPAN and other modules
-'module         perl5	Log::Log4perl'
-'module         perl5	URI'
-'module         perl5	XML::Parser'
+'script   run       phyglos-deck-setup-CPAN'    
+'module   perl5     Log::Log4perl'
+'module   perl5     URI'
+'module   perl5     XML::Parser'
 
 # Internationalization tools
-'package	do	icu                        tgz'
-'package	do	intltool-0.51.0            tar.gz'
-'package	do	iso-codes-3.65             tar.xz' `# Rebuild a newer version after Python3`
+'package  do        icu                        tgz'
+'package  do        intltool-0.51.0            tar.gz'
+'package  do        iso-codes-3.65             tar.xz' `# Rebuild a newer version after Python3`
 
 # XML, CSS
-'package	do	libxml2-2.9.3              tar.gz'
-'package	do	libxslt-1.1.28             tar.gz'
+'package  do        libxml2-2.9.3              tar.gz'
+'package  do        libxslt-1.1.28             tar.gz'
 
 # System libraries'
-'package	do	libatomic_ops-7.4.2        tar.gz'
-'package	do	libarchive-3.2.1           tar.gz'
-'package	do	libevent-2.1.8-stable      tar.gz'
-'package	do	libusb-1.0.20              tar.bz2'
-'package	do	pcre-8.40                  tar.bz2'
-'package	do	popt-1.16                  tar.gz'
+'package  do        libatomic_ops-7.4.2        tar.gz'
+'package  do        libarchive-3.2.1           tar.gz'
+'package  do        libevent-2.1.8-stable      tar.gz'
+'package  do        libusb-1.0.20              tar.bz2'
+'package  do        pcre-8.40                  tar.bz2'
+'package  do        popt-1.16                  tar.gz'
 
 # Common Development tools
-'package	do	elfutils-0.165             tar.bz2'
-'package	do	tcl8.6.4                   tar.gz'
-'package	do	expect5.45                 tar.gz'
-'package	do	dejagnu-1.5.3              tar.gz'
-'package	do	yasm-1.3.0                 tar.gz'
-'package	do	cmake-3.4.3                tar.gz'
+'package  do        elfutils-0.165             tar.bz2'
+'package  do        tcl8.6.4                   tar.gz'
+'package  do        expect5.45                 tar.gz'
+'package  do        dejagnu-1.5.3              tar.gz'
+'package  do        yasm-1.3.0                 tar.gz'
+'package  do        cmake-3.4.3                tar.gz'
 
 # Devices
-'package	do	mtdev-1.1.5                tar.bz2'
+'package  do        mtdev-1.1.5                tar.bz2'
 
 # Graphics
-'package        do      giflib-5.1.2               tar.bz2'
-'package        do      ijs-0.35                   tar.bz2'
-'package	do	libpng-1.6.28              tar.xz'
-'package	do	pixman-0.34.0              tar.gz'
-'package	do	libjpeg-turbo-1.4.2        tar.gz'
-'package	do	tiff-4.0.8                 tar.gz'
-'package	do	openjpeg-1.5.2             tar.gz'
-'package	do	openjpeg-2.1.0             tar.gz'
+'package  do        giflib-5.1.2               tar.bz2'
+'package  do        ijs-0.35                   tar.bz2'
+'package  do        libpng-1.6.28              tar.xz'
+'package  do        pixman-0.34.0              tar.gz'
+'package  do        libjpeg-turbo-1.4.2        tar.gz'
+'package  do        tiff-4.0.8                 tar.gz'
+'package  do        openjpeg-1.5.2             tar.gz'
+'package  do        openjpeg-2.1.0             tar.gz'
 
 # Fonts
-'package	do	freetype-2.6.3             tar.bz2' `# Reinstall it again after harfbuzz`
-'package	do	fontconfig-2.11.1          tar.bz2'
+'package  do        freetype-2.6.3             tar.bz2' `# Reinstall it again after harfbuzz`
+'package  do        fontconfig-2.11.1          tar.bz2'
 
 # Sound
-'package	do	fdk-aac-0.1.5              tar.gz'
-'package	do	libogg-1.3.2               tar.xz'
-'package	do	flac-1.3.2                 tar.xz'
-'package	do	libvorbis-1.3.5            tar.xz'
-'package	do	alsa-lib-1.1.0             tar.bz2'
-'package	do	alsa-plugins-1.1.0         tar.bz2'
-'package	do	alsa-utils-1.1.0           tar.bz2'
-#'package	do	 alsa-tools-1.1.0          tar.bz2'
+'package  do        fdk-aac-0.1.5              tar.gz'
+'package  do        libogg-1.3.2               tar.xz'
+'package  do        flac-1.3.2                 tar.xz'
+'package  do        libvorbis-1.3.5            tar.xz'
+'package  do        alsa-lib-1.1.0             tar.bz2'
+'package  do        alsa-plugins-1.1.0         tar.bz2'
+'package  do        alsa-utils-1.1.0           tar.bz2'
+#'package       do       alsa-tools-1.1.0          tar.bz2'
 
 # Video
-'package	do	libtheora-1.1.1            tar.xz'
-'package	do	libvpx-1.5.0               tar.bz2'
-'package	do	x264-snapshot-20170212-2245-stable    tar.bz2'
-'package	do	x265_2.3                   tar.gz'
-'package	do	xvidcore                   tar.gz'
-'package	do	ffmpeg-3.3.3               tar.xz'
+'package  do        libtheora-1.1.1            tar.xz'
+'package  do        libvpx-1.5.0               tar.bz2'
+'package  do        x264-snapshot-20170212-2245-stable    tar.bz2'
+'package  do        x265_2.3                   tar.gz'
+'package  do        xvidcore                   tar.gz'
+'package  do        ffmpeg-3.3.3               tar.xz'
 
 # CD and DVD 
-'package	do      libisofs-1.4.8             tar.gz'
-'package	do      libburn-1.4.8              tar.gz'
-'package	do      libisoburn-1.4.8           tar.gz'
-'package	do	libdvdcss-1.4.0            tar.bz2'
-'package	do	libdvdread-5.0.3           tar.bz2'
-'package	do	libdvdnav-5.0.3            tar.bz2'
-'package	do	cdrtools-3.02              tar.bz2'
-'package	do	dvd+rw-tools-7.1           tar.gz'
+'package  do        libisofs-1.4.8             tar.gz'
+'package  do        libburn-1.4.8              tar.gz'
+'package  do        libisoburn-1.4.8           tar.gz'
+'package  do        libdvdcss-1.4.0            tar.bz2'
+'package  do        libdvdread-5.0.3           tar.bz2'
+'package  do        libdvdnav-5.0.3            tar.bz2'
+'package  do        cdrtools-3.02              tar.bz2'
+'package  do        dvd+rw-tools-7.1           tar.gz'
 
 # S-Lang
-'package	do	slang-2.3.2                tar.bz2'
+'package  do        slang-2.3.2                tar.bz2'
 
 # Python2 for system scripting
-'package	do	Python-2.7.15              tar.xz'
+'package  do        Python-2.7.15              tar.xz'
 
 # System libraries depending on Python2
-'package	do	glib-2.46.2                tar.xz'
-'package	do	glibmm-2.46.3              tar.xz'
+'package  do        glib-2.46.2                tar.xz'
+'package  do        glibmm-2.46.3              tar.xz'
 
 # Fonts depending on Python or GLib-2
-'package	do	harfbuzz-1.2.4             tar.bz2'
-'package	do	freetype-2.6.3             tar.bz2' `# Needed to reinstall after harfbuzz`
+'package  do        harfbuzz-1.2.4             tar.bz2'
+'package  do        freetype-2.6.3             tar.bz2' `# Needed to reinstall after harfbuzz`
   
 # Multimedia depending on Python or GLib-2
-'package	do 	gstreamer-1.12.2           tar.xz'
-'package	do	gst-plugins-base-1.12.2    tar.xz'
-'package	do	gst-plugins-good-1.12.2    tar.xz'
-'package	do	gst-plugins-bad-1.12.2     tar.xz'
-'package	do	gst-plugins-ugly-1.12.2    tar.xz'
-'package	do	gst-libav-1.12.2           tar.xz'
+'package  do        gstreamer-1.12.2           tar.xz'
+'package  do        gst-plugins-base-1.12.2    tar.xz'
+'package  do        gst-plugins-good-1.12.2    tar.xz'
+'package  do        gst-plugins-bad-1.12.2     tar.xz'
+'package  do        gst-plugins-ugly-1.12.2    tar.xz'
+'package  do        gst-libav-1.12.2           tar.xz'
 
 # System /etc configuration
 'script         run     phyglos-deck-setup-etc'
 
 # System utilities
-'package	do	check-0.10.0               tar.gz'
+'package  do        check-0.10.0               tar.gz'
 
-'package	do	time-1.7                   tar.gz'
-'package	do	tree-1.7.0                 tgz'
-'package	do	hd2u-1.0.3                 tgz'
+'package  do        time-1.7                   tar.gz'
+'package  do        tree-1.7.0                 tgz'
+'package  do        hd2u-1.0.3                 tgz'
 
-'package	do	zip30                      tgz'
-'package	do	unzip60                    tar.gz'
+'package  do        zip30                      tgz'
+'package  do        unzip60                    tar.gz'
 
-'package	do      acpid-2.0.28               tar.xz'
-'package	do	pm-utils-1.4.1             tar.gz'
+'package  do        acpid-2.0.28               tar.xz'
+'package  do        pm-utils-1.4.1             tar.gz'
 
-'package	do	fcron-3.2.0                tar.gz'
-'package	do	logrotate-3.12.2           tar.xz'
+'package  do        fcron-3.2.0                tar.gz'
+'package  do        logrotate-3.12.2           tar.xz'
 
 # SQLite system database
-'package	do	sqlite-autoconf-3240000    tar.gz'
+'package  do        sqlite-autoconf-3240000    tar.gz'
 
 # System services
-'package	do	ntp-4.2.8p10               tar.gz'
-'package	do	fuse-2.9.7                 tar.gz'
-'package	do	ntfs-3g_ntfsprogs-2017.3.23 tgz'
+'package  do        ntp-4.2.8p10               tar.gz'
+'package  do        fuse-2.9.7                 tar.gz'
+'package  do        ntfs-3g_ntfsprogs-2017.3.23 tgz'
 
 # Console applications
-'package	do	links-2.14                 tar.bz2'
-'package	do	mc-4.8.21                  tar.xz'
-'package	do	nano-2.5.3                 tar.gz'
+'package  do        links-2.14                 tar.bz2'
+'package  do        mc-4.8.21                  tar.xz'
+'package  do        nano-2.5.3                 tar.gz'
 )
