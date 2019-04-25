@@ -2,7 +2,7 @@
 
 build_compile()
 {
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --disable-static
 
     make
 }
