@@ -19,6 +19,15 @@ script_run()
     local PHY_TYPE=$BANDIT_TARGET_PART_TYPE
     local PHY_SWAP=$BANDIT_TARGET_SWAP
     
+    # Comment out fstab line for root partition when not defined
+    if [ $PHY_PART == "none" ]; then
+        PHY_PART="#none"
+    fi
+    # Comment out fstab line for swap partition when not defined
+    if [ $PHY_SWAP == "none" ]; then
+        PHY_SWAP="#none"
+    fi
+    
     cat > /etc/fstab << EOF
 # file system  mount-point  type      options             dump  fsck
 #                                                              order
