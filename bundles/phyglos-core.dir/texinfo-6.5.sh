@@ -2,7 +2,9 @@
 
 build_compile()
 {
-    ./configure --prefix=/usr --disable-static
+    ./configure \
+        --prefix=/usr \
+        --disable-static
 
     make
 }
@@ -26,7 +28,7 @@ install_setup()
     pushd /usr/share/info
     rm -v dir
     for f in *; do
-	install-info $f dir 2>/dev/null
+        install-info $f dir 2>/dev/null
     done
     popd
 }
