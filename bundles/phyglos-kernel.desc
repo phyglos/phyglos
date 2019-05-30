@@ -2,6 +2,6 @@
 source $BUILD_BUNDLES/phyglos-kernel.conf
 
 BUILD_CMD=( 
-'package	do	linux-configs-0.7.1		tar.gz'  
+'package	do	linux-configs-0.8.4		tar.gz'  
 'package	do	linux-'${PHY_KERNEL_VER}'	tar.xz'
 )
