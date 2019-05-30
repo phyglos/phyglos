@@ -38,6 +38,6 @@ build_pack()
 	 MANSUFFIX=ssl \
 	 install
 
-    bandit_mkdir $BUILD_PACK/usr/share/doc/openssl-1.1.0g
-    cp -vfr doc/* $BUILD_PACK/usr/share/doc/openssl-1.1.0g
+    bandit_mkdir $BUILD_PACK/usr/share/doc/openssl-1.1.0j
+    cp -vfr doc/* $BUILD_PACK/usr/share/doc/openssl-1.1.0j
 }
