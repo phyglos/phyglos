@@ -13,13 +13,20 @@
 
 RELEASE NOTES for the phyglos catalog
 =====================================
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.18.0" of the phyglos catalog.
+This is a "STABLE" release.
 
 See https://docs.phyglos.org/phyglos for more information.
 
 
-MAJOR CHANGES in "latest"
-=========================
+MAJOR CHANGES
+=============
 
-*
+* Upgraded to openssl-1.1.0j
+* Upgraded to openssl-1.0.2p
+* Upgraded to linux-configs-0.8.4, linux-4.4.180, linux-4.19.46 and linux-5.1.5
+* Upgraded to man-pages-5.01
+* Upgraded to texinfo-6.5
+* Comment out fstab lines when no partition is defined
+* Setup CPAN in phyglos-deck bundle
+* Upgraded to perl-5.28.1
