@@ -1,0 +1,4 @@
+URL=(https://openssl.org/source/old/1.0.2/openssl-1.0.2p.tar.gz
+     ftp://phyglos.org/download/patches/openssl-1.0.2p-compat_versioned_symbols-1.patch)
+MD5=(ac5eb30bf5798aa14b1ae6d0e7da58df
+     b94d4b17b2fdddf8bfe422041320e174)

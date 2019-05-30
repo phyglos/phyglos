@@ -5,7 +5,7 @@ build_compile()
     # Always build with an empty CCache
     bandit_system_has ccache && ccache -C
 
-    patch -Np1 -i $BUILD_SOURCES/openssl-1.0.2m-compat_versioned_symbols-1.patch
+    patch -Np1 -i $BUILD_SOURCES/openssl-1.0.2p-compat_versioned_symbols-1.patch
     
     # Remove unneeded encryptation and compression methods
     ./config                     \

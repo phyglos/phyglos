@@ -15,7 +15,7 @@ BUILD_CMD=(
 'package  do      sudo-1.8.15  tar.gz  with-pam'
 
 # Security suites
-'package  do      openssl-1.0.2m  tar.gz'
+'package  do      openssl-1.0.2p  tar.gz'
 'package  do      openssl-1.1.0g  tar.gz'
 
 'package  do      nettle-3.2  tar.gz'
