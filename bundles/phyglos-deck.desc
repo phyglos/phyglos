@@ -22,7 +22,6 @@ BUILD_CMD=(
 'package  do        libevent-2.1.8-stable      tar.gz'
 'package  do        libusb-1.0.20              tar.bz2'
 'package  do        pcre-8.40                  tar.bz2'
-'package  do        popt-1.16                  tar.gz'
 
 # Common Development tools
 'package  do        elfutils-0.165             tar.bz2'
