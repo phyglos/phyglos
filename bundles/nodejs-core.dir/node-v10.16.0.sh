@@ -2,11 +2,10 @@
     
 build_compile()
 {
-    PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig \
     ./configure                \
         --prefix=/usr          \
         --without-npm          \
-        --with-intl=small-icu  \
+        --with-intl=system-icu \
         --shared-cares         \
         --shared-openssl       \
         --shared-zlib
@@ -25,5 +24,5 @@ build_pack()
     make DESTDIR=$BUILD_PACK install
 
     bandit_mkdir $BUILD_PACK/usr/share/doc
-    ln -sf node $BUILD_PACK/usr/share/doc/node-8.11.4
+    ln -sf node $BUILD_PACK/usr/share/doc/node-10.16.0
 }

@@ -1,5 +1,5 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-'package	do	node-v8.11.4        	tar.xz      deck'
+'package   do        node-v10.16.0  tar.xz  deck'
 )
