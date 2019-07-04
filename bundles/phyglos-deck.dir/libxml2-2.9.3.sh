@@ -7,6 +7,7 @@ build_compile()
     ./configure          \
 	--prefix=/usr    \
         --disable-static \
+        --with-icu       \
         --with-history 
 
     make
