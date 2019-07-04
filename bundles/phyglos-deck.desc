@@ -83,6 +83,7 @@ BUILD_CMD=(
 'package  do        Python-2.7.15              tar.xz'
 
 # System libraries depending on Python2
+'package  do        c-ares-1.15.0              tar.gz'
 'package  do        glib-2.46.2                tar.xz'
 'package  do        glibmm-2.46.3              tar.xz'
 
