@@ -13,13 +13,18 @@
 
 RELEASE NOTES for the phyglos catalog
 =====================================
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+This is the revision "1.19.0" of the phyglos catalog.
+This is a "STABLE" release.
 
 See https://docs.phyglos.org/phyglos for more information.
 
 
-MAJOR CHANGES in "latest"
-=========================
+MAJOR CHANGES
+=============
 
-*
+* Upgraded to atom-1.38.2
+* Upgraded to nodejs-v10.16.0
+* Upgraded to c-ares-1.15.0
+* Upgraded to icu-64_2
+* Upgraded to linux-configs-0.8.6, linux-4.4.184, linux-4.14.56 and linux-5.1.15
+
