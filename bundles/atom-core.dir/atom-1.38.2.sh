@@ -8,7 +8,7 @@ build_compile()
 build_pack()
 {  
     bandit_mkdir $BUILD_PACK/usr/lib/atom
-    cp -vR out/atom-1.29.0-amd64/* $BUILD_PACK/usr/lib/atom
+    cp -vR out/atom-1.38.2-amd64/* $BUILD_PACK/usr/lib/atom
 
     bandit_mkdir $BUILD_PACK/usr/bin
     ln -sf /usr/lib/atom/atom $BUILD_PACK/usr/bin/atom
