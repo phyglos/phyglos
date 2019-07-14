@@ -5,13 +5,13 @@ build_compile()
     mkdir -v build
     cd build
 
-    CC=$BANDIT_BUILDER_TRIPLET-gcc                  \
-    AR=$BANDIT_BUILDER_TRIPLET-ar                   \
-    RANLIB=$BANDIT_BUILDER_TRIPLET-ranlib           \
-    ../configure                              \
+    CC=$BANDIT_BUILDER_TRIPLET-gcc               \
+    AR=$BANDIT_BUILDER_TRIPLET-ar                \
+    RANLIB=$BANDIT_BUILDER_TRIPLET-ranlib        \
+    ../configure                                 \
         --prefix=$BANDIT_BUILDER_DIR             \
-        --disable-nls                         \
-        --disable-werror                      \
+        --disable-nls                            \
+        --disable-werror                         \
         --with-lib-path=$BANDIT_BUILDER_DIR/lib  \
         --with-sysroot
 

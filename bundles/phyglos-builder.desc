@@ -4,17 +4,17 @@ BUILD_CMD=(
 'script   run       phyglos-builder-start'
 
 # Pass 1: build a new compiler 
-'package  do        binutils-2.26      tar.bz2    pass1-builder'
-'package  do        gcc-5.5.0          tar.xz     pass1-builder'  
+'package  do        binutils-2.32      tar.xz     pass1-builder'
+'package  do        gcc-8.3.0          tar.xz     pass1-builder'  
 
 # Pass 2: build a new libC and headers using the new compiler
-'package  do        linux-4.4.184      tar.xz     headers-builder'
-'package  do        glibc-2.23         tar.xz     builder'
-'package  do        gcc-5.5.0          tar.xz     libstdcxx-builder'
+'package  do        linux-4.19.56      tar.xz     headers-builder'
+'package  do        glibc-2.29         tar.xz     builder'
+'package  do        gcc-8.3.0          tar.xz     libstdcxx-builder'
 
 # Pass 3: build the crosscompiling environment BUILDER
-'package  do        binutils-2.26      tar.bz2    builder'
-'package  do        gcc-5.5.0          tar.xz     builder'        
+'package  do        binutils-2.32      tar.xz     builder'
+'package  do        gcc-8.3.0          tar.xz     builder'        
 'package  do        tcl8.6.4           tar.gz     builder'
 'package  do        expect5.45         tar.gz     builder' 
 'package  do        dejagnu-1.5.3      tar.gz     builder' 

@@ -1,0 +1,3 @@
+URL=http://ftpmirror.gnu.org/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.xz
+MD5=65b210b4bfe7e060051f799e0f994896
+ADD=(gmp-6.1.2 mpfr-4.0.2 mpc-1.1.0)

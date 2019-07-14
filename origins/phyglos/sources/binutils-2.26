@@ -1,4 +1,0 @@
-URL=(http://ftp.gnu.org/gnu/binutils/binutils-2.26.tar.bz2
-     http://www.linuxfromscratch.org/patches/lfs/7.9/binutils-2.26-upstream_fix-2.patch)
-MD5=(64146a0faa3b411ba774f47d41de239f
-     33662839ab819acb58796c4c2db20631)

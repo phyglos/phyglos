@@ -5,17 +5,12 @@ build_compile()
     mkdir -v build
     cd build
 
-    ../configure                                      \
-	--host=$BANDIT_BUILDER_TRIPLET                      \
-	--build=$(../scripts/config.guess)            \
-	--prefix=$BANDIT_BUILDER_DIR                     \
-	--disable-profile                             \
-	--enable-kernel=2.6.32                        \
-	--enable-obsolote-rpc                         \
-	--with-headers=$BANDIT_BUILDER_DIR/include       \
-	libc_cv_forced_unwind=yes                     \
-	libc_cv_ctors_header=yes                      \
-	libc_cv_c_cleanup=yes
+    ../configure                                    \
+	--prefix=$BANDIT_BUILDER_DIR                \
+	--host=$BANDIT_BUILDER_TRIPLET              \
+	--build=$(../scripts/config.guess)          \
+	--enable-kernel=3.2                         \
+	--with-headers=$BANDIT_BUILDER_DIR/include
 
     make -j1
 }
@@ -29,10 +24,11 @@ install_verify()
 {
     bandit_log "Checking for a working compiler..."
 
+    echo "CHECK: Compiling and linking"
+
     echo 'int main(){}' > dummy.c
     $BANDIT_BUILDER_TRIPLET-gcc dummy.c
 
-    echo "CHECK: Compiling and linking"
     readelf -l a.out | grep ": $BANDIT_BUILDER_DIR"
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in
@@ -46,5 +42,4 @@ install_verify()
     echo
 
     rm -v dummy.c a.out
-
 }

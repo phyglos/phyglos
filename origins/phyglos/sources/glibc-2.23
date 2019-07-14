@@ -1,4 +1,0 @@
-URL=(http://ftp.gnu.org/gnu/glibc/glibc-2.23.tar.xz
-     http://www.linuxfromscratch.org/patches/lfs/7.9/glibc-2.23-fhs-1.patch)
-MD5=(456995968f3acadbed39f5eba31678df
-     9a5997c3452909b1769918c759eff8a2)
