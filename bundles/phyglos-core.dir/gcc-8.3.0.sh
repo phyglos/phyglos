@@ -2,6 +2,15 @@
 
 build_compile()
 {
+    case $(uname -m) in
+        x86_64)
+            sed -e '/m64=/s/lib64/lib/' \
+                -i.orig gcc/config/i386/t-linux64
+            ;;
+    esac
+
+    rm -f /usr/lib/gcc
+    
     mkdir -v build
     cd build
 
@@ -11,6 +20,7 @@ build_compile()
 	--enable-languages=c,c++    \
 	--disable-multilib          \
 	--disable-bootstrap         \
+	--disable-libmpx            \
 	--with-system-zlib
 
     make
@@ -20,8 +30,11 @@ build_test_level=1
 build_test()
 {
     ulimit -s 32768
-    make -k check
+    rm ../gcc/testsuite/g++.dg/pr83239.C
 
+    chown -Rv nobody . 
+    su nobody -s /bin/bash -c "PATH=$PATH make -k check"
+    
     bandit_log "Summary of tests results..."
 
     ../contrib/test_summary | grep -A7 Summ
@@ -34,10 +47,11 @@ build_pack()
 
     mkdir -pv $BUILD_PACK/lib
     ln -sv ../usr/bin/cpp $BUILD_PACK/lib
+    
     ln -sv gcc $BUILD_PACK/usr/bin/cc
 
     install -dm755 $BUILD_PACK/usr/lib/bfd-plugins
-    ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/5.5.0/liblto_plugin.so $BUILD_PACK/usr/lib/bfd-plugins/
+    ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/8.3.0/liblto_plugin.so $BUILD_PACK/usr/lib/bfd-plugins/
 
     mkdir -pv $BUILD_PACK/usr/share/gdb/auto-load/usr/lib
     mv -v $BUILD_PACK/usr/lib*/*gdb.py $BUILD_PACK/usr/share/gdb/auto-load/usr/lib

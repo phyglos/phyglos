@@ -9,8 +9,8 @@ BUILD_CMD=(
 #---
 # Prepare a new TARGET libC to be used by the BUILDER
 'package  do        man-pages-5.01           tar.xz'
-'package  do        linux-4.4.184            tar.xz   headers'
-'package  do        glibc-2.23               tar.xz'
+'package  do        linux-4.19.56            tar.xz   headers'
+'package  do        glibc-2.29               tar.xz'
 'script   run       phyglos-core-setup-locales'
 'package  do        tzdata2018i              tar.xz'
 'script   run       phyglos-core-adjust-builder'
@@ -21,13 +21,13 @@ BUILD_CMD=(
 # Start building the TARGET system
 'package  do        zlib-1.2.11              tar.xz'  
 'package  do        file-5.25                tar.gz'
-'package  do        binutils-2.26            tar.bz2'
+'package  do        binutils-2.32            tar.xz'
 
 # Prepare the new C system compiler
 'package  do        gmp-6.1.2                tar.xz'
-'package  do        mpfr-4.0.1               tar.xz'
+'package  do        mpfr-4.0.2               tar.xz'
 'package  do        mpc-1.1.0                tar.gz'
-'package  do        gcc-5.5.0                tar.xz'
+'package  do        gcc-8.3.0                tar.xz'
 
 # Build the rest of the TARGET system
 'package  do        bzip2-1.0.6              tar.gz'

@@ -5,7 +5,7 @@ build_compile()
     ./configure                            \
 	--prefix=/usr                      \
 	--enable-thread-safe               \
-	--docdir=/usr/share/doc/mpfr-4.0.1 \
+	--docdir=/usr/share/doc/mpfr-4.0.2 \
 	--disable-static    
 
     make
