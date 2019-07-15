@@ -66,7 +66,7 @@ BUILD_CMD=(
 'package  do        groff-1.22.3             tar.gz'
 'package  do        xz-5.2.2                 tar.xz'
 'package  do        less-481                 tar.gz'
-'package  do        gzip-1.6                 tar.xz'
+'package  do        gzip-1.10                tar.xz'
 #'package       do      iproute2-4.4.0           tar.xz' `# Moved to phyglos-security`
 'package  do        kbd-2.0.3                tar.xz'
 'package  do        kmod-22                  tar.xz'
