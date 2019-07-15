@@ -36,7 +36,6 @@ BUILD_CMD=(
 'package  do        sed-4.2.2          tar.bz2    builder' 
 'package  do        tar-1.28           tar.xz     builder' 
 'package  do        texinfo-6.5        tar.xz     builder' 
-'package  do        util-linux-2.27.1  tar.xz     builder' 
 'package  do        xz-5.2.2           tar.xz     builder' 
 
 'script   run       phyglos-builder-end'
