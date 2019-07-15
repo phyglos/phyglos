@@ -2,8 +2,6 @@
 
 build_compile()
 {
-    sed -i s/mawk// configure
-
     sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in
 
     ./configure                 \
@@ -37,6 +35,6 @@ build_pack()
     echo "INPUT(-lncursesw)" > $BUILD_PACK/usr/lib/libcursesw.so
     ln -sfv libncurses.so      $BUILD_PACK/usr/lib/libcurses.so
 
-    bandit_mkdir $BUILD_PACK/usr/share/doc/ncurses-6.0
-    cp -v -R doc/* $BUILD_PACK/usr/share/doc/ncurses-6.0
+    bandit_mkdir $BUILD_PACK/usr/share/doc/ncurses-6.1
+    cp -v -R doc/* $BUILD_PACK/usr/share/doc/ncurses-6.1
 }
