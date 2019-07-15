@@ -18,7 +18,6 @@ BUILD_CMD=(
 'package  do        tcl8.6.4           tar.gz     builder'
 'package  do        expect5.45         tar.gz     builder' 
 'package  do        dejagnu-1.5.3      tar.gz     builder' 
-'package  do        check-0.10.0       tar.gz     builder' 
 'package  do        ncurses-6.1        tar.gz     builder' 
 'package  do        bash-4.3.30        tar.gz     builder' 
 'package  do        bzip2-1.0.6        tar.gz     builder' 
