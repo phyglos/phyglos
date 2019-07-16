@@ -2,17 +2,13 @@
 
 build_compile()
 {
+    sed -i '6855 s/mv/cp/' Makefile.in
+    
     ./configure       \
 	--prefix=/usr \
-	--docdir=/usr/share/doc/bison-3.0.4
+	--docdir=/usr/share/doc/bison-3.4.1
 
-    make
-}
-
-build_test_level=2
-build_test()
-{
-    make check
+    make -j1
 }
 
 build_pack()

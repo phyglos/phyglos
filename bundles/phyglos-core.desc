@@ -42,7 +42,7 @@ BUILD_CMD=(
 'package  do        procps-ng-3.3.11         tar.xz'
 'package  do        iana-etc-2.30            tar.bz2'
 'package  do        m4-1.4.18                tar.xz'
-'package  do        bison-3.0.4              tar.xz'
+'package  do        bison-3.4.1              tar.xz'
 'package  do        flex-2.6.0               tar.xz'
 'package  do        grep-2.23                tar.xz'
 'package  do        readline-6.3             tar.gz'
