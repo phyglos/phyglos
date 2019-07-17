@@ -4,38 +4,25 @@ build_compile()
 {
     patch -Np1 -i $BUILD_SOURCES/glibc-2.29-fhs-1.patch
 
-    ln -sfv $BANDIT_BUILDER_DIR/lib/gcc /usr/lib
-
     case $(uname -m) in
-        i?86)   GCC_INCDIR=/usr/lib/gcc/$(uname -m)-pc-linux-gnu/8.2.0/include
-                ln -sfv ld-linux.so.2 /lib/ld-lsb.so.3
-                 ;;
-        x86_64) GCC_INCDIR=/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include
-                ln -sfv ../lib/ld-linux-x86-64.so.2 /lib64
+        i?86)   ln -sfv ld-linux.so.2 /lib/ld-lsb.so.3
+                ;;
+        x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 /lib64
                 ln -sfv ../lib/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3
                 ;;
     esac
 
-    rm -f /usr/include/limits.h
-    
-    mkdir -v build
+    mkdir build
     cd build
-
-    ../configure               \
-	--prefix=/usr          \
-	--disable-profile      \
-	--enable-kernel=2.6.32 \
-	--enable-obsolete-rpc
-
-    CC="gcc -isystem $GCC_INCDIR -isystem /usr/include" \
-    ../configure                        \
-      --prefix=/usr                     \
-      --enable-kernel=3.2               \
-      --enable-stack-protector=strong   \
-      --disable-werror                  \
-      libc_cv_slibdir=/lib
     
-    unset GCC_INCDIR
+    CC="gcc -ffile-prefix-map=/tools=/usr" \
+    libc_cv_slibdir=/lib                   \
+      ../configure                         \
+        --prefix=/usr                      \
+        --disable-werror                   \
+        --enable-kernel=3.2                \
+        --enable-stack-protector=strong    \
+        --with-headers=/usr/include
     
     make
 }
@@ -83,8 +70,5 @@ EOF
 include /etc/ld.so.conf.d/*.conf
 EOF
     bandit_mkdir $BUILD_PACK/etc/ld.so.conf.d
-
-    bandit_mkdir $BUILD_PACK/usr/lib/locale
-    #localedef -i en_US -f UTF-8  $BUILD_PACK/usr/lib/locale/en_US.UTF-8
 }
 
