@@ -2,6 +2,8 @@
 
 build_compile()
 {
+    sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
+    
     make
 }
 
