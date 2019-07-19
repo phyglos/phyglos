@@ -25,7 +25,7 @@ BUILD_CMD=(
 
 # Common Development tools
 'package  do        elfutils-0.165             tar.bz2'
-'package  do        tcl8.6.4                   tar.gz'
+'package  do        tcl8.6.9                   tar.gz'
 'package  do        expect5.45                 tar.gz'
 'package  do        dejagnu-1.5.3              tar.gz'
 'package  do        yasm-1.3.0                 tar.gz'
