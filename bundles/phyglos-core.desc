@@ -21,6 +21,7 @@ BUILD_CMD=(
 # Start building the TARGET system
 'package  do        zlib-1.2.11              tar.xz'  
 'package  do        file-5.37                tar.gz'
+'package  do        readline-8.0             tar.gz'
 'package  do        binutils-2.32            tar.xz'
 'package  do        shadow-4.5               tar.xz'
 
@@ -45,7 +46,6 @@ BUILD_CMD=(
 'package  do        bison-3.4.1              tar.xz'
 'package  do        flex-2.6.0               tar.xz'
 'package  do        grep-2.23                tar.xz'
-'package  do        readline-6.3             tar.gz'
 'package  do        bash-4.3.30              tar.gz'
 'package  do        bc-1.06.95               tar.bz2'
 'package  do        libtool-2.4.6            tar.xz'
