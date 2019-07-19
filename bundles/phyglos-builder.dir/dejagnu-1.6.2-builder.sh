@@ -2,7 +2,8 @@
 
 build_compile()
 {
-    ./configure --prefix=$BANDIT_BUILDER_DIR
+    ./configure \
+	--prefix=$BANDIT_BUILDER_DIR
 
     make 
 }
