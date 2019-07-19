@@ -23,5 +23,5 @@ build_pack()
     make DESTDIR=$BUILD_PACK install
 
     bandit_mkdir $BUILD_PACK/usr/lib
-    ln -svf expect5.45/libexpect5.45.so $BUILD_PACK/usr/lib
+    ln -svf expect5.45/libexpect5.45.4.so $BUILD_PACK/usr/lib
 }
