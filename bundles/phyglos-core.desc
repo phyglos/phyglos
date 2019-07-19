@@ -20,7 +20,7 @@ BUILD_CMD=(
 
 # Start building the TARGET system
 'package  do        zlib-1.2.11              tar.xz'  
-'package  do        file-5.25                tar.gz'
+'package  do        file-5.37                tar.gz'
 'package  do        binutils-2.32            tar.xz'
 'package  do        shadow-4.5               tar.xz'
 
