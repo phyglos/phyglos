@@ -18,13 +18,5 @@ build_compile()
 
 build_pack()
 {
-    bandit_mkdir $BUILD_PACK$BANDIT_BUILDER_DIR/lib
-
-    case $(uname -m) in
-	x86_64) 
-	    ln -sv lib $BUILD_PACK$BANDIT_BUILDER_DIR/lib64 
-	    ;;
-    esac
-
     make DESTDIR=$BUILD_PACK install
 }
