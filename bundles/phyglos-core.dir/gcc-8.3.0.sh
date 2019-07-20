@@ -2,14 +2,14 @@
 
 build_compile()
 {
-    case $(uname -m) in
-        x86_64)
-            sed -e '/m64=/s/lib64/lib/' \
-                -i.orig gcc/config/i386/t-linux64
-            ;;
-    esac
+#    case $(uname -m) in
+#        x86_64)
+#            sed -e '/m64=/s/lib64/lib/' \
+#                -i.orig gcc/config/i386/t-linux64
+#            ;;
+#    esac
 
-    rm -f /usr/lib/gcc
+    rm -vf /usr/lib/gcc
     
     mkdir -v build
     cd build
@@ -20,7 +20,6 @@ build_compile()
 	--enable-languages=c,c++    \
 	--disable-multilib          \
 	--disable-bootstrap         \
-	--disable-libmpx            \
 	--with-system-zlib
 
     make
@@ -32,8 +31,8 @@ build_test()
     ulimit -s 32768
     rm ../gcc/testsuite/g++.dg/pr83239.C
 
-    chown -Rv nobody . 
-    su nobody -s /bin/bash -c "PATH=$PATH make -k check"
+    chown -R nobody . 
+    su nobody -s /bin/bash -c "PATH=$PATH make -k check 2>&1"
     
     bandit_log "Summary of tests results..."
 
@@ -50,7 +49,7 @@ build_pack()
     
     ln -sv gcc $BUILD_PACK/usr/bin/cc
 
-    install -dm755 $BUILD_PACK/usr/lib/bfd-plugins
+    install -v -dm755 $BUILD_PACK/usr/lib/bfd-plugins
     ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/8.3.0/liblto_plugin.so $BUILD_PACK/usr/lib/bfd-plugins/
 
     mkdir -pv $BUILD_PACK/usr/share/gdb/auto-load/usr/lib
@@ -65,6 +64,7 @@ install_verify()
     cc dummy.c -v -Wl,--verbose &> dummy.log
 
     echo "CHECK: Compiling and linking"
+    
     readelf -l a.out | grep ': /lib'
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in
@@ -95,22 +95,22 @@ install_verify()
     echo
 
     echo "CHECK: Search for C header files"
-    grep -B4 '^ /usr/include' dummy.log
+    grep -B4 '^End of search list' dummy.log
     echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
 	    echo "#include <...> search starts here:"
-	    echo " /usr/lib/gcc/.../include"
-	    echo " /usr/lib/gcc/.../include-fixed"
+	    echo " /usr/lib/gcc/x86-pc-linux-gnu/8.3.0/include"
+	    echo " /usr/lib/gcc/x86-pc-linux-gnu/8.3.0/include-fixed"
 	    echo " /usr/local/include"
 	    echo " /usr/include"
 	    ;;
 	x86_64)
-	    echo "#include <...> search starts here:"
-	    echo " /usr/lib/gcc/.../include"
-	    echo " /usr/lib/gcc/.../include-fixed"
+	    echo " /usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include"
+	    echo " /usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"
 	    echo " /usr/local/include"
 	    echo " /usr/include"
+	    echo "End of search list."
 	    ;;
     esac
     echo
@@ -118,6 +118,7 @@ install_verify()
     echo "CHECK: Search paths"
     grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
     echo "Compare lines above with:"
+    echo "(ignore extra lines with '-linux-gnu')"
     case $BANDIT_TARGET_ARCH in
 	i?86)
 	    echo "SEARCH_DIR(\"/usr/local/lib32\")"
@@ -128,15 +129,16 @@ install_verify()
 	    echo "SEARCH_DIR(\"/usr/lib\");"
 	    ;;
 	x86_64)
-	    echo "SEARCH_DIR(\"/usr/local/lib64\")"
-	    echo "SEARCH_DIR(\"/lib64\")"
-	    echo "SEARCH_DIR(\"/usr/lib64\")"
-	    echo "SEARCH_DIR(\"/usr/local/lib\")"
-	    echo "SEARCH_DIR(\"/lib\")"
-	    echo "SEARCH_DIR(\"/usr/lib\");"
+            echo 'SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib64")'
+            echo 'SEARCH_DIR("/usr/local/lib64")'
+            echo 'SEARCH_DIR("/lib64")'
+            echo 'SEARCH_DIR("/usr/lib64")'
+            echo 'SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib")'
+            echo 'SEARCH_DIR("/usr/local/lib")'
+            echo 'SEARCH_DIR("/lib")'
+            echo 'SEARCH_DIR("/usr/lib");'
 	    ;;
     esac
-    echo "Ignore extra lines with '-linux-gnu'"
     echo
     
     echo "CHECK: C library"
