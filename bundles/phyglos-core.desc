@@ -22,6 +22,7 @@ BUILD_CMD=(
 'package  do        zlib-1.2.11              tar.xz'  
 'package  do        file-5.37                tar.gz'
 'package  do        readline-8.0             tar.gz'
+'package  do        bc-2.1.0                 tar.xz'
 'package  do        binutils-2.32            tar.xz'
 'package  do        shadow-4.5               tar.xz'
 
@@ -47,7 +48,6 @@ BUILD_CMD=(
 'package  do        flex-2.6.0               tar.xz'
 'package  do        grep-2.23                tar.xz'
 'package  do        bash-4.3.30              tar.gz'
-'package  do        bc-1.06.95               tar.bz2'
 'package  do        libtool-2.4.6            tar.xz'
 'package  do        gdbm-1.11                tar.gz'
 'package  do        expat-2.1.0              tar.gz'

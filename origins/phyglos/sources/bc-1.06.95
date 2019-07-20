@@ -1,4 +1,0 @@
-URL=(http://alpha.gnu.org/gnu/bc/bc-1.06.95.tar.bz2
-     http://www.linuxfromscratch.org/patches/lfs/7.9/bc-1.06.95-memory_leak-1.patch)
-MD5=(5126a721b73f97d715bb72c13c889035
-     877e81fba316fe487ec23501059d54b8)
