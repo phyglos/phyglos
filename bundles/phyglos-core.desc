@@ -33,7 +33,7 @@ BUILD_CMD=(
 
 # Build the rest of the TARGET system
 'package  do        bzip2-1.0.6              tar.gz'
-'package  do        pkg-config-0.29          tar.gz'
+'package  do        pkg-config-0.29.2        tar.gz'
 'package  do        ncurses-6.1              tar.gz'
 'package  do        attr-2.4.47              tar.gz'
 'package  do        acl-2.2.52               tar.gz'
