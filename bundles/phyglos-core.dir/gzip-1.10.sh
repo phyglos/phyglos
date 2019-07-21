@@ -19,5 +19,5 @@ build_pack()
     make DESTDIR=$BUILD_PACK install
 
     bandit_mkdir $BUILD_PACK/bin
-    mv -v $BUILD_PACK/bin/gzip $BUILD_PACK/bin
+    mv -v $BUILD_PACK/usr/bin/gzip $BUILD_PACK/bin
 }
