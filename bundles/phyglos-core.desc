@@ -73,7 +73,7 @@ BUILD_CMD=(
 'package  do        lfs-bootscripts-20150222 tar.bz2'
 'package  do        tar-1.32                 tar.xz'
 'package  do        texinfo-6.5              tar.xz'
-'package  do        eudev-3.1.5              tar.gz'
+'package  do        eudev-3.2.7              tar.gz'
 'package  do        man-db-2.7.5             tar.xz'
 'package  do        vim74                    tar.bz2'
 
