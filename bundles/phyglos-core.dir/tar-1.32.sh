@@ -19,5 +19,5 @@ build_test()
 build_pack()
 {
     make DESTDIR=$BUILD_PACK install
-    make DESTDIR=$BUILD_PACK -C doc install-html docdir=/usr/share/doc/tar-1.28
+    make DESTDIR=$BUILD_PACK -C doc install-html docdir=/usr/share/doc/tar-1.32
 }
