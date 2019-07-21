@@ -63,7 +63,7 @@ BUILD_CMD=(
 'package  do        less-481                 tar.gz'
 'package  do        gzip-1.10                tar.xz'
 'package  do        check-0.12.0             tar.gz'
-'package  do        kbd-2.0.3                tar.xz'
+'package  do        kbd-2.0.4                tar.xz'
 'package  do        kmod-22                  tar.xz'
 'package  do        libpipeline-1.4.1        tar.gz'
 'package  do        make-4.2.1               tar.bz2'
