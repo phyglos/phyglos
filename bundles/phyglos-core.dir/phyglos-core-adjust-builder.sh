@@ -62,10 +62,9 @@ script_verify()
 
     echo "CHECK: Search paths"
     grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
-    echo "Compare lines above with:"
+    echo "Compare lines above with (ignore the "linux-gnu" lines):"
     echo "SEARCH_DIR(\"/usr/lib\")"
     echo "SEARCH_DIR(\"/lib\");"
-    echo "Ignore extra lines with '-linux-gnu'"
     echo 
 
     echo "CHECK: C library"
