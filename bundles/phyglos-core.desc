@@ -38,7 +38,7 @@ BUILD_CMD=(
 'package  do        acl-2.2.53               tar.gz'
 'package  do        libcap-2.25              tar.xz'
 'package  do        sed-4.2.2                tar.bz2'
-'package  do        psmisc-22.21             tar.gz'
+'package  do        psmisc-23.2              tar.xz'
 'package  do        procps-ng-3.3.11         tar.xz'
 'package  do        iana-etc-2.30            tar.bz2'
 'package  do        bison-3.4.1              tar.xz'
