@@ -39,6 +39,7 @@ BUILD_CMD=(
 'package  do        tar-1.32           tar.xz     builder' 
 'package  do        texinfo-6.5        tar.xz     builder' 
 'package  do        xz-5.2.2           tar.xz     builder' 
+'package  do        vim-8.1            tar.xz     builder' 
 
 'script   run       phyglos-builder-end'
 )
