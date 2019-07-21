@@ -69,7 +69,7 @@ BUILD_CMD=(
 'package  do        make-4.2.1               tar.bz2'
 'package  do        patch-2.7.5              tar.xz'
 'package  do        sysklogd-1.5.1           tar.gz'
-'package  do        sysvinit-2.88dsf         tar.bz2'
+'package  do        sysvinit-2.93            tar.xz'
 'package  do        lfs-bootscripts-20150222 tar.bz2'
 'package  do        tar-1.32                 tar.xz'
 'package  do        texinfo-6.5              tar.xz'

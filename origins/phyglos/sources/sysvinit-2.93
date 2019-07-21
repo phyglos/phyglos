@@ -1,0 +1,4 @@
+URL=(http://download.savannah.gnu.org/releases/sysvinit/sysvinit-2.93.tar.xz
+     http://www.linuxfromscratch.org/patches/lfs/8.4/sysvinit-2.93-consolidated-1.patch)
+MD5=(041dbe36a5dd80b2108aff305bc10620
+     aaa84675e717504d7d3da452c8c2eaf1)
