@@ -60,11 +60,11 @@ install_verify()
 {
     bandit_log "Checking the new system C/C++ compiler..."
 
+    # Ensure testing the new compiler with full path
     echo 'int main(){}' > dummy.c
-    cc dummy.c -v -Wl,--verbose &> dummy.log
+    /usr/bin/cc dummy.c -v -Wl,--verbose &> dummy.log
 
     echo "CHECK: Compiling and linking"
-    
     readelf -l a.out | grep ': /lib'
     echo "Compare line above with:"
     case $BANDIT_TARGET_ARCH in
@@ -99,16 +99,16 @@ install_verify()
     echo "Compare lines above with:"
     case $BANDIT_TARGET_ARCH in
 	i?86)
-	    echo "#include <...> search starts here:"
 	    echo " /usr/lib/gcc/x86-pc-linux-gnu/8.3.0/include"
-	    echo " /usr/lib/gcc/x86-pc-linux-gnu/8.3.0/include-fixed"
 	    echo " /usr/local/include"
+	    echo " /usr/lib/gcc/x86-pc-linux-gnu/8.3.0/include-fixed"
 	    echo " /usr/include"
+	    echo "End of search list."
 	    ;;
 	x86_64)
 	    echo " /usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include"
-	    echo " /usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"
 	    echo " /usr/local/include"
+	    echo " /usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"
 	    echo " /usr/include"
 	    echo "End of search list."
 	    ;;
@@ -116,24 +116,18 @@ install_verify()
     echo
 
     echo "CHECK: Search paths"
-    grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
-    echo "Compare lines above with:"
-    echo "(ignore extra lines with '-linux-gnu')"
+    grep 'SEARCH.*/usr/lib' dummy.log | sed 's|; |\n|g'
+    echo "Compare lines above with (ignore the "linux-gnu" lines):"
     case $BANDIT_TARGET_ARCH in
 	i?86)
-	    echo "SEARCH_DIR(\"/usr/local/lib32\")"
-	    echo "SEARCH_DIR(\"/lib32\")"
-	    echo "SEARCH_DIR(\"/usr/lib32\")"
-	    echo "SEARCH_DIR(\"/usr/local/lib\")"
-	    echo "SEARCH_DIR(\"/lib\")"
-	    echo "SEARCH_DIR(\"/usr/lib\");"
+            echo 'SEARCH_DIR("/usr/local/lib")'
+            echo 'SEARCH_DIR("/lib")'
+            echo 'SEARCH_DIR("/usr/lib");'
 	    ;;
 	x86_64)
-            echo 'SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib64")'
             echo 'SEARCH_DIR("/usr/local/lib64")'
             echo 'SEARCH_DIR("/lib64")'
             echo 'SEARCH_DIR("/usr/lib64")'
-            echo 'SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib")'
             echo 'SEARCH_DIR("/usr/local/lib")'
             echo 'SEARCH_DIR("/lib")'
             echo 'SEARCH_DIR("/usr/lib");'
