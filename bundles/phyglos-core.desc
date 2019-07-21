@@ -75,7 +75,7 @@ BUILD_CMD=(
 'package  do        texinfo-6.5              tar.xz'
 'package  do        eudev-3.2.7              tar.gz'
 'package  do        man-db-2.7.5             tar.xz'
-'package  do        vim74                    tar.bz2'
+'package  do        vim-8.1                  tar.xz'
 
 # Set up TARGET configuration files
 'package  do        lsb-release-1.4          tar.gz'
