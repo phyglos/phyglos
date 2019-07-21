@@ -70,7 +70,7 @@ BUILD_CMD=(
 'package  do        patch-2.7.5              tar.xz'
 'package  do        sysklogd-1.5.1           tar.gz'
 'package  do        sysvinit-2.93            tar.xz'
-'package  do        lfs-bootscripts-20150222 tar.bz2'
+'package  do        lfs-bootscripts-20180820 tar.bz2'
 'package  do        tar-1.32                 tar.xz'
 'package  do        texinfo-6.5              tar.xz'
 'package  do        eudev-3.2.7              tar.gz'
