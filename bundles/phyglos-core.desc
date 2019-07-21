@@ -2,12 +2,9 @@
 
 BUILD_CMD=(
 # Build porg using BUILDER libC
-'package  do        porg-0.10                tar.gz   pre-libc'
+'package  do         porg-0.10               tar.gz   pre-libc'
 
-#---
-# Start a new LFS build
-#---
-# Prepare a new TARGET libC to be used by the BUILDER
+# Prepare the new TARGET libC 
 'package  do        man-pages-5.01           tar.xz'
 'package  do        linux-4.19.56            tar.xz   headers'
 'package  do        glibc-2.29               tar.xz'
@@ -22,6 +19,7 @@ BUILD_CMD=(
 'package  do        zlib-1.2.11              tar.xz'  
 'package  do        file-5.37                tar.gz'
 'package  do        readline-8.0             tar.gz'
+'package  do        m4-1.4.18                tar.xz'
 'package  do        bc-2.1.0                 tar.xz'
 'package  do        binutils-2.32            tar.xz'
 'package  do        shadow-4.5               tar.xz'
@@ -43,7 +41,6 @@ BUILD_CMD=(
 'package  do        psmisc-22.21             tar.gz'
 'package  do        procps-ng-3.3.11         tar.xz'
 'package  do        iana-etc-2.30            tar.bz2'
-'package  do        m4-1.4.18                tar.xz'
 'package  do        bison-3.4.1              tar.xz'
 'package  do        flex-2.6.0               tar.xz'
 'package  do        grep-2.23                tar.xz'
@@ -53,7 +50,6 @@ BUILD_CMD=(
 'package  do        expat-2.1.0              tar.gz'
 'package  do        inetutils-1.9.4          tar.xz'
 'package  do        perl-5.28.1              tar.bz2'
-#'package       do      XML-Parser-2.44          tar.gz' `# Moved to phyglos-deck as perl5 module`
 'package  do        autoconf-2.69            tar.xz'
 'package  do        automake-1.15            tar.xz'
 'package  do        coreutils-8.30           tar.xz'
@@ -61,13 +57,11 @@ BUILD_CMD=(
 'package  do        gawk-4.1.3               tar.xz'
 'package  do        findutils-4.6.0          tar.gz'
 'package  do        gettext-0.19.7           tar.xz'
-#'package       do      intltool-0.51.0          tar.gz' `# Moved to phyglos-deck after XML::Parser`
 'package  do        gperf-3.0.4              tar.gz'
 'package  do        groff-1.22.3             tar.gz'
 'package  do        xz-5.2.2                 tar.xz'
 'package  do        less-481                 tar.gz'
 'package  do        gzip-1.10                tar.xz'
-#'package       do      iproute2-4.4.0           tar.xz' `# Moved to phyglos-security`
 'package  do        kbd-2.0.3                tar.xz'
 'package  do        kmod-22                  tar.xz'
 'package  do        libpipeline-1.4.1        tar.gz'
@@ -88,13 +82,10 @@ BUILD_CMD=(
 'script   run       phyglos-core-setup-site'
 'script   run       phyglos-core-setup-profiles'
 
-'package  do        util-linux-2.27.1        tar.xz' `# Requires tty group after setup-profiles`
+'package  do        util-linux-2.27.1        tar.xz'
 'package  do        e2fsprogs-1.44.4         tar.gz'
 
 'script   run       phyglos-core-setup-network'
-#---
-# End the LFS build
-#---
 
 # Add some core utilities, libraries and services
 'package  do        which-2.21               tar.gz'
@@ -110,4 +101,3 @@ BUILD_CMD=(
 
 'script   run       phyglos-core-end'
 )
-
