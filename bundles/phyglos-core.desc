@@ -73,6 +73,7 @@ BUILD_CMD=(
 'package  do        lfs-bootscripts-20180820 tar.bz2'
 'package  do        tar-1.32                 tar.xz'
 'package  do        texinfo-6.5              tar.xz'
+'package  do        util-linux-2.34          tar.xz'
 'package  do        eudev-3.2.7              tar.gz'
 'package  do        man-db-2.7.5             tar.xz'
 'package  do        vim-8.1                  tar.xz'
@@ -83,7 +84,6 @@ BUILD_CMD=(
 'script   run       phyglos-core-setup-site'
 'script   run       phyglos-core-setup-profiles'
 
-'package  do        util-linux-2.27.1        tar.xz'
 'package  do        e2fsprogs-1.44.4         tar.gz'
 
 'script   run       phyglos-core-setup-network'

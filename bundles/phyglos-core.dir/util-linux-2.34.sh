@@ -3,6 +3,7 @@
 build_compile()
 {
     mkdir -pv /var/lib/hwclock
+    
     ADJTIME_PATH=/var/lib/hwclock/adjtime \
     ./configure              \
         --disable-chfn-chsh  \
@@ -16,7 +17,7 @@ build_compile()
         --without-python     \
         --without-systemd    \
         --without-systemdsystemunitdir \
-        --docdir=/usr/share/doc/util-linux-2.27.1
+        --docdir=/usr/share/doc/util-linux-2.34
 
     make
 }
@@ -31,8 +32,4 @@ build_test()
 build_pack()
 {
     make DESTDIR=$BUILD_PACK install
-
-    #TODO Review !
-    bandit_mkdir $BUILD_PACK/var/lib/hwclock
-    cp -Rv /var/lib/hwclock $BUILD_PACK/var/lib/hwclock
 }
