@@ -6,7 +6,7 @@ build_compile()
     cd build
 
     ../configure                \
-	--prefix=/usr           \
+        --prefix=/usr           \
         --bindir=/bin           \
         --with-root-prefix=""   \
         --enable-elf-shlibs     \
@@ -27,11 +27,11 @@ build_test()
 build_pack()
 {
     make DESTDIR=$BUILD_PACK install
+    
     make DESTDIR=$BUILD_PACK install-libs
-
     chmod -v u+w $BUILD_PACK/usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
 
-    makeinfo -o      doc/com_err.info ../lib/et/com_err.texinfo
+    makeinfo -o doc/com_err.info ../lib/et/com_err.texinfo
     install -v -m644 doc/com_err.info $BUILD_PACK/usr/share/info
     install-info --dir-file=/usr/share/info/dir $BUILD_PACK/usr/share/info/com_err.info
 }
