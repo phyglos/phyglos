@@ -33,7 +33,7 @@ build_pack()
     bandit_mkdir $BUILD_PACK/etc
     cat > $BUILD_PACK/etc/vimrc << EOF
 " Ensure defaults are set before customizing settings, not after
-source $VIMRUNTIME/defaults.vim
+source \$VIMRUNTIME/defaults.vim
 let skip_defaults_vim=1 
 
 set nocompatible
