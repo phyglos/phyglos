@@ -38,7 +38,7 @@ let skip_defaults_vim=1
 
 set nocompatible
 set backspace=2
-colorscheme paco
+colorscheme pablo
 if (&term == "iterm") || (&term == "putty")
   set background=dark
 endif
