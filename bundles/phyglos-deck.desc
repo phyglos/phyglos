@@ -103,8 +103,6 @@ BUILD_CMD=(
 'script         run     phyglos-deck-setup-etc'
 
 # System utilities
-'package  do        check-0.10.0               tar.gz'
-
 'package  do        time-1.7                   tar.gz'
 'package  do        tree-1.7.0                 tgz'
 'package  do        hd2u-1.0.3                 tgz'
