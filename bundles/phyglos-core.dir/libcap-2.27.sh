@@ -9,10 +9,11 @@ build_compile()
 
 build_pack()
 {
-    make DESTDIR=$BUILD_PACK install \
+    make DESTDIR=$BUILD_PACK \
 	prefix=/usr          \
 	lib=/lib             \
-	RAISE_SETFCAP=no
+	RAISE_SETFCAP=no     \
+        install
 
     chmod -v 755 $BUILD_PACK/usr/lib/libcap.so
 

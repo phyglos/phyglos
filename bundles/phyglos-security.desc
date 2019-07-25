@@ -10,7 +10,7 @@ BUILD_CMD=(
 
 # Do Linux-PAM and rebuild other packages with PAM support
 'package  do      Linux-PAM-1.2.1  tar.bz2'
-'package  do      libcap-2.25  tar.xz  with-pam'
+'package  do      libcap-2.27  tar.xz  with-pam'
 'package  do      shadow-4.7   tar.xz  with-pam'
 'package  do      sudo-1.8.15  tar.gz  with-pam'
 

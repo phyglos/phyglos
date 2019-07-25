@@ -36,7 +36,7 @@ BUILD_CMD=(
 'package  do        ncurses-6.1              tar.gz'
 'package  do        attr-2.4.48              tar.gz'
 'package  do        acl-2.2.53               tar.gz'
-'package  do        libcap-2.25              tar.xz'
+'package  do        libcap-2.27              tar.xz'
 'package  do        sed-4.2.2                tar.bz2'
 'package  do        psmisc-23.2              tar.xz'
 'package  do        procps-ng-3.3.11         tar.xz'
