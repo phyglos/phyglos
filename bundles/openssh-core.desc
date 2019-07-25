@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BUILD_CMD=( 
+'script   run       phyglos-security-setup-ssh'
+'package  do        openssh-7.5p1  tar.gz'
+)
+
