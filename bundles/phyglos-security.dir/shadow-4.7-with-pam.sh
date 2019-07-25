@@ -8,12 +8,12 @@ build_compile()
     find man -name Makefile.in -exec sed -i 's/passwd\.5 / /'   {} \; 
 
     sed -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' \
-	-e 's@/var/spool/mail@/var/mail@' \
-	-i etc/login.defs
+        -e 's@/var/spool/mail@/var/mail@' \
+        -i etc/login.defs
 
     ./configure           \
-	--sysconfdir=/etc \
-	--with-group-name-max-length=32
+        --sysconfdir=/etc \
+        --with-group-name-max-length=32
 
     make
 }
@@ -46,7 +46,7 @@ install_setup()
         CHFN_AUTH ENCRYPT_METHOD \
         ENVIRON_FILE
     do
-	sed -i "s/^${FUNCTION}/# &/" /etc/login.defs
+        sed -i "s/^${FUNCTION}/# &/" /etc/login.defs
     done
 
     cat > /etc/pam.d/login << "EOF"
@@ -126,15 +126,13 @@ password  required    pam_permit.so
 EOF
 
     for PROGRAM in chfn chgpasswd chpasswd chsh groupadd groupdel \
-	           groupmems groupmod newusers useradd userdel usermod
+                   groupmems groupmod newusers useradd userdel usermod
     do
-	install -v -m644 /etc/pam.d/chage /etc/pam.d/${PROGRAM}
-	sed -i "s/chage/$PROGRAM/" /etc/pam.d/${PROGRAM}
+        install -v -m644 /etc/pam.d/chage /etc/pam.d/${PROGRAM}
+        sed -i "s/chage/$PROGRAM/" /etc/pam.d/${PROGRAM}
     done
     
     # Disable login.access and limits, unneeded after Linux-PAM
     [ -f /etc/login.access ] && mv -v /etc/login.access{,.orig}
     [ -f /etc/limits ]       && mv -v /etc/limits{,.orig}
-
-
 }

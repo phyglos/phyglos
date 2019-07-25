@@ -27,7 +27,7 @@ build_pack()
 
 install_setup()
 {
-    bandit_log "Setting shadow passwords..."
+    bandit_log "Setting shadowed passwords..."
     pwconv
     grpconv
 
