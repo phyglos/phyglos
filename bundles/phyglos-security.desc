@@ -2,7 +2,7 @@
 
 BUILD_CMD=( 
 # Add phy group and phy user with sudo capabilities before Linux-PAM
-'package  do      sudo-1.8.15  tar.gz'
+'package  do      sudo-1.8.27  tar.gz'
 'script   run     phyglos-security-setup-users'
 
 # Enforce strong passwords use
@@ -12,7 +12,7 @@ BUILD_CMD=(
 'package  do      Linux-PAM-1.2.1  tar.bz2'
 'package  do      libcap-2.27  tar.xz  with-pam'
 'package  do      shadow-4.7   tar.xz  with-pam'
-'package  do      sudo-1.8.15  tar.gz  with-pam'
+'package  do      sudo-1.8.27  tar.gz  with-pam'
 
 # Security suites
 'package  do      openssl-1.0.2p  tar.gz'

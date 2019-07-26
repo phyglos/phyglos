@@ -3,14 +3,14 @@
 build_compile()
 {
     ./configure                    \
-	--prefix=/usr              \
+        --prefix=/usr              \
         --libexecdir=/usr/lib      \
         --with-secure-path         \
         --with-all-insults         \
         --with-env-editor          \
         --with-passprompt="[sudo] password for %p: " \
-	--without-pam              \
-        --docdir=/usr/share/doc/sudo-1.8.15  
+        --without-pam              \
+        --docdir=/usr/share/doc/sudo-1.8.27
 
     make
 }

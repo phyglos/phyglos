@@ -10,7 +10,7 @@ build_compile()
         --with-env-editor          \
         --with-passprompt="[sudo] password for %p: " \
 	--with-pam                 \
-        --docdir=/usr/share/doc/sudo-1.8.15  
+        --docdir=/usr/share/doc/sudo-1.8.27
 
     make
 }
