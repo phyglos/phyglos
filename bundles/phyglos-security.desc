@@ -9,7 +9,7 @@ BUILD_CMD=(
 'package  do      cracklib-2.9.7  tar.gz'
 
 # Do Linux-PAM and rebuild other packages with PAM support
-'package  do      Linux-PAM-1.2.1  tar.bz2'
+'package  do      Linux-PAM-1.3.1  tar.bz2'
 'package  do      libcap-2.27  tar.xz  with-pam'
 'package  do      shadow-4.7   tar.xz  with-pam'
 'package  do      sudo-1.8.27  tar.gz  with-pam'
