@@ -45,7 +45,7 @@ BUILD_CMD=(
 'package  do        openjpeg-2.1.0             tar.gz'
 
 # Fonts
-'package  do        freetype-2.6.3             tar.bz2' `# Reinstall it again after harfbuzz`
+'package  do        freetype-2.10.1            tar.xz' `# Reinstall it again after harfbuzz`
 'package  do        fontconfig-2.11.1          tar.bz2'
 
 # Sound
