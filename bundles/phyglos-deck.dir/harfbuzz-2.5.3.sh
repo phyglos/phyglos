@@ -1,11 +1,10 @@
 #!/bin/bash
 
-
 build_compile()
 {
-    ./configure       \
-	--prefix=/usr \
-	--with-gobject 
+    ./configure        \
+        --prefix=/usr  \
+        --with-gobject
 
     make
 }

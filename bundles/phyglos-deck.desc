@@ -88,8 +88,8 @@ BUILD_CMD=(
 'package  do        glibmm-2.46.3              tar.xz'
 
 # Fonts depending on Python or GLib-2
-'package  do        harfbuzz-1.2.4             tar.bz2'
-'package  do        freetype-2.6.3             tar.bz2' `# Needed to reinstall after harfbuzz`
+'package  do        harfbuzz-2.5.3             tar.xz'
+'package  do        freetype-2.10.1            tar.xz' `# Needed to reinstall after harfbuzz`
   
 # Multimedia depending on Python or GLib-2
 'package  do        gstreamer-1.12.2           tar.xz'
