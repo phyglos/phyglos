@@ -30,9 +30,6 @@ install_setup()
     bandit_log "Setting shadowed passwords..."
     pwconv
     grpconv
-
-    bandit_log "Setting root's password..."
-    echo "root:phyglos" | chpasswd
 }
 
 
