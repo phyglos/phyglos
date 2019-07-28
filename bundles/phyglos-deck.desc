@@ -127,5 +127,5 @@ BUILD_CMD=(
 # Console applications
 'package  do        links-2.14                 tar.bz2'
 'package  do        mc-4.8.21                  tar.xz'
-'package  do        nano-2.5.3                 tar.gz'
+'package  do        nano-4.3                   tar.xz'
 )

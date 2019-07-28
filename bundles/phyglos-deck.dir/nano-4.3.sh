@@ -3,10 +3,11 @@
 build_compile()
 {
     ./configure           \
-	--prefix=/usr     \
+        --prefix=/usr     \
         --sysconfdir=/etc \
-	--with-slang      \
-        --enable-utf8 
+        --with-slang      \
+        --enable-utf8     \
+        --docdir=/usr/share/doc/nano-4.3
 
     make
 }
@@ -15,13 +16,9 @@ build_pack()
 {
     make DESTDIR=$BUILD_PACK install
 
+    install -v -m644 doc/{nano.html,sample.nanorc} $BUILD_PACK/usr/share/doc/nano-4.3
+
     bandit_mkdir $BUILD_PACK/etc
-    install -v -m644 doc/nanorc.sample $BUILD_PACK/etc 
-
-    bandit_mkdir $BUILD_PACK/usr/share/doc
-    install -v -m755 -d $BUILD_PACK/usr/share/doc/nano-2.5.3
-    install -v -m644 doc/{,man/,texinfo/}*.html $BUILD_PACK/usr/share/doc/nano-2.5.3
-
     cat > $BUILD_PACK/etc/nanorc <<EOF
 set autoindent
 set const
