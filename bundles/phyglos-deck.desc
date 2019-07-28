@@ -46,7 +46,7 @@ BUILD_CMD=(
 
 # Fonts
 'package  do        freetype-2.10.1            tar.xz' `# Reinstall it again after harfbuzz`
-'package  do        fontconfig-2.11.1          tar.bz2'
+'package  do        fontconfig-2.13.1          tar.bz2'
 
 # Sound
 'package  do        fdk-aac-0.1.5              tar.gz'
