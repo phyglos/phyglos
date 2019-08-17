@@ -3,6 +3,7 @@
 BUILD_CMD=(
 # Perl CPAN and other modules
 'script   run       phyglos-deck-setup-CPAN'    
+'module   perl5     inc::latest'
 'module   perl5     Log::Log4perl'
 'module   perl5     URI'
 'module   perl5     XML::Parser'
