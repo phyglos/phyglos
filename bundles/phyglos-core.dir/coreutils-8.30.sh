@@ -35,7 +35,7 @@ build_pack()
     mv -v $BUILD_PACK/usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} $BUILD_PACK/bin
     mv -v $BUILD_PACK/usr/bin/{false,ln,ls,mkdir,mknod,mv,pwd,rm}        $BUILD_PACK/bin
     mv -v $BUILD_PACK/usr/bin/{rmdir,stty,sync,true,uname,test,[}        $BUILD_PACK/bin
-    mv -v $BUILD_PACK/usr/bin/{head,sleep,nice}                          $BUILD_PACK/bin
+    mv -v $BUILD_PACK/usr/bin/{head,sleep,nice,touch}                    $BUILD_PACK/bin
 
     bandit_mkdir $BUILD_PACK/usr/sbin
     mv -v $BUILD_PACK/usr/bin/chroot $BUILD_PACK/usr/sbin
