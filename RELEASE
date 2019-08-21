@@ -11,15 +11,15 @@
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
 #
 
-RELEASE NOTES for the phyglos catalog
-=====================================
-This is the revision "latest" of the phyglos catalog.
-This is a "DEVELOPMENT" release.
+RELEASE NOTES
+=============
+This is the revision "$RELEASE" of the phyglos catalog.
+This is a "$RELEASE_TYPE" release.
 
 See https://docs.phyglos.org/phyglos for more information.
 
 
-MAJOR CHANGES in "latest"
-=========================
+MAJOR CHANGES
+=============
 
 *
