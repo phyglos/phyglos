@@ -1,5 +1,5 @@
 #!/bin/bash
 
 BUILD_CMD=( 
-'package	do	emacs-24.5		tar.xz         desktop'
+'package   do        emacs-26.2   tar.xz   desktop'
 )
