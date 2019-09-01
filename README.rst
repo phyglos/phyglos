@@ -16,7 +16,7 @@ The phyglos Catalog
 The phyglos Catalog is a BANDIT catalog that contains the necessary "bundles of
 functionality" to create and raise a new phySystem.
 
-t also contains other bundles to add more functionality to the system in order
+It also contains other bundles to add more functionality to the system in order
 to raise the X Window System and the Xfce Destop Environment as well as other
 common applications like Emacs, Git, Atom, Firefox, etc. 
 
